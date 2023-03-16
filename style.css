@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500&family=Prata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500&family=Prata&display=swap");
 
 * {
   margin: 0;
@@ -17,9 +17,9 @@
   --4: #1282a2;
   --5: #fefcfb;
 
-  --font-family-1: 'Montserrat', sans-serif;
-  --font-family-2: 'Dancing Script', cursive;
-  --font-family-3: 'Prata', serif;
+  --font-family-1: "Montserrat", sans-serif;
+  --font-family-2: "Dancing Script", cursive;
+  --font-family-3: "Prata", serif;
 
   --font-size-nav: 18px;
   --font-weight-nav: 500;
@@ -109,7 +109,7 @@ h3 {
   white-space: nowrap;
 }
 h3:after {
-  content: '';
+  content: "";
   display: block;
   margin: 5px 0 20px 0;
   width: 100%;
@@ -121,6 +121,7 @@ h4 {
   letter-spacing: var(--font-letter-spacing-contrast);
   font-size: var(--font-size-contrast);
   color: var(--5);
+  line-height: 160%;
 }
 
 /* Header */
@@ -169,7 +170,7 @@ header nav .button {
   cursor: pointer;
 }
 header nav .button .row {
-  content: '';
+  content: "";
   width: 40px;
   height: 3px;
   background-color: var(--5);
@@ -263,7 +264,7 @@ section#banner h2 {
   margin-bottom: 15px;
 }
 section#banner h2:after {
-  content: '';
+  content: "";
   display: flex;
   width: 50%;
   height: 2px;
@@ -288,7 +289,7 @@ section#banner .contact a {
 }
 
 section#banner .contact a:after {
-  content: '';
+  content: "";
   display: flex;
   position: absolute;
   bottom: -3px;
@@ -356,13 +357,13 @@ section#works .work-container {
   grid-template-rows: auto auto;
   column-gap: 45px;
   grid-template-areas:
-    'title site'
-    'text site';
+    "title site"
+    "text site";
 }
 section#works .work + .work .work-container {
   grid-template-areas:
-    'site title'
-    'site text';
+    "site title"
+    "site text";
 }
 section#works .work h4:first-child {
   margin-top: 5px;
@@ -388,6 +389,7 @@ section#works .work .text p + p {
 section#works .site {
   position: relative;
   grid-area: site;
+  max-height: 400px;
 }
 section#works .work h4:first-child a {
   color: var(--contrast);
@@ -431,15 +433,15 @@ section#works .site .site-mobile img {
     grid-template-rows: auto auto 350px;
     gap: 0;
     grid-template-areas:
-      'title'
-      'text'
-      'site';
+      "title"
+      "text"
+      "site";
   }
   section#works .work + .work .work-container {
     grid-template-areas:
-      'title'
-      'text'
-      'site';
+      "title"
+      "text"
+      "site";
   }
   section#works .text {
     margin-bottom: 25px;
