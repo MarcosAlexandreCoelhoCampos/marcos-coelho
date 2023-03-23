@@ -360,7 +360,7 @@ section#works .work-container {
     "title site"
     "text site";
 }
-section#works .work + .work .work-container {
+section#works .work:nth-child(odd) .work-container {
   grid-template-areas:
     "site title"
     "site text";
