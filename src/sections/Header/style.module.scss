@@ -7,49 +7,101 @@
   width: 100%;
 
   .container {
-    .containerMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .containerNav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      .containerNav {
+      .curriculo {
+        color: var(--color-tertiary-500);
         display: flex;
+        align-self: center;
+      }
 
-        .curriculo {
-          color: var(--color-tertiary-500);
-          display: flex;
-          align-self: center;
+      .openCloseMenu {
+        margin-left: 30px;
+        .closeMenu {
+          height: 0px;
+          width: 0px;
+          overflow: hidden;
         }
 
-        .openCloseMenu {
-          margin-left: 30px;
+        &.active {
           .closeMenu {
+            height: initial;
+            width: initial;
+            overflow: initial;
+          }
+          .openMenu {
             height: 0px;
             width: 0px;
             overflow: hidden;
           }
+        }
+      }
 
-          &.active {
-            .closeMenu {
-              height: initial;
-              width: initial;
-              overflow: initial;
-            }
-            .openMenu {
-              height: 0px;
-              width: 0px;
-              overflow: hidden;
+      .menuNav {
+        height: 0px;
+        width: 0px;
+        overflow: hidden;
+
+        &.active {
+          width: 100vw;
+          overflow: visible;
+          position: fixed;
+          top: 45%;
+          left: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9;
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            a {
+              color: var(--color-primary-25);
+              font-size: 1.25rem;
+              padding: 5px 10px;
+              display: flex;
+              width: min-content;
+              white-space: nowrap;
             }
           }
         }
       }
     }
-    .menuNav {
-      height: 0px;
-      width: 0px;
-      overflow: hidden;
+  }
+}
 
-      &.active {
+.header.active {
+  height: 100vh;
+  background-color: var(--menu-background-active-mobile);
+  backdrop-filter: blur(10px);
+
+  .container {
+    .containerNav {
+      & > .curriculo {
+        display: none;
+      }
+
+      .openCloseMenu {
+        .closeMenu {
+          height: initial;
+          width: initial;
+          overflow: initial;
+        }
+        .openMenu {
+          height: 0px;
+          width: 0px;
+          overflow: hidden;
+        }
+      }
+
+      .menuNav {
         width: 100vw;
         overflow: visible;
         position: fixed;
@@ -72,58 +124,9 @@
             width: min-content;
             white-space: nowrap;
           }
-        }
-      }
-    }
-  }
-}
-
-.header.active {
-  height: 100vh;
-  background-color: var(--menu-background-active-mobile);
-  backdrop-filter: blur(10px);
-
-  .container {
-    .containerNav {
-      .curriculo {
-        display: none;
-      }
-
-      .openCloseMenu {
-        .closeMenu {
-          height: initial;
-          width: initial;
-          overflow: initial;
-        }
-        .openMenu {
-          height: 0px;
-          width: 0px;
-          overflow: hidden;
-        }
-      }
-    }
-    .menuNav {
-      width: 100vw;
-      overflow: visible;
-      position: fixed;
-      top: 45%;
-      left: 0px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9;
-      ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        a {
-          color: var(--color-primary-25);
-          font-size: 1.25rem;
-          padding: 5px 10px;
-          display: flex;
-          width: min-content;
-          white-space: nowrap;
+          & .curriculo {
+            color: var(--color-tertiary-500);
+          }
         }
       }
     }
