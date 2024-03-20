@@ -11,6 +11,12 @@
   "paths": {
     "@/*": ["src/*"]
   },
-  "include": ["vite.config.ts", "@/**/*.tsx", "@/**/*.ts", "@/**/*.scss"],
+  "include": [
+    "vite.config.ts",
+    "@/**/*.tsx",
+    "@/**/*.ts",
+    "@/**/*.scss",
+    "@/**/*"
+  ],
   "exclude": ["node_modules", "build"]
 }
