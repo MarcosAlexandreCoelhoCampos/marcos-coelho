@@ -1,6 +1,6 @@
 import './theme.scss';
 import './fonts.scss';
-import React from 'react';
+// import React from 'react';
 import Header from './sections/Header';
 
 function App() {
