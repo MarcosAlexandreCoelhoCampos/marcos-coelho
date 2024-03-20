@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+:root {
+  /* PRIMARY */
+  --color-primary-25: #edfaff; /* 0 */
+  --color-primary-50: #d3f7ff; /* 1 */
+  --color-primary-100: #ade6ff; /* 2 */
+  --color-primary-150: #89d6f8; /* 3 */
+  --color-primary-200: #89c3f8; /* 4 */
+  --color-primary-250: #76b4ee; /* 5 */
+  --color-primary-300: #63a7e5; /* 6 */
+  --color-primary-350: #6397e5; /* 7 */
+  --color-primary-400: #5480d8; /* 8 */
+  --color-primary-450: #4371ca; /* 9 */
+  --color-primary-500: #3558b2; /* 10 */
+  --color-primary-550: #284aa0; /* 11 */
+  --color-primary-600: #1d3d92; /* 12 */
+  --color-primary-650: #0f2d7b; /* 13 */
+  --color-primary-700: #0a1a70; /* 14 */
+  --color-primary-750: #0a0b70; /* 15 */
+  --color-primary-800: #03045e; /* 16 */
+  --color-primary-850: #030240; /* 17 */
+  --color-primary-900: #010026; /* 18 */
+  --color-primary-950: #000117; /* 19 */
+  --color-primary-975: #030010; /* 20 */
+  --color-primary-1000: #010007; /* 21 */
+
+  /* SECONDARY */
+  --color-secondary-25: #f3e6fd; /* 0 */
+  --color-secondary-50: #d8a7ff; /* 1 */
+  --color-secondary-100: #cf93ff; /* 2 */
+  --color-secondary-150: #bd7cf0; /* 3 */
+  --color-secondary-200: #ad69e2; /* 4 */
+  --color-secondary-250: #9b4fd7; /* 5 */
+  --color-secondary-300: #8e41cb; /* 6 */
+  --color-secondary-350: #8032be; /* 7 */
+  --color-secondary-400: #7226ad; /* 8 */
+  --color-secondary-450: #651b9e; /* 9 */
+  --color-secondary-500: #6b1292; /* 10 */
+  --color-secondary-550: #610d8b; /* 11 */
+  --color-secondary-600: #5a0983; /* 12 */
+  --color-secondary-650: #520578; /* 13 */
+  --color-secondary-700: #540072; /* 14 */
+  --color-secondary-750: #4d0068; /* 15 */
+  --color-secondary-800: #410058; /* 16 */
+  --color-secondary-850: #3a004f; /* 17 */
+  --color-secondary-900: #36003f; /* 18 */
+  --color-secondary-950: #2d0034; /* 19 */
+  --color-secondary-1000: #130016; /* 20 */
+
+  /* TERTIARY */
+  --color-tertiary-25: #edfef1; /* 0 */
+  --color-tertiary-50: #cfffda; /* 1 */
+  --color-tertiary-100: #b8f0c4; /* 2 */
+  --color-tertiary-150: #a3e5b1; /* 3 */
+  --color-tertiary-200: #86d798; /* 4 */
+  --color-tertiary-250: #77cd8a; /* 5 */
+  --color-tertiary-300: #64ce82; /* 6 */
+  --color-tertiary-350: #53c673; /* 7 */
+  --color-tertiary-400: #3fbd62; /* 8 */
+  --color-tertiary-450: #2db453; /* 9 */
+  --color-tertiary-500: #26a64a; /* 10 */
+  --color-tertiary-550: #1d9530; /* 11 */
+  --color-tertiary-600: #19892b; /* 12 */
+  --color-tertiary-650: #148025; /* 13 */
+  --color-tertiary-700: #117521; /* 14 */
+  --color-tertiary-750: #0b6219; /* 15 */
+  --color-tertiary-800: #095515; /* 16 */
+  --color-tertiary-850: #064710; /* 17 */
+  --color-tertiary-900: #083d04; /* 18 */
+  --color-tertiary-950: #042f01; /* 19 */
+  --color-tertiary-1000: #021b00; /* 20 */
+
+  /* FONTS */
+  --font-primary: 'Nunito', sans-serif;
+  --font-secondary: 'Sofia Sans', sans-serif;
+
+  --menu-background-active-mobile: #03001075;
+}

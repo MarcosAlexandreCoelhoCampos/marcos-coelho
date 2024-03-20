@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+.font-extralarge {
+  font-family: var(--font-primary);
+  font-size: 8rem;
+  letter-spacing: 6.4px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.font-bigtitle {
+  font-family: var(--font-primary);
+  font-size: 3.75rem;
+  letter-spacing: 3px;
+  line-height: 128%;
+  font-weight: 700;
+}
+
+.font-logo {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 500;
+  @media (min-width: 1200px) {
+    font-size: 2.25rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+.font-subtitle {
+  font-family: var(--font-primary);
+  font-size: 2.75rem;
+  letter-spacing: 1.76px;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.font-littlesubtitle {
+  font-family: var(--font-primary);
+  font-size: 2.125rem;
+  letter-spacing: 1.7px;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.font-mobilesubtitle {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  letter-spacing: 1.28px;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.font-mobilelogo {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.font-contrast {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  letter-spacing: 0.72px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.font-bigbutton {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  letter-spacing: 0.48px;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.font-mobilecontrast {
+  font-family: var(--font-primary);
+  font-size: 1.375rem;
+  letter-spacing: 0.66px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.font-bigfont {
+  font-family: var(--font-primary);
+  font-size: 1.375rem;
+  letter-spacing: 0.44px;
+  line-height: 123%;
+  font-weight: 600;
+}
+
+.font-nav {
+  font-family: var(--font-primary);
+  letter-spacing: 0.6px;
+  line-height: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.font-mediumbutton {
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+  letter-spacing: 0.36px;
+  line-height: 135%;
+  font-weight: 500;
+}
+
+.font-font {
+  font-family: var(--font-secondary);
+  font-size: 1.125rem;
+  letter-spacing: 0.18px;
+  line-height: 150%;
+}
+
+.font-mobilenav {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  letter-spacing: 0.48px;
+  line-height: 125%;
+  font-weight: 700;
+}
+
+.font-mobilefont {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  letter-spacing: 0.16px;
+  line-height: 168%;
+}
+
+.font-littlebutton {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  letter-spacing: 0.42px;
+  line-height: 171%;
+  font-weight: 600;
+}
+
+.font-littlefont {
+  font-family: var(--font-secondary);
+  font-size: 0.875rem;
+  letter-spacing: 0.18px;
+  line-height: 188%;
+}

@@ -1,0 +1,14 @@
+.MaxWidth {
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px;
+  margin: 0px auto;
+  @media (min-width: 768px) {
+    padding: 0 24px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1160px;
+    padding: 0;
+  }
+}
