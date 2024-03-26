@@ -1,0 +1,10 @@
+#homeBanner {
+  padding-top: 5rem;
+  min-height: 100vh;
+  background: linear-gradient(#010007, #030240);
+
+  .mainTitle {
+    white-space: pre-line;
+    color: var(--color-primary-25);
+  }
+}

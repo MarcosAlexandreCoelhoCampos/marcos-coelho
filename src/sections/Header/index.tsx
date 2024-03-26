@@ -4,16 +4,10 @@ import MaxWidth from '../../components/MaxWidth/MaxWidth';
 
 const Header: React.FC = () => {
   const [menuNavActive, setmenuNavActive] = React.useState(false);
-  const menuMobileStyle = menuNavActive
-    ? {
-        borderBottom: '2px solid #ffffff',
-        paddingBottom: '6px',
-      }
-    : {};
 
   return (
     <header className={`${styles.header} ${menuNavActive && styles.active}`}>
-      <MaxWidth style={menuMobileStyle}>
+      <MaxWidth className={styles.MaxWidthContainer}>
         <div className={styles.container}>
           <div className={styles.containerLogo}>
             <h2 className='font-logo'>MarcosCoelho</h2>
