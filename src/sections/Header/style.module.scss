@@ -82,6 +82,19 @@
   background-color: var(--menu-background-active-mobile);
   backdrop-filter: blur(10px);
 
+  .MaxWidthContainer {
+    &::after {
+      content: '';
+      display: flex;
+      background-color: var(--color-primary-25);
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 4.75rem;
+      height: 2px;
+    }
+  }
+
   .container {
     .containerNav {
       & > .curriculo {
