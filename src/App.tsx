@@ -1,15 +1,23 @@
+/* Rotas */
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+/* CSS GLOBAL */
 import './theme.scss';
 import './fonts.scss';
-import Header from './sections/Header';
-import Banner from './sections/Banner';
 
-function App() {
+/* PAGES */
+import Home from './pages/Home';
+
+const App = () => {
   return (
-    <>
-      <Header />
-      <Banner />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        {/* <Route path="*" element={<Page404 />} /> ERROR PAGE*/}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

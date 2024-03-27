@@ -31,13 +31,13 @@ const Header: React.FC = () => {
                 className={styles.openMenu}
                 onClick={() => setmenuNavActive(true)}
               >
-                <img src='/icons/open-menu.svg' alt='Abrir menu' />
+                <img src='/icons/menu/open-menu.svg' alt='Abrir menu' />
               </button>
               <button
                 className={styles.closeMenu}
                 onClick={() => setmenuNavActive(false)}
               >
-                <img src='/icons/close-menu.svg' alt='Fechar menu' />
+                <img src='/icons/menu/close-menu.svg' alt='Fechar menu' />
               </button>
             </div>
 
