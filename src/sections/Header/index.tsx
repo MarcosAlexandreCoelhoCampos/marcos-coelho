@@ -2,6 +2,12 @@ import React from 'react';
 import styles from './style.module.scss';
 import MaxWidth from '../../components/MaxWidth/MaxWidth';
 
+/* 
+Teste
+import ImageOpenMenu from '/icons/open-menu.svg';
+import ImageCloseMenu from 'public/icons/close-menu.svg';
+*/
+
 const Header: React.FC = () => {
   const [menuNavActive, setmenuNavActive] = React.useState(false);
 
@@ -25,13 +31,13 @@ const Header: React.FC = () => {
                 className={styles.openMenu}
                 onClick={() => setmenuNavActive(true)}
               >
-                <img src='/public/icons/open-menu.svg' alt='Abrir menu' />
+                <img src='/icons/open-menu.svg' alt='Abrir menu' />
               </button>
               <button
                 className={styles.closeMenu}
                 onClick={() => setmenuNavActive(false)}
               >
-                <img src='/public/icons/close-menu.svg' alt='Fechar menu' />
+                <img src='/icons/close-menu.svg' alt='Fechar menu' />
               </button>
             </div>
 

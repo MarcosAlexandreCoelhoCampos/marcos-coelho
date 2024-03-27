@@ -10,10 +10,13 @@
 
 .font-bigtitle {
   font-family: var(--font-primary);
-  font-size: 3.75rem;
   letter-spacing: 3px;
   line-height: 128%;
   font-weight: 700;
+  font-size: 2.25rem;
+  @media (min-width: 768px) {
+    font-size: 3.75rem;
+  }
 }
 
 .font-logo {
