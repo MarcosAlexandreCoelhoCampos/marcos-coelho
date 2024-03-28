@@ -8,6 +8,26 @@ import ImageOpenMenu from '/icons/open-menu.svg';
 import ImageCloseMenu from 'public/icons/close-menu.svg';
 */
 
+/* 
+Seguindo esse caminho podemos navegar por paginas de uma forma mais fluida
+
+import { Link } from 'react-router-dom'
+
+<Link to="/"> Home </Link>
+<Link to="sobre"> Sobre </Link
+
+Para ter mais funções dentro do link
+Neste caso, o react adiciona automaticamente a class active no que está ativo com base na rota
+Alem de outras funções e detalhes
+
+import { NavLink } from 'react-router-dom'
+
+Home precisa ter "end" no final, pois o link é apenas uma / e todos os links
+tem essa barra por padrão no inicio
+<NavLink to="/" end > Home </NavLink>
+<NavLink to="sobre"> Sobre </NavLink
+*/
+
 const Header: React.FC = () => {
   const [menuNavActive, setmenuNavActive] = React.useState(false);
 
