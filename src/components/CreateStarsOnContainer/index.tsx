@@ -6,7 +6,7 @@ interface CreateStarsOnContainerProps {
   imgHeight: number;
   imgWidth: number;
   containerRef: React.RefObject<HTMLDivElement>;
-  whiteSpaceRef: React.RefObject<HTMLHeadingElement>;
+  whiteSpaceRef?: React.RefObject<HTMLHeadingElement>;
 }
 
 const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
@@ -28,12 +28,29 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
     return { x, y };
   };
 
-  let allStartPosition: { top: number; left: number }[] = [];
+  const checkIfPositionIsInsideWhiteSpace = (x: number, y: number) => {
+    if (!whiteSpaceRef) return false;
+
+    const mainTitleInfos = whiteSpaceRef.current?.getBoundingClientRect();
+
+    if (mainTitleInfos) {
+      const { top, left, width, height } = mainTitleInfos;
+      const imgWidth = 30;
+      const imgHeight = 30;
+
+      return !(
+        x + imgWidth < left ||
+        x > left + width ||
+        y + imgHeight < top ||
+        y > top + height
+      );
+    }
+
+    return false;
+  };
 
   const createStar = (index: number): JSX.Element | null => {
     const { x, y } = getRandomPosition();
-
-    const mainTitleInfos = whiteSpaceRef.current?.getBoundingClientRect();
 
     const positionAlreadyExists = allStartPosition.some(
       (startPosition) =>
@@ -44,25 +61,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
           x < startPosition.left + 25)
     );
 
-    if (mainTitleInfos) {
-      const { top, left, width, height } = mainTitleInfos;
-
-      const imgWidth = 30;
-      const imgHeight = 30;
-
-      if (
-        !(
-          x + imgWidth < left ||
-          x > left + width ||
-          y + imgHeight < top ||
-          y > top + height
-        )
-      ) {
-        return createStar(index);
-      }
-    }
-
-    if (positionAlreadyExists) {
+    if (positionAlreadyExists || checkIfPositionIsInsideWhiteSpace(x, y)) {
       return createStar(index);
     }
 
@@ -78,12 +77,14 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
         key={index}
         style={{
           position: 'absolute',
-          top: y ? y : 20,
-          left: x ? x : 20,
+          top: y,
+          left: x,
         }}
       />
     );
   };
+
+  let allStartPosition: { top: number; left: number }[] = [];
 
   return <>{createStar(index)}</>;
 };
