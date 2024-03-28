@@ -52,20 +52,20 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   const createStar = (index: number): JSX.Element | null => {
     const { x, y } = getRandomPosition();
 
-    const positionAlreadyExists = allStartPosition.some(
-      (startPosition) =>
-        (startPosition.top === y && startPosition.left === x) ||
-        (startPosition.top - 25 < y &&
-          y < startPosition.top + 25 &&
-          startPosition.left - 25 < x &&
-          x < startPosition.left + 25)
+    const positionAlreadyExists = allstarPosition.some(
+      (starPosition) =>
+        (starPosition.top === y && starPosition.left === x) ||
+        (starPosition.top - 25 < y &&
+          y < starPosition.top + 25 &&
+          starPosition.left - 25 < x &&
+          x < starPosition.left + 25)
     );
 
     if (positionAlreadyExists || checkIfPositionIsInsideWhiteSpace(x, y)) {
       return createStar(index);
     }
 
-    allStartPosition.push({
+    allstarPosition.push({
       top: y,
       left: x,
     });
@@ -84,7 +84,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
     );
   };
 
-  let allStartPosition: { top: number; left: number }[] = [];
+  let allstarPosition: { top: number; left: number }[] = [];
 
   return <>{createStar(index)}</>;
 };
