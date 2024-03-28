@@ -9,7 +9,6 @@ type HeadProps = {
   twitterImage?: string;
   keywords?: string;
   author?: string;
-  manifest?: string;
   lang?: string;
 };
 
@@ -22,7 +21,6 @@ const Head: React.FC<HeadProps> = ({
   twitterImage = 'teste',
   keywords = 'teste',
   author = 'teste',
-  manifest = 'teste',
   lang = 'pt-br',
 }) => {
   const updateTags = (
@@ -56,7 +54,6 @@ const Head: React.FC<HeadProps> = ({
       { name: 'author', content: author },
       { name: 'icon', content: ogImage, isLink: true },
       { name: 'apple-touch-icon', content: ogImage, isLink: true },
-      { name: 'manifest', content: manifest, isLink: true },
     ]);
   }, [title, description, ogUrl, ogImage, twitterUrl, twitterImage]);
 
