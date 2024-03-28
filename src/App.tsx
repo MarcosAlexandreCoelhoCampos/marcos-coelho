@@ -9,9 +9,13 @@ import './fonts.scss';
 import Home from './pages/Home';
 import Page404 from './pages/Page404';
 
+/* HEADER AND FOOTER */
+import Header from './components/Header';
+
 const App = () => {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
