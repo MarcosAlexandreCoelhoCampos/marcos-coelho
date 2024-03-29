@@ -33,18 +33,15 @@ const Banner: React.FC = () => {
       </h1>
 
       {loaded && (
-        <div className={styles.containerStars}>
-          {Array.from({ length: 25 }).map((_, index) => (
-            <CreateStarsOnContainer
-              key={index}
-              svgs={svgs}
-              index={index}
-              imgHeight={30}
-              imgWidth={30}
-              containerRef={homeBannerRef}
-              whiteSpaceRef={mainTitleRef}
-            />
-          ))}
+        <div>
+          <CreateStarsOnContainer
+            numStars={50}
+            svgs={svgs}
+            imgHeight={30}
+            imgWidth={30}
+            containerRef={homeBannerRef}
+            whiteSpaceRef={mainTitleRef}
+          />
         </div>
       )}
     </section>

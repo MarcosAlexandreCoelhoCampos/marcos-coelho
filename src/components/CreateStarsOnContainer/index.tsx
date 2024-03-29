@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface CreateStarsOnContainerProps {
   svgs: string[];
-  index: number;
+  numStars: number; // Nova propriedade para especificar a quantidade de estrelas
   imgHeight: number;
   imgWidth: number;
   containerRef: React.RefObject<HTMLDivElement>;
@@ -11,65 +11,68 @@ interface CreateStarsOnContainerProps {
 
 const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   svgs,
-  index,
+  numStars, // Nova propriedade sendo utilizada
   imgHeight,
   imgWidth,
   containerRef,
   whiteSpaceRef,
 }) => {
+  const [stars, setStars] = useState<JSX.Element[]>([]);
+
   const getRandomPosition = () => {
-    const boundingClientRect = containerRef.current?.getBoundingClientRect();
-    /* Trocar por porcentagem ?? */
-    const maxX = boundingClientRect ? boundingClientRect.width - imgWidth : 0;
-    const maxY = boundingClientRect ? boundingClientRect.height - imgHeight : 0;
+    if (!containerRef.current) {
+      return { x: 0, y: 0 };
+    }
+
+    const boundingClientRect = containerRef.current.getBoundingClientRect();
+    const maxX = boundingClientRect.width - imgWidth;
+    const maxY = boundingClientRect.height - imgHeight;
 
     const x = Math.floor(Math.random() * maxX);
     const y = Math.floor(Math.random() * maxY);
 
-    return { x, y };
+    const xPercentage = (x / boundingClientRect.width) * 100;
+    const yPercentage = (y / boundingClientRect.height) * 100;
+
+    return { x: xPercentage, y: yPercentage };
   };
 
-  const checkIfPositionIsInsideWhiteSpace = (x: number, y: number) => {
-    if (!whiteSpaceRef) return false;
-
-    const mainTitleInfos = whiteSpaceRef.current?.getBoundingClientRect();
-
-    if (mainTitleInfos) {
-      const { top, left, width, height } = mainTitleInfos;
-      const imgWidth = 30;
-      const imgHeight = 30;
-
-      return !(
-        x + imgWidth < left ||
-        x > left + width ||
-        y + imgHeight < top ||
-        y > top + height
-      );
+  const checkIfPositionIsInsideWhiteSpace = (
+    xPercentage: number,
+    yPercentage: number
+  ) => {
+    if (!containerRef.current || !whiteSpaceRef?.current) {
+      return false;
     }
 
-    return false;
+    const mainTitleInfos = whiteSpaceRef.current.getBoundingClientRect();
+    const containerInfos = containerRef.current.getBoundingClientRect();
+
+    const imgWidthPercentage = (imgWidth / containerInfos.width) * 100;
+    const imgHeightPercentage = (imgHeight / containerInfos.height) * 100;
+
+    const adjustedTop =
+      ((mainTitleInfos.top - containerInfos.top) / containerInfos.height) * 100;
+    const adjustedLeft =
+      ((mainTitleInfos.left - containerInfos.left) / containerInfos.width) *
+      100;
+
+    return !(
+      xPercentage + imgWidthPercentage < adjustedLeft ||
+      xPercentage >
+        adjustedLeft + (mainTitleInfos.width / containerInfos.width) * 100 ||
+      yPercentage + imgHeightPercentage < adjustedTop ||
+      yPercentage >
+        adjustedTop + (mainTitleInfos.height / containerInfos.height) * 100
+    );
   };
 
   const createStar = (index: number): JSX.Element | null => {
     const { x, y } = getRandomPosition();
 
-    const positionAlreadyExists = allstarPosition.some(
-      (starPosition) =>
-        (starPosition.top === y && starPosition.left === x) ||
-        (starPosition.top - 25 < y &&
-          y < starPosition.top + 25 &&
-          starPosition.left - 25 < x &&
-          x < starPosition.left + 25)
-    );
-
-    if (positionAlreadyExists || checkIfPositionIsInsideWhiteSpace(x, y)) {
-      return createStar(index);
+    if (checkIfPositionIsInsideWhiteSpace(x, y)) {
+      return null; // Não cria uma nova estrela se a posição estiver dentro do espaço em branco
     }
-
-    allstarPosition.push({
-      top: y,
-      left: x,
-    });
 
     return (
       <img
@@ -78,16 +81,52 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
         key={index}
         style={{
           position: 'absolute',
-          top: y,
-          left: x,
+          bottom: `${y}%`,
+          left: `${x}%`,
         }}
       />
     );
   };
 
-  let allstarPosition: { top: number; left: number }[] = [];
+  const generateStars = () => {
+    const newStars = [];
+    let attempts = 0;
+    while (newStars.length < numStars && attempts < numStars * 2) {
+      // Tenta até duas vezes o número desejado de estrelas
+      const star = createStar(newStars.length);
+      if (star) newStars.push(star);
+      attempts++;
+    }
+    setStars(newStars);
+  };
 
-  return <>{createStar(index)}</>;
+  useEffect(() => {
+    generateStars();
+
+    const debounce = (func: (...args: any[]) => void, wait: number) => {
+      let timeout: number | null = null;
+      return function executedFunction(...args: any[]) {
+        const later = () => {
+          if (timeout) clearTimeout(timeout);
+          func(...args);
+        };
+        if (timeout) clearTimeout(timeout);
+        timeout = window.setTimeout(later, wait);
+      };
+    };
+
+    const handleResize = debounce(() => {
+      generateStars();
+    }, 500);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [numStars, svgs, imgHeight, imgWidth, containerRef, whiteSpaceRef]);
+
+  return <>{stars}</>;
 };
 
 export default CreateStarsOnContainer;
