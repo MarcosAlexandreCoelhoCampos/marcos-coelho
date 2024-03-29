@@ -112,7 +112,7 @@
   .header.active {
     height: 100vh;
     background-color: var(--menu-background-active-mobile);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(25px);
 
     &::after {
       content: '';
