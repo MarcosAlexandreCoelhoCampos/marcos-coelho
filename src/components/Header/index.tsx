@@ -3,6 +3,12 @@ import styles from './style.module.scss';
 import MaxWidth from '../../components/MaxWidth/MaxWidth';
 
 /* 
+
+Criar animação para navegação
+
+*/
+
+/* 
 Teste
 import ImageOpenMenu from '/icons/open-menu.svg';
 import ImageCloseMenu from 'public/icons/close-menu.svg';
