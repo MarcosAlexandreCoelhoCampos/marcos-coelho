@@ -2,8 +2,10 @@
   min-height: 60vh;
   padding: 50px 0;
   display: flex;
+  margin-top: 5.625rem;
   align-items: center;
   justify-content: center;
+  position: relative;
   background: linear-gradient(#03000f 20%, #030240);
 
   .mainTitle {
