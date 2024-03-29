@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styles from './starAnimation.module.scss';
+
+/* 
+
+Melhorar leitura do código
+Separar código em componentes se possivel
+Evitar que estrelas sejam criadas em cima de outras estrelas (talves a função que calcula WhiteSpace ajude)
+numStarTotal tem que alterar ao mudar o tamanho do window
+*/
 interface CreateStarsOnContainerProps {
   svgs: string[];
   numStars?: number;
