@@ -19,6 +19,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
 }) => {
   const getRandomPosition = () => {
     const boundingClientRect = containerRef.current?.getBoundingClientRect();
+    /* Trocar por porcentagem ?? */
     const maxX = boundingClientRect ? boundingClientRect.width - imgWidth : 0;
     const maxY = boundingClientRect ? boundingClientRect.height - imgHeight : 0;
 

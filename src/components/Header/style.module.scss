@@ -2,9 +2,17 @@
   background-color: var(--color-primary-975);
   color: var(--color-primary-25);
   padding: 5px 0;
+  box-sizing: border-box;
   position: fixed;
   z-index: 10;
+  top: 0;
   width: 100%;
+  min-height: 5.625rem;
+
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 
   .container {
     display: flex;
@@ -18,10 +26,17 @@
         color: var(--color-tertiary-500);
         display: flex;
         align-self: center;
+        @media (min-width: 1200px) {
+          display: none;
+        }
       }
 
       .openCloseMenu {
         margin-left: 30px;
+        @media (min-width: 1200px) {
+          display: none;
+        }
+
         .closeMenu {
           height: 0px;
           width: 0px;
@@ -47,7 +62,93 @@
         width: 0px;
         overflow: hidden;
 
+        @media (min-width: 1200px) {
+          height: initial;
+          width: initial;
+          overflow: initial;
+        }
+
+        .curriculo {
+          color: var(--color-tertiary-500);
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+
+          @media (min-width: 1200px) {
+            flex-direction: row;
+          }
+
+          a {
+            color: var(--color-primary-25);
+            font-size: 1.25rem;
+            padding: 5px 10px;
+            display: flex;
+            width: min-content;
+            white-space: nowrap;
+          }
+        }
+
         &.active {
+          width: 100vw;
+          overflow: visible;
+          position: fixed;
+          top: 45%;
+          left: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header.active {
+    height: 100vh;
+    background-color: var(--menu-background-active-mobile);
+    backdrop-filter: blur(10px);
+
+    &::after {
+      content: '';
+      display: flex;
+      background-color: var(--color-primary-25);
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 3.25rem;
+      height: 2px;
+
+      @media (min-width: 768px) {
+        top: 4.75rem;
+      }
+    }
+
+    .container {
+      .containerNav {
+        & > .curriculo {
+          display: none;
+        }
+
+        .openCloseMenu {
+          .closeMenu {
+            height: initial;
+            width: initial;
+            overflow: initial;
+          }
+          .openMenu {
+            height: 0px;
+            width: 0px;
+            overflow: hidden;
+          }
+        }
+
+        .menuNav {
           width: 100vw;
           overflow: visible;
           position: fixed;
@@ -70,75 +171,9 @@
               width: min-content;
               white-space: nowrap;
             }
-          }
-        }
-      }
-    }
-  }
-}
-
-.header.active {
-  height: 100vh;
-  background-color: var(--menu-background-active-mobile);
-  backdrop-filter: blur(10px);
-
-  .MaxWidthContainer {
-    &::after {
-      content: '';
-      display: flex;
-      background-color: var(--color-primary-25);
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: 4.75rem;
-      height: 2px;
-    }
-  }
-
-  .container {
-    .containerNav {
-      & > .curriculo {
-        display: none;
-      }
-
-      .openCloseMenu {
-        .closeMenu {
-          height: initial;
-          width: initial;
-          overflow: initial;
-        }
-        .openMenu {
-          height: 0px;
-          width: 0px;
-          overflow: hidden;
-        }
-      }
-
-      .menuNav {
-        width: 100vw;
-        overflow: visible;
-        position: fixed;
-        top: 45%;
-        left: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9;
-        ul {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 20px;
-          a {
-            color: var(--color-primary-25);
-            font-size: 1.25rem;
-            padding: 5px 10px;
-            display: flex;
-            width: min-content;
-            white-space: nowrap;
-          }
-          & .curriculo {
-            color: var(--color-tertiary-500);
+            & .curriculo {
+              color: var(--color-tertiary-500);
+            }
           }
         }
       }

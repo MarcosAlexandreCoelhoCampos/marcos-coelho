@@ -33,7 +33,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={`${styles.header} ${menuNavActive && styles.active}`}>
-      <MaxWidth className={styles.MaxWidthContainer}>
+      <MaxWidth>
         <div className={styles.container}>
           <div className={styles.containerLogo}>
             <h2 className='font-logo'>MarcosCoelho</h2>
