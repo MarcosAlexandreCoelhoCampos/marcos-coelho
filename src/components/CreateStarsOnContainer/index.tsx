@@ -1,22 +1,31 @@
 import React, { useState, useEffect } from 'react';
-
+import styles from './starAnimation.module.scss';
 interface CreateStarsOnContainerProps {
   svgs: string[];
-  numStars: number; // Nova propriedade para especificar a quantidade de estrelas
+  numStars?: number;
   imgHeight: number;
   imgWidth: number;
   containerRef: React.RefObject<HTMLDivElement>;
   whiteSpaceRef?: React.RefObject<HTMLHeadingElement>;
+  animationStar?: boolean;
 }
 
 const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   svgs,
-  numStars, // Nova propriedade sendo utilizada
+  numStars = 0,
   imgHeight,
   imgWidth,
   containerRef,
   whiteSpaceRef,
+  animationStar = true,
 }) => {
+  const boundingClientRect = containerRef?.current?.getBoundingClientRect();
+  const numStarTotal = numStars
+    ? numStars
+    : boundingClientRect
+    ? Math.floor(boundingClientRect.width / 30 + boundingClientRect.height / 27)
+    : 30;
+
   const [stars, setStars] = useState<JSX.Element[]>([]);
 
   const getRandomPosition = () => {
@@ -71,7 +80,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
     const { x, y } = getRandomPosition();
 
     if (checkIfPositionIsInsideWhiteSpace(x, y)) {
-      return null; // Não cria uma nova estrela se a posição estiver dentro do espaço em branco
+      return null;
     }
 
     return (
@@ -79,10 +88,13 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
         src={`./icons/stars/white/${svgs[Math.floor(Math.random() * 4)]}`}
         alt='Estrela'
         key={index}
+        className={animationStar && styles.animationStar}
         style={{
           position: 'absolute',
           bottom: `${y}%`,
           left: `${x}%`,
+          animationDelay: `${Math.random() * 10}s`,
+          animationDuration: `${1 + Math.random() * 9}s`,
         }}
       />
     );
@@ -91,8 +103,8 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   const generateStars = () => {
     const newStars = [];
     let attempts = 0;
-    while (newStars.length < numStars && attempts < numStars * 2) {
-      // Tenta até duas vezes o número desejado de estrelas
+
+    while (newStars.length < numStarTotal && attempts < numStarTotal * 2) {
       const star = createStar(newStars.length);
       if (star) newStars.push(star);
       attempts++;

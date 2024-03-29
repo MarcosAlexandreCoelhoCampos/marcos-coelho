@@ -35,7 +35,6 @@ const Banner: React.FC = () => {
       {loaded && (
         <div>
           <CreateStarsOnContainer
-            numStars={50}
             svgs={svgs}
             imgHeight={30}
             imgWidth={30}
