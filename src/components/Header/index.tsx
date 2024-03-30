@@ -70,27 +70,27 @@ const Header: React.FC = () => {
             <nav className={`${styles.menuNav}`}>
               <ul>
                 <li>
-                  <a className='font-nav' href='#sobre'>
+                  <a className='font-nav' href='#about-me'>
                     Sobre
                   </a>
                 </li>
                 <li>
-                  <a className='font-nav' href='#projetos'>
+                  <a className='font-nav' href='#projects'>
                     Projetos
                   </a>
                 </li>
                 <li>
-                  <a className='font-nav' href='#experiencia'>
+                  <a className='font-nav' href='#experience'>
                     Experiencia
                   </a>
                 </li>
                 <li>
-                  <a className='font-nav' href='#formacao'>
+                  <a className='font-nav' href='#academic-education'>
                     Formação
                   </a>
                 </li>
                 <li>
-                  <a className='font-nav' href='#contato'>
+                  <a className='font-nav' href='#contatc-ne'>
                     Contato
                   </a>
                 </li>
