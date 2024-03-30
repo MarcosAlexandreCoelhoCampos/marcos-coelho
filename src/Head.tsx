@@ -5,8 +5,6 @@ type HeadProps = {
   description?: string;
   ogUrl?: string;
   ogImage?: string;
-  twitterUrl?: string;
-  twitterImage?: string;
   keywords?: string;
   author?: string;
   lang?: string;
@@ -14,13 +12,11 @@ type HeadProps = {
 
 const Head: React.FC<HeadProps> = ({
   title = 'MarcosCoelho',
-  description = 'teste',
-  ogUrl = 'teste',
+  description = 'Portfólio de Marcos Alexandre Coelho Campos - Desenvolvedor Front-end e Designer UX/UI',
+  ogUrl = 'https://marcos-coelho.vercel.app/',
   ogImage = '/logo.svg',
-  twitterUrl = 'teste',
-  twitterImage = 'teste',
-  keywords = 'teste',
-  author = 'teste',
+  keywords = 'Desenvolvedor Front-end, Designer UX/UI, React, Portfolio',
+  author = 'Marcos Alexandre Coelho Campos',
   lang = 'pt-br',
 }) => {
   const updateTags = (
@@ -45,17 +41,12 @@ const Head: React.FC<HeadProps> = ({
       { name: 'og:title', content: title },
       { name: 'og:description', content: description },
       { name: 'og:image', content: ogImage },
-      { name: 'twitter:url', content: twitterUrl },
-      { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: twitterImage },
-      { name: 'twitter:card', content: ogImage },
       { name: 'keywords', content: keywords },
       { name: 'author', content: author },
       { name: 'icon', content: ogImage, isLink: true },
       { name: 'apple-touch-icon', content: ogImage, isLink: true },
     ]);
-  }, [title, description, ogUrl, ogImage, twitterUrl, twitterImage]);
+  }, [title, description, ogUrl, ogImage]);
 
   return null;
 };

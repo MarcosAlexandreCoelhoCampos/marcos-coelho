@@ -20,8 +20,8 @@ interface Image {
   src: string;
   alt: string;
   title: string;
-  width?: number;
-  height?: number;
+  width: number;
+  height: number;
 }
 
 const siteData: SiteData = homeJson as SiteData;

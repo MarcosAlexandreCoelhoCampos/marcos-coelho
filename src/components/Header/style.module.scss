@@ -17,7 +17,7 @@
     .containerNav {
       display: flex;
 
-      .curriculo {
+      .curriculum {
         color: var(--color-tertiary-500);
         display: flex;
         align-self: center;
@@ -37,19 +37,6 @@
           width: 0px;
           overflow: hidden;
         }
-
-        &.active {
-          .closeMenu {
-            height: initial;
-            width: initial;
-            overflow: initial;
-          }
-          .openMenu {
-            height: 0px;
-            width: 0px;
-            overflow: hidden;
-          }
-        }
       }
 
       .menuNav {
@@ -63,7 +50,7 @@
           overflow: initial;
         }
 
-        .curriculo {
+        .curriculum {
           color: var(--color-tertiary-500);
         }
 
@@ -126,7 +113,7 @@
 
     .container {
       .containerNav {
-        & > .curriculo {
+        & > .curriculum {
           display: none;
         }
 
@@ -173,7 +160,7 @@
               width: min-content;
               white-space: nowrap;
             }
-            & .curriculo {
+            & .curriculum {
               color: var(--color-tertiary-500);
             }
           }

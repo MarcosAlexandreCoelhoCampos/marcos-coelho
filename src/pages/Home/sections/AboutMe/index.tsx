@@ -33,6 +33,8 @@ const AboutMe: React.FC<{ data: AboutMeData }> = ({ data }) => {
             src={data.image.src}
             alt={data.image.alt}
             title={data.image.title}
+            width={data.image.width}
+            height={data.image.height}
             className={styles.aboutMeImage}
           />
           <div className={styles.textContent}>

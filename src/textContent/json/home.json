@@ -4,9 +4,11 @@
   },
   "AboutMe": {
     "image": {
-      "src": "/home/about-me.png",
-      "alt": "",
-      "title": ""
+      "src": "/home/marcos-olhando-para-o-lado-esquerdo-em-um-fundo-azul.webp",
+      "alt": "Homem chamado Marcos olhando para o lado esquerdo em um fundo azul",
+      "title": "Marcos olhando para o lado esquerdo em um fundo azul",
+      "width": 568,
+      "height": 402
     },
     "title": "Sobre mim",
     "texts": [
@@ -14,9 +16,9 @@
       "Além disso, como pessoa autista de suporte no grau 1, trago uma perspectiva única e uma abordagem meticulosa aos meus projetos, buscando sempre a excelência e a usabilidade em cada solução que desenvolvo."
     ],
     "stars": [
-      "star-average-no-tip-white.svg",
-      "star-average-white.svg",
-      "star-small-white.svg"
+      "/icons/stars/white/star-average-no-tip-white.svg",
+      "/icons/stars/white/star-average-white.svg",
+      "/icons/stars/white/star-small-white.svg"
     ]
   }
 }

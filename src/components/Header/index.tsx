@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import MaxWidth from '../../components/MaxWidth/MaxWidth';
+import UserScreenWidth from '../UserScreenWidth/UserScreenWidth';
 
 /* 
 
@@ -46,7 +47,7 @@ const Header: React.FC = () => {
           </div>
           <div className={styles.containerNav}>
             <a
-              className={`font-nav ${styles.curriculo}`}
+              className={`font-nav ${styles.curriculum}`}
               href='https://drive.google.com/file/d/1__BcaoPtUrONDdBu-mInk33NBYdWN_sq/view'
               target='_blank'
             >
@@ -54,58 +55,66 @@ const Header: React.FC = () => {
             </a>
 
             <div className={`${styles.openCloseMenu}`}>
-              <button
-                className={styles.openMenu}
-                onClick={() => setmenuNavActive(true)}
-              >
-                <img src='/icons/menu/open-menu.svg' alt='Abrir menu' />
-              </button>
-              <button
-                className={styles.closeMenu}
-                onClick={() => setmenuNavActive(false)}
-              >
-                <img src='/icons/menu/close-menu.svg' alt='Fechar menu' />
-              </button>
+              {!menuNavActive && (
+                <button
+                  className={styles.openMenu}
+                  onClick={() => setmenuNavActive(true)}
+                >
+                  <img src='/icons/menu/open-menu.svg' alt='Abrir menu' />
+                </button>
+              )}
+
+              {menuNavActive && (
+                <button
+                  className={styles.closeMenu}
+                  onClick={() => setmenuNavActive(false)}
+                  {...(menuNavActive ? { hidden: false } : { hidden: true })}
+                >
+                  <img src='/icons/menu/close-menu.svg' alt='Fechar menu' />
+                </button>
+              )}
             </div>
 
-            <nav className={`${styles.menuNav}`}>
-              <ul>
-                <li>
-                  <a className='font-nav' href='#about-me'>
-                    Sobre
-                  </a>
-                </li>
-                <li>
-                  <a className='font-nav' href='#projects'>
-                    Projetos
-                  </a>
-                </li>
-                <li>
-                  <a className='font-nav' href='#experience'>
-                    Experiencia
-                  </a>
-                </li>
-                <li>
-                  <a className='font-nav' href='#academic-education'>
-                    Formação
-                  </a>
-                </li>
-                <li>
-                  <a className='font-nav' href='#contatc-ne'>
-                    Contato
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className={`font-nav ${styles.curriculo}`}
-                    target='_blank'
-                    href='https://drive.google.com/file/d/1__BcaoPtUrONDdBu-mInk33NBYdWN_sq/view'
-                  >
-                    CV
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            {(UserScreenWidth() || menuNavActive) && (
+              <nav className={`${styles.menuNav}`}>
+                <ul>
+                  <li>
+                    <a className='font-nav' href='#about-me'>
+                      Sobre
+                    </a>
+                  </li>
+                  <li>
+                    <a className='font-nav' href='#projects'>
+                      Projetos
+                    </a>
+                  </li>
+                  <li>
+                    <a className='font-nav' href='#experience'>
+                      Experiencia
+                    </a>
+                  </li>
+                  <li>
+                    <a className='font-nav' href='#academic-education'>
+                      Formação
+                    </a>
+                  </li>
+                  <li>
+                    <a className='font-nav' href='#contatc-ne'>
+                      Contato
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={`font-nav ${styles.curriculum}`}
+                      target='_blank'
+                      href='https://drive.google.com/file/d/1__BcaoPtUrONDdBu-mInk33NBYdWN_sq/view'
+                    >
+                      CV
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            )}
           </div>
         </div>
       </MaxWidth>

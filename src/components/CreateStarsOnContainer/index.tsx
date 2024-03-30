@@ -24,10 +24,10 @@ interface CreateStarsOnContainerProps {
 
 const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   svgs = [
-    'star-average-no-tip-white.svg',
-    'star-average-white.svg',
-    'star-big-white.svg',
-    'star-small-white.svg',
+    '/icons/stars/white/star-average-no-tip-white.svg',
+    '/icons/stars/white/star-average-white.svg',
+    '/icons/stars/white/star-big-white.svg',
+    '/icons/stars/white/star-small-white.svg',
   ],
   numStars = 0,
   imgHeight = 30,
@@ -104,10 +104,9 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
 
     return (
       <img
-        src={`./icons/stars/white/${
-          svgs[Math.floor(Math.random() * svgs.length)]
-        }`}
-        alt='Estrela'
+        src={`${svgs[Math.floor(Math.random() * svgs.length)]}`}
+        aria-hidden='true'
+        alt=''
         key={index}
         className={animationStar && styles.animationStar}
         style={{
