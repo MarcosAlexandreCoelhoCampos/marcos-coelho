@@ -9,21 +9,17 @@ const AboutMe = () => {
   const aboutMeContainertRef = React.useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = React.useState(false);
 
-  React.useEffect(() => {
-    const timeout = setTimeout(() => setLoaded(true), 2000);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
+  React.useEffect(() => setLoaded(true), [aboutMeRef, aboutMeContainertRef]);
   return (
     <section className={styles.aboutMeSection} id='about-me' ref={aboutMeRef}>
       {loaded && (
         <CreateStarsOnContainer
           containerRef={aboutMeRef}
           whiteSpaceRef={aboutMeContainertRef}
-          numStars={30}
+          numStars={25}
         />
       )}
+
       <MaxWidth>
         <div
           className={styles.aboutMeSectionContainer}

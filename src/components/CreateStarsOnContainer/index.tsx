@@ -8,6 +8,7 @@ Separar código em componentes se possivel
 Evitar que estrelas sejam criadas em cima de outras estrelas (talves a função que calcula WhiteSpace ajude)
 numStarTotal tem que alterar ao mudar o tamanho do window
 */
+
 interface CreateStarsOnContainerProps {
   svgs?: string[];
   numStars?: number;
@@ -32,6 +33,8 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   whiteSpaceRef,
   animationStar = true,
 }) => {
+  if (containerRef.current) containerRef.current.style.position = 'relative';
+
   const boundingClientRect = containerRef?.current?.getBoundingClientRect();
   const numStarTotal = numStars
     ? numStars
