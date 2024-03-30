@@ -48,6 +48,7 @@ const Header: React.FC = () => {
             <a
               className={`font-nav ${styles.curriculo}`}
               href='https://drive.google.com/file/d/1__BcaoPtUrONDdBu-mInk33NBYdWN_sq/view'
+              target='_blank'
             >
               CV
             </a>
@@ -97,6 +98,7 @@ const Header: React.FC = () => {
                 <li>
                   <a
                     className={`font-nav ${styles.curriculo}`}
+                    target='_blank'
                     href='https://drive.google.com/file/d/1__BcaoPtUrONDdBu-mInk33NBYdWN_sq/view'
                   >
                     CV

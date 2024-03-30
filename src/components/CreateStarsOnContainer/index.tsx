@@ -7,6 +7,9 @@ Melhorar leitura do código
 Separar código em componentes se possivel
 Evitar que estrelas sejam criadas em cima de outras estrelas (talves a função que calcula WhiteSpace ajude)
 numStarTotal tem que alterar ao mudar o tamanho do window
+
+VERIFICAR FORMA DE SEMPRE QUE containerRef E whiteSpaceRef ATUALIZAREM
+O CÓDIGO ATUALIZAR TAMBÉM
 */
 
 interface CreateStarsOnContainerProps {
@@ -101,7 +104,9 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
 
     return (
       <img
-        src={`./icons/stars/white/${svgs[Math.floor(Math.random() * 4)]}`}
+        src={`./icons/stars/white/${
+          svgs[Math.floor(Math.random() * svgs.length)]
+        }`}
         alt='Estrela'
         key={index}
         className={animationStar && styles.animationStar}

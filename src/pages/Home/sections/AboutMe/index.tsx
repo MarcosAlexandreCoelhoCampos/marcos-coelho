@@ -8,16 +8,25 @@ const AboutMe = () => {
   const aboutMeRef = React.useRef<HTMLDivElement>(null);
   const aboutMeContainertRef = React.useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = React.useState(false);
-
   React.useEffect(() => setLoaded(true), [aboutMeRef, aboutMeContainertRef]);
+
+  const stars = [
+    'star-average-no-tip-white.svg',
+    'star-average-white.svg',
+    'star-small-white.svg',
+  ];
+
   return (
     <section className={styles.aboutMeSection} id='about-me' ref={aboutMeRef}>
       {loaded && (
-        <CreateStarsOnContainer
-          containerRef={aboutMeRef}
-          whiteSpaceRef={aboutMeContainertRef}
-          numStars={25}
-        />
+        <div>
+          <CreateStarsOnContainer
+            containerRef={aboutMeRef}
+            whiteSpaceRef={aboutMeContainertRef}
+            numStars={25}
+            svgs={stars}
+          />
+        </div>
       )}
 
       <MaxWidth>
@@ -31,7 +40,7 @@ const AboutMe = () => {
             className={styles.aboutMeImage}
           />
           <div className={styles.textContent}>
-            <TitleWithStar />
+            <TitleWithStar> Sobre Mim </TitleWithStar>
             <p>
               Sou um desenvolvedor front-end com uma paixão pela criação de
               designs envolventes e funcionais. Descobri minha vocação para a
