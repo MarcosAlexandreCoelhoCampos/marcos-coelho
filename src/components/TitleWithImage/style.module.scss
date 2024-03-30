@@ -1,0 +1,22 @@
+.TitleWithStarContent {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+
+  img {
+    display: flex;
+    align-self: center;
+  }
+
+  &.TitleWithStarContentReverse {
+    flex-direction: row-reverse;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 46px;
+  }
+}

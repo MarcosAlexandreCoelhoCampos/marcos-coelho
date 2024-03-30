@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './starAnimation.module.scss';
 
 /* 
@@ -9,20 +9,25 @@ Evitar que estrelas sejam criadas em cima de outras estrelas (talves a função 
 numStarTotal tem que alterar ao mudar o tamanho do window
 */
 interface CreateStarsOnContainerProps {
-  svgs: string[];
+  svgs?: string[];
   numStars?: number;
-  imgHeight: number;
-  imgWidth: number;
+  imgHeight?: number;
+  imgWidth?: number;
   containerRef: React.RefObject<HTMLDivElement>;
   whiteSpaceRef?: React.RefObject<HTMLHeadingElement>;
   animationStar?: boolean;
 }
 
 const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
-  svgs,
+  svgs = [
+    'star-average-no-tip-white.svg',
+    'star-average-white.svg',
+    'star-big-white.svg',
+    'star-small-white.svg',
+  ],
   numStars = 0,
-  imgHeight,
-  imgWidth,
+  imgHeight = 30,
+  imgWidth = 30,
   containerRef,
   whiteSpaceRef,
   animationStar = true,
@@ -34,7 +39,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
     ? Math.floor(boundingClientRect.width / 30 + boundingClientRect.height / 27)
     : 30;
 
-  const [stars, setStars] = useState<JSX.Element[]>([]);
+  const [stars, setStars] = React.useState<JSX.Element[]>([]);
 
   const getRandomPosition = () => {
     if (!containerRef.current) {
@@ -120,7 +125,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
     setStars(newStars);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     generateStars();
 
     const debounce = (func: (...args: any[]) => void, wait: number) => {
@@ -144,7 +149,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [numStars, svgs, imgHeight, imgWidth, containerRef, whiteSpaceRef]);
+  }, [numStars, imgHeight, imgWidth, containerRef, whiteSpaceRef]);
 
   return <>{stars}</>;
 };

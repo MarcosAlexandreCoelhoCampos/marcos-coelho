@@ -1,29 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './style.module.scss';
 import CreateStarsOnContainer from '../../../../components/CreateStarsOnContainer';
 
 const Banner: React.FC = () => {
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = React.useState(false);
   const homeBannerRef = React.useRef<HTMLDivElement>(null);
-  const mainTitleRef = React.useRef<HTMLHeadingElement>(null);
+  const mainTitleRef = React.useRef<HTMLDivElement>(null);
+  // const mainTitleRef = React.useRef<HTMLHeadingElement>(null);
 
-  const svgs = [
-    'star-average-no-tip-white.svg',
-    'star-average-white.svg',
-    'star-big-white.svg',
-    'star-small-white.svg',
-  ];
-
-  useEffect(() => {
+  React.useEffect(() => {
     const timeout = setTimeout(() => setLoaded(true), 50);
 
     return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <section id={styles.homeBanner} ref={homeBannerRef}>
+    <section className={`${styles.homeBanner}`} ref={homeBannerRef} id='banner'>
       <h1
-        className={`${styles.mainTitle} font-bigtitle`}
+        className={`${styles.mainTitle}`}
         style={{ whiteSpace: 'pre-line' }}
         ref={mainTitleRef}
       >
@@ -35,9 +29,6 @@ const Banner: React.FC = () => {
       {loaded && (
         <div>
           <CreateStarsOnContainer
-            svgs={svgs}
-            imgHeight={30}
-            imgWidth={30}
             containerRef={homeBannerRef}
             whiteSpaceRef={mainTitleRef}
           />

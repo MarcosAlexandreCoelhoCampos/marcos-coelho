@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import styles from './style.module.scss';
 
 interface MaxWidthProps {
   style?: React.CSSProperties;
   className?: string;
   children: React.ReactNode;
+  ref?: RefObject<HTMLDivElement>;
 }
 
-const MaxWidth: React.FC<MaxWidthProps> = ({ style, className, children }) => {
+const MaxWidth: React.FC<MaxWidthProps> = ({
+  style,
+  className,
+  children,
+  ref,
+}) => {
   return (
-    <div className={`${styles.MaxWidth} ${className}`} style={{ ...style }}>
+    <div className={`${styles.MaxWidth} ${className}`} style={style} ref={ref}>
       {children}
     </div>
   );

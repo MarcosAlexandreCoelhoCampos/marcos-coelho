@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 /* CSS GLOBAL */
 import './theme.scss';
 import './fonts.scss';
+import './global.scss';
 
 /* PAGES */
 import Home from './pages/Home';

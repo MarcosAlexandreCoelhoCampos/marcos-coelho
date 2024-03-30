@@ -8,7 +8,8 @@
   font-weight: 700;
 }
 
-.font-bigtitle {
+.font-bigtitle,
+h1 {
   font-family: var(--font-primary);
   letter-spacing: 3px;
   line-height: 128%;
@@ -19,10 +20,13 @@
   }
 }
 
-.font-logo {
+.font-logo,
+h2.font-logo {
   font-family: var(--font-primary);
   font-size: 1.75rem;
   font-weight: 500;
+  letter-spacing: initial;
+  text-transform: initial;
   @media (min-width: 1200px) {
     font-size: 2.25rem;
   }
@@ -31,12 +35,19 @@
   }
 }
 
-.font-subtitle {
+.font-subtitle,
+h2 {
   font-family: var(--font-primary);
-  font-size: 2.75rem;
-  letter-spacing: 1.76px;
+  font-size: 2rem;
+  letter-spacing: 1.28px;
   line-height: 100%;
-  font-weight: 600;
+  font-weight: 500;
+  text-transform: uppercase;
+  @media (min-width: 1200px) {
+    font-size: 2.75rem;
+    letter-spacing: 1.76px;
+    font-weight: 500;
+  }
 }
 
 .font-littlesubtitle {
@@ -45,20 +56,6 @@
   letter-spacing: 1.7px;
   line-height: 100%;
   font-weight: 600;
-}
-
-.font-mobilesubtitle {
-  font-family: var(--font-primary);
-  font-size: 2rem;
-  letter-spacing: 1.28px;
-  line-height: 100%;
-  font-weight: 600;
-}
-
-.font-mobilelogo {
-  font-family: var(--font-primary);
-  font-size: 1.75rem;
-  font-weight: 500;
 }
 
 .font-contrast {
@@ -113,11 +110,15 @@
   font-weight: 500;
 }
 
-.font-font {
+.font-text,
+p {
   font-family: var(--font-secondary);
-  font-size: 1.125rem;
+  font-size: 1rem;
   letter-spacing: 0.18px;
   line-height: 150%;
+  @media (min-width: 1200px) {
+    font-size: 1.125rem;
+  }
 }
 
 .font-mobilenav {
