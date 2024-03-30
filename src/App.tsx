@@ -13,6 +13,9 @@ import Page404 from './pages/Page404';
 /* HEADER AND FOOTER */
 import Header from './components/Header';
 
+/* JSON e TYPESCRIPT */
+import siteData from './textContent/typescript/home.ts';
+
 /* 
 
 ANTES DE CONTINUAR  CRIAR JSON E TS COM O CONTEUDO DO SITE
@@ -30,13 +33,14 @@ CreateStarsOnContainer
 Header
 
 */
+
 const App = () => {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home data={siteData} />} />
+        <Route path='/home' element={<Home data={siteData} />} />
         <Route path='*' element={<Page404 />} />
       </Routes>
     </BrowserRouter>

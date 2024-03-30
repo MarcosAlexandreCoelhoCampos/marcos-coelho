@@ -3,18 +3,13 @@ import styles from './style.module.scss';
 import MaxWidth from '../../../../components/MaxWidth/MaxWidth';
 import TitleWithStar from '../../../../components/TitleWithImage/TitleWithStar';
 import CreateStarsOnContainer from '../../../../components/CreateStarsOnContainer';
+import { AboutMeData } from '../../../../textContent/typescript/home.ts';
 
-const AboutMe = () => {
+const AboutMe: React.FC<{ data: AboutMeData }> = ({ data }) => {
   const aboutMeRef = React.useRef<HTMLDivElement>(null);
   const aboutMeContainertRef = React.useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = React.useState(false);
   React.useEffect(() => setLoaded(true), [aboutMeRef, aboutMeContainertRef]);
-
-  const stars = [
-    'star-average-no-tip-white.svg',
-    'star-average-white.svg',
-    'star-small-white.svg',
-  ];
 
   return (
     <section className={styles.aboutMeSection} id='about-me' ref={aboutMeRef}>
@@ -24,7 +19,7 @@ const AboutMe = () => {
             containerRef={aboutMeRef}
             whiteSpaceRef={aboutMeContainertRef}
             numStars={25}
-            svgs={stars}
+            svgs={data.stars}
           />
         </div>
       )}
@@ -35,27 +30,16 @@ const AboutMe = () => {
           ref={aboutMeContainertRef}
         >
           <img
-            src='/home/about-me.png'
-            alt=''
+            src={data.image.src}
+            alt={data.image.alt}
+            title={data.image.title}
             className={styles.aboutMeImage}
           />
           <div className={styles.textContent}>
-            <TitleWithStar> Sobre Mim </TitleWithStar>
-            <p>
-              Sou um desenvolvedor front-end com uma paixão pela criação de
-              designs envolventes e funcionais. Descobri minha vocação para a
-              programação aos 14 anos e desde então tenho me dedicado a
-              aprimorar minhas habilidades nessa área em constante evolução.
-              Atualmente, aos 20 anos, estou em formação acadêmica, cursando o
-              segundo semestre de Análise e Desenvolvimento de Sistemas na
-              Cruzeiro do Sul.
-            </p>
-            <p>
-              Além disso, como pessoa autista de suporte no grau 1, trago uma
-              perspectiva única e uma abordagem meticulosa aos meus projetos,
-              buscando sempre a excelência e a usabilidade em cada solução que
-              desenvolvo.
-            </p>
+            <TitleWithStar> {data.title} </TitleWithStar>
+            {data.texts.map((text, index) => (
+              <p key={index}> {text} </p>
+            ))}
           </div>
         </div>
       </MaxWidth>

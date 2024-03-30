@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './style.module.scss';
 import CreateStarsOnContainer from '../../../../components/CreateStarsOnContainer';
+import { BannerData } from '../../../../textContent/typescript/home.ts';
 
-const Banner: React.FC = () => {
+const Banner: React.FC<{ data: BannerData }> = ({ data }) => {
   const homeBannerRef = React.useRef<HTMLDivElement>(null);
   const mainTitleRef = React.useRef<HTMLDivElement>(null);
 
@@ -13,9 +14,9 @@ const Banner: React.FC = () => {
         style={{ whiteSpace: 'pre-line' }}
         ref={mainTitleRef}
       >
-        {`Desenvolvedor
-          Front-End &
-          UX/UI Design`}
+        {`${data.mainTitle[0]}
+        ${data.mainTitle[1]}
+        ${data.mainTitle[2]}`}
       </h1>
       <div>
         <CreateStarsOnContainer
