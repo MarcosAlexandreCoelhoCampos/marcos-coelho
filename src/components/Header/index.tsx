@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import MaxWidth from '../../components/MaxWidth/MaxWidth';
-import UserScreenWidth from '../UserScreenWidth/UserScreenWidth';
+import UserScreenWidth from '../../functions/UserScreenWidth/UserScreenWidth';
 
 /* 
 

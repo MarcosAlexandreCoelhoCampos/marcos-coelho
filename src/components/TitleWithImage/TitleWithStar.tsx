@@ -19,7 +19,8 @@ const TitleWithStar: React.FC<TitleWithStarProps> = ({
       <h2> {children} </h2>
       <img
         src='/icons/stars/white/star-big-subtitle-outline-white.svg'
-        alt='Contorno de estrela'
+        alt=''
+        aria-hidden='true'
       />
     </div>
   );
