@@ -24,7 +24,7 @@ const CreateCloudsOnRow = () => {
           alt=''
           aria-hidden='true'
           style={{
-            animation: `RollingTheClouds ${cloudsNum * 0.5}s linear infinite`,
+            animation: `RollingTheClouds ${cloudsNum * 10}s linear infinite`,
           }}
         />
       );
