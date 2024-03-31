@@ -3,13 +3,12 @@ import styles from './style.module.scss';
 import CreateCloudsOnRow from '../../../../components/CreateCloudsOnRow/CreateCloudsOnRow';
 
 const Knowledges = () => {
-  const teste1 = React.useRef(null);
-  const teste2 = React.useRef(null);
+  const knowledgesSectionRef = React.useRef(null);
 
   return (
-    <section className={styles.knowledgesSection} ref={teste1}>
+    <section className={styles.knowledgesSection} ref={knowledgesSectionRef}>
       <CreateCloudsOnRow />
-      <div ref={teste2}>
+      <div>
         <p> TESTE </p>
         <p> TESTE </p>
         <p> TESTE </p>

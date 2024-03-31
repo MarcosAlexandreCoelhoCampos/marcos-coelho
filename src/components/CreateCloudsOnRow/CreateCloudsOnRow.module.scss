@@ -1,0 +1,28 @@
+.CreateCloudsOnRow {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.cloudsRow {
+  display: flex;
+  gap: 117px;
+  position: absolute;
+  animation: RollingTheClouds 100s linear infinite;
+  &:first-child {
+    bottom: 0px;
+    margin-left: 117px;
+  }
+}
+
+@keyframes RollingTheClouds {
+  0% {
+    transform: translateX(
+      calc(-117px * 22)
+    ); // - Cloud Width * (2 * number of clouds)
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
