@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './CreateCloudsOnRow.module.scss';
+import UserScreenWidth from '../../functions/UserScreenWidth/UserScreenWidth';
 
 const CreateCloudsOnRow = () => {
   const svgs = [
@@ -11,16 +12,20 @@ const CreateCloudsOnRow = () => {
 
   const [cloudsRow1, setCloudsRow1] = React.useState<React.ReactNode>([]);
   const [cloudsRow2, setCloudsRow2] = React.useState<React.ReactNode>([]);
+  const cloudsNum = !UserScreenWidth(768) ? 4 : 11;
 
   const createClouds = () => {
     const generatedClouds = [];
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < cloudsNum; i++) {
       generatedClouds.push(
         <img
-          key={i}
+          key={`cloud-${i}-${cloudsNum}`}
           src={svgs[Math.floor(Math.random() * svgs.length)]}
           alt=''
           aria-hidden='true'
+          style={{
+            animation: `RollingTheClouds ${cloudsNum * 0.5}s linear infinite`,
+          }}
         />
       );
     }
@@ -30,7 +35,7 @@ const CreateCloudsOnRow = () => {
   React.useEffect(() => {
     setCloudsRow1(createClouds());
     setCloudsRow2(createClouds());
-  }, []);
+  }, [cloudsNum]);
 
   return (
     <div className={styles.CreateCloudsOnRow}>
@@ -42,6 +47,16 @@ const CreateCloudsOnRow = () => {
         {cloudsRow2}
         {cloudsRow2}
       </div>
+      <style>{`
+        @keyframes RollingTheClouds {
+          0% {
+            transform: translateX(${-117 * (cloudsNum * 2)}px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </div>
   );
 };
