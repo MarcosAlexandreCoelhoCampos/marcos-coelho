@@ -1,5 +1,8 @@
 .aboutMeSection {
-  background: linear-gradient(#030240 50%, #03045e);
+  background: linear-gradient(
+    var(--color-primary-850) 50%,
+    var(--color-primary-800)
+  );
   display: flex;
   align-items: center;
 

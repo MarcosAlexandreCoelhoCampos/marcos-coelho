@@ -35,7 +35,7 @@
   .AirplaneWithTextContent {
     display: grid;
     grid-template-rows: repeat(3, auto);
-    gap: 36px;
+    gap: 16px 24px;
     width: max-content;
     grid-auto-flow: column;
     @media (min-width: 1200px) {

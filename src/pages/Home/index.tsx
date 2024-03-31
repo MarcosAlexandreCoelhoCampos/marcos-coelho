@@ -6,6 +6,7 @@ import Knowledges from './sections/Knowledges/index.tsx';
 import { SiteData } from '../../textContent/typescript/home.ts';
 import CreateCloudsOnRow from '../../components/CreateCloudsOnRow/CreateCloudsOnRow.tsx';
 import CloudsDivider from '../../components/CloudsDivider/index.tsx';
+import Projects from './sections/Projects/index.tsx';
 
 const Home: React.FC<{ data: SiteData }> = ({ data }) => {
   document.body.style.backgroundColor = 'var(--color-primary-975)';
@@ -18,6 +19,7 @@ const Home: React.FC<{ data: SiteData }> = ({ data }) => {
       <CreateCloudsOnRow containerBg='var(--color-primary-800)' />
       <Knowledges data={data.Knowledges} />
       <CloudsDivider />
+      <Projects data={data.Projects} />
     </>
   );
 };

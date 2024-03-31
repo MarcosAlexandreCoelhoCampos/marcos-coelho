@@ -1,3 +1,6 @@
 .knowledgesSection {
-  background: linear-gradient(#03045e 10%, #0a0b70);
+  background: linear-gradient(
+    var(--color-primary-800) 10%,
+    var(--color-primary-750)
+  );
 }

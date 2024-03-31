@@ -4,6 +4,7 @@ export interface SiteData {
   Banner: BannerData;
   AboutMe: AboutMeData;
   Knowledges: KnowledgesData;
+  Projects: ProjectsData;
 }
 
 export interface BannerData {
@@ -21,6 +22,10 @@ export interface KnowledgesData {
   title: string;
   knowledges: string[];
 }
+export interface ProjectsData {
+  title: string;
+}
+
 interface Image {
   src: string;
   alt: string;

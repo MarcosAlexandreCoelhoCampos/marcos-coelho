@@ -15,6 +15,8 @@ import Header from './components/Header/Header.tsx';
 import siteData from './textContent/typescript/home.ts';
 
 /* 
+Ajustar tab, está com foco no menu ao iniciar
+
 EXISTEM ANOTAÇÕES NOS COMPONENTES:
 CreateStarsOnContainer
 Header
