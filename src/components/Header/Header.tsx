@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.scss';
-import MaxWidth from '../../components/MaxWidth/MaxWidth';
+import MaxWidth from '../MaxWidth/MaxWidth';
 import UserScreenWidth from '../../functions/UserScreenWidth/UserScreenWidth';
 
 /* 
@@ -36,7 +36,18 @@ tem essa barra por padrão no inicio
 */
 
 const Header: React.FC = () => {
+  if (UserScreenWidth(768)) document.body.style.paddingTop = '5rem';
+  else document.body.style.paddingTop = '2rem';
+
   const [menuNavActive, setmenuNavActive] = React.useState(false);
+
+  const openMenuButton = React.useRef<HTMLButtonElement>(null);
+  const closeMenuButton = React.useRef<HTMLButtonElement>(null);
+
+  React.useEffect(() => {
+    if (menuNavActive) closeMenuButton.current?.focus();
+    else openMenuButton.current?.focus();
+  }, [menuNavActive]);
 
   return (
     <header className={`${styles.header} ${menuNavActive && styles.active}`}>
@@ -58,6 +69,7 @@ const Header: React.FC = () => {
               {!menuNavActive && (
                 <button
                   className={styles.openMenu}
+                  ref={openMenuButton}
                   onClick={() => setmenuNavActive(true)}
                 >
                   <img src='/icons/menu/open-menu.svg' alt='Abrir menu' />
@@ -67,8 +79,8 @@ const Header: React.FC = () => {
               {menuNavActive && (
                 <button
                   className={styles.closeMenu}
+                  ref={closeMenuButton}
                   onClick={() => setmenuNavActive(false)}
-                  {...(menuNavActive ? { hidden: false } : { hidden: true })}
                 >
                   <img src='/icons/menu/close-menu.svg' alt='Fechar menu' />
                 </button>

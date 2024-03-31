@@ -1,32 +1,23 @@
-/* Rotas */
+//  Rotas
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-/* CSS GLOBAL */
-import './theme.scss';
-import './fonts.scss';
-import './global.scss';
+//  CSS GLOBAL
+import './index.css';
 
-/* PAGES */
+// PAGES
 import Home from './pages/Home';
 import Page404 from './pages/Page404';
 
-/* HEADER AND FOOTER */
-import Header from './components/Header';
+//  HEADER AND FOOTER
+import Header from './components/Header/Header.tsx';
 
-/* JSON e TYPESCRIPT */
+//  JSON e TYPESCRIPT
 import siteData from './textContent/typescript/home.ts';
 
 /* 
-
-ANALISAR COMPONENTES CRIADOS ATÉ ENTÃO PARA POSSIVEL
-MELHORA NA LÓGICA E RENDEDIZAÇÃO
-
-ANALISAR CÓDIGO PARA VERIFICAR ACESSIBILIDADE
-
 EXISTEM ANOTAÇÕES NOS COMPONENTES:
 CreateStarsOnContainer
 Header
-
 */
 
 const App = () => {

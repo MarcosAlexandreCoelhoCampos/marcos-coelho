@@ -1,0 +1,45 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+button {
+  background-color: #00000000;
+  border: none;
+  cursor: pointer;
+  padding-block: 0px;
+  padding-inline: 0px;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+p + p {
+  margin-top: 24px;
+}
+
+*:focus {
+  outline: 2px solid var(--color-primary-25);
+}
+
+section {
+  padding: 75px 0;
+  @media (min-width: 1200px) {
+    padding: 100px 0;
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary-25);
+}

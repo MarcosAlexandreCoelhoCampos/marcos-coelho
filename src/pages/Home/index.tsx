@@ -1,7 +1,8 @@
 import React from 'react';
 import Banner from './sections/Banner';
-import Head from '../../Head';
+import Head from '../../components/Head/Head.tsx';
 import AboutMe from './sections/AboutMe';
+import Knowledges from './sections/Knowledges/index.tsx';
 import { SiteData } from '../../textContent/typescript/home.ts';
 
 const Home: React.FC<{ data: SiteData }> = ({ data }) => {
@@ -12,6 +13,7 @@ const Home: React.FC<{ data: SiteData }> = ({ data }) => {
       <Head />
       <Banner data={data.Banner} />
       <AboutMe data={data.AboutMe} />
+      <Knowledges />
     </>
   );
 };

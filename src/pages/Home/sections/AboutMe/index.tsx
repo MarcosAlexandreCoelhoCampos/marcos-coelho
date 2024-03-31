@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './style.module.scss';
 import MaxWidth from '../../../../components/MaxWidth/MaxWidth';
 import TitleWithStar from '../../../../components/TitleWithImage/TitleWithStar';
-import CreateStarsOnContainer from '../../../../components/CreateStarsOnContainer';
+import CreateStarsOnContainer from '../../../../components/CreateStarsOnContainer/CreateStarsOnContainer.tsx';
 import { AboutMeData } from '../../../../textContent/typescript/home.ts';
 
 const AboutMe: React.FC<{ data: AboutMeData }> = ({ data }) => {
@@ -36,6 +36,7 @@ const AboutMe: React.FC<{ data: AboutMeData }> = ({ data }) => {
             width={data.image.width}
             height={data.image.height}
             className={styles.aboutMeImage}
+            loading='lazy'
           />
           <div className={styles.textContent}>
             <TitleWithStar> {data.title} </TitleWithStar>

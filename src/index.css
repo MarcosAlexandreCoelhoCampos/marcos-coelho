@@ -1,15 +1,3 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  text-decoration: none;
-  list-style-type: none;
-}
-
-button {
-  background-color: #00000000;
-  border: none;
-  cursor: pointer;
-  padding-block: 0px;
-  padding-inline: 0px;
-  outline: none;
-}
+@import url(./globalStyles/fonts.scss);
+@import url(./globalStyles/global.scss);
+@import url(./globalStyles/theme.scss);
