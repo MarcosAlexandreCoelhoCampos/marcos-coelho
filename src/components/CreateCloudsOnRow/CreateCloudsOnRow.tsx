@@ -50,7 +50,7 @@ const CreateCloudsOnRow = () => {
       <style>{`
         @keyframes RollingTheClouds {
           0% {
-            transform: translateX(${-117 * (cloudsNum * 2)}px);
+            transform: translateX(${-118 * (cloudsNum * 2)}px);
           }
           100% {
             transform: translateX(0);
