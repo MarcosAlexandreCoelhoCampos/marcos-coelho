@@ -23,5 +23,14 @@
       "/icons/stars/white/star-big-white.svg",
       "/icons/stars/white/star-small-white.svg"
     ]
+  },
+  "AirplaneWithText": {
+    "image": {
+      "src": "/icons/airplane/airplane-outline-white.svg",
+      "alt": "",
+      "title": "",
+      "width": 80,
+      "height": 64
+    }
   }
 }

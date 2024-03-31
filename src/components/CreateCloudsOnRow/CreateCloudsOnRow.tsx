@@ -5,9 +5,13 @@ import componentsData from '../../textContent/typescript/components.ts';
 
 interface Props {
   containerBg?: string;
+  animationTimeDuration?: number;
 }
 
-const CreateCloudsOnRow: React.FC<Props> = ({ containerBg = 'null' }) => {
+const CreateCloudsOnRow: React.FC<Props> = ({
+  containerBg = 'null',
+  animationTimeDuration = 1,
+}) => {
   const { cloudsSrc } = componentsData.CreateCloudsOnRow;
   const [cloudsRow1, setCloudsRow1] = React.useState<React.ReactNode>([]);
   const [cloudsRow2, setCloudsRow2] = React.useState<React.ReactNode>([]);
@@ -23,7 +27,9 @@ const CreateCloudsOnRow: React.FC<Props> = ({ containerBg = 'null' }) => {
           alt=''
           aria-hidden='true'
           style={{
-            animation: `RollingTheClouds ${cloudsNum * 10}s linear infinite`,
+            animation: `RollingTheClouds ${
+              cloudsNum * animationTimeDuration * 12
+            }s linear infinite`,
           }}
         />
       );

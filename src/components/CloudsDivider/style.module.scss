@@ -1,0 +1,26 @@
+.CloudsDivider {
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  background-color: var(--color-primary-750);
+  position: relative;
+
+  .cloudContainer {
+    position: absolute;
+  }
+
+  .cloudContainer:nth-child(1) {
+    transform: translateX(-200px);
+    bottom: 0px;
+  }
+
+  .cloudContainer:nth-child(2) {
+    transform: translateX(-300px);
+    bottom: 5px;
+  }
+
+  .cloudContainer:nth-child(3) {
+    transform: translateX(-125px);
+    bottom: 10px;
+  }
+}

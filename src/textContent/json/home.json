@@ -23,7 +23,7 @@
   },
   "Knowledges": {
     "title": "Conhecimentos",
-    "conhecimentos": [
+    "knowledges": [
       "React",
       "CSS",
       "SCSS",

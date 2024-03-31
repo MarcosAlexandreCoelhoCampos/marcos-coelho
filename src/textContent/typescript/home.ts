@@ -19,7 +19,7 @@ export interface AboutMeData {
 
 export interface KnowledgesData {
   title: string;
-  conhecimentos: string[];
+  knowledges: string[];
 }
 interface Image {
   src: string;

@@ -4,6 +4,7 @@ export interface ComponentsData {
   TitleWithStar: TitleWithStarData;
   CreateCloudsOnRow: CreateCloudsOnRowData;
   CreateStarsOnContainer: CreateStarsOnContainerData;
+  AirplaneWithText: AirplaneWithTextData;
 }
 
 export interface TitleWithStarData {
@@ -16,6 +17,10 @@ export interface CreateCloudsOnRowData {
 
 export interface CreateStarsOnContainerData {
   starsSrc: string[];
+}
+
+export interface AirplaneWithTextData {
+  image: Image;
 }
 
 interface Image {

@@ -1,0 +1,79 @@
+.AirplaneWithTextContainer {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 36px;
+
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-primary-900);
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-primary-50);
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-100);
+  }
+  @media screen and (pointer: coarse) {
+    padding-bottom: 0px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    transform: translateX(30px);
+
+    &.animate {
+      animation: AirplaneAnimate 1s linear both;
+    }
+  }
+
+  .AirplaneWithTextContent {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 36px;
+    width: max-content;
+    grid-auto-flow: column;
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 30px;
+    }
+    .AirplaneWithText {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+
+      p {
+        min-width: 122px;
+        width: 35vw;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        border: 2px solid var(--color-primary-25);
+        @media (min-width: 768px) {
+          width: 25vw;
+        }
+        @media (min-width: 1200px) {
+          width: initial;
+        }
+      }
+    }
+  }
+}
+
+@keyframes AirplaneAnimate {
+  0% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
