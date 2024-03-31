@@ -3,6 +3,7 @@ import homeJson from '../json/home.json';
 export interface SiteData {
   Banner: BannerData;
   AboutMe: AboutMeData;
+  Knowledges: KnowledgesData;
 }
 
 export interface BannerData {
@@ -16,6 +17,10 @@ export interface AboutMeData {
   stars: string[];
 }
 
+export interface KnowledgesData {
+  title: string;
+  conhecimentos: string[];
+}
 interface Image {
   src: string;
   alt: string;

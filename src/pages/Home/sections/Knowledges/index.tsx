@@ -1,26 +1,12 @@
-import React from 'react';
 import styles from './style.module.scss';
-import CreateCloudsOnRow from '../../../../components/CreateCloudsOnRow/CreateCloudsOnRow';
+import TitleWithStar from '../../../../components/TitleWithStar/TitleWithStar';
+import { KnowledgesData } from '../../../../textContent/typescript/home.ts';
 
-const Knowledges = () => {
-  const knowledgesSectionRef = React.useRef(null);
-
+const Knowledges: React.FC<{ data: KnowledgesData }> = ({ data }) => {
   return (
-    <section className={styles.knowledgesSection} ref={knowledgesSectionRef}>
-      <CreateCloudsOnRow />
+    <section className={styles.knowledgesSection}>
       <div>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
-        <p> TESTE </p>
+        <TitleWithStar> {data.title} </TitleWithStar>
       </div>
     </section>
   );

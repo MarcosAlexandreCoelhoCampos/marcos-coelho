@@ -20,5 +20,20 @@
       "/icons/stars/white/star-average-white.svg",
       "/icons/stars/white/star-small-white.svg"
     ]
+  },
+  "Knowledges": {
+    "title": "Conhecimentos",
+    "conhecimentos": [
+      "React",
+      "CSS",
+      "SCSS",
+      "UX/UI",
+      "JavaScript",
+      "Next.js",
+      "HTML",
+      "BootStrap",
+      "Git",
+      "Figma"
+    ]
   }
 }

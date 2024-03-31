@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './starAnimation.module.scss';
+import componentsData from '../../textContent/typescript/components.ts';
 
 /* 
 
@@ -23,12 +24,7 @@ interface CreateStarsOnContainerProps {
 }
 
 const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
-  svgs = [
-    '/icons/stars/white/star-average-no-tip-white.svg',
-    '/icons/stars/white/star-average-white.svg',
-    '/icons/stars/white/star-big-white.svg',
-    '/icons/stars/white/star-small-white.svg',
-  ],
+  svgs = [''],
   numStars = 0,
   imgHeight = 30,
   imgWidth = 30,
@@ -36,6 +32,9 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   whiteSpaceRef,
   animationStar = true,
 }) => {
+  const { starsSrc } = componentsData.CreateStarsOnContainer;
+  const starsSvg = svgs[0] ? svgs : starsSrc;
+
   if (containerRef.current) containerRef.current.style.position = 'relative';
 
   const boundingClientRect = containerRef?.current?.getBoundingClientRect();
@@ -104,7 +103,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
 
     return (
       <img
-        src={`${svgs[Math.floor(Math.random() * svgs.length)]}`}
+        src={`${starsSvg[Math.floor(Math.random() * starsSvg.length)]}`}
         aria-hidden='true'
         alt=''
         key={index}
@@ -114,7 +113,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
           bottom: `${y}%`,
           left: `${x}%`,
           animationDelay: `${Math.random() * 10}s`,
-          animationDuration: `${2 + Math.random() * 8}s`,
+          animationDuration: `${4 + Math.random() * 6}s`,
         }}
       />
     );

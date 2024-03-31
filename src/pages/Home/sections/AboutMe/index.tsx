@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import MaxWidth from '../../../../components/MaxWidth/MaxWidth';
-import TitleWithStar from '../../../../components/TitleWithImage/TitleWithStar';
+import TitleWithStar from '../../../../components/TitleWithStar/TitleWithStar';
 import CreateStarsOnContainer from '../../../../components/CreateStarsOnContainer/CreateStarsOnContainer.tsx';
 import { AboutMeData } from '../../../../textContent/typescript/home.ts';
 

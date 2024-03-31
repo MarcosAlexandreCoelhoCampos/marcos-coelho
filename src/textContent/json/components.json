@@ -7,5 +7,21 @@
       "width": 36,
       "height": 36
     }
+  },
+  "CreateCloudsOnRow": {
+    "cloudsSrc": [
+      "/icons/cloud/white/cloud-dark-blue-white.svg",
+      "/icons/cloud/white/cloud-dark-white.svg",
+      "/icons/cloud/white/cloud-light-blue-white.svg",
+      "/icons/cloud/white/cloud-light-white.svg"
+    ]
+  },
+  "CreateStarsOnContainer": {
+    "starsSrc": [
+      "/icons/stars/white/star-average-no-tip-white.svg",
+      "/icons/stars/white/star-average-white.svg",
+      "/icons/stars/white/star-big-white.svg",
+      "/icons/stars/white/star-small-white.svg"
+    ]
   }
 }

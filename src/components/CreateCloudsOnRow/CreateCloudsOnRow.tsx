@@ -1,15 +1,14 @@
 import React from 'react';
 import styles from './CreateCloudsOnRow.module.scss';
 import UserScreenWidth from '../../functions/UserScreenWidth/UserScreenWidth';
+import componentsData from '../../textContent/typescript/components.ts';
 
-const CreateCloudsOnRow = () => {
-  const svgs = [
-    '/icons/cloud/white/cloud-dark-blue-white.svg',
-    '/icons/cloud/white/cloud-dark-white.svg',
-    '/icons/cloud/white/cloud-light-blue-white.svg',
-    '/icons/cloud/white/cloud-light-white.svg',
-  ];
+interface Props {
+  containerBg?: string;
+}
 
+const CreateCloudsOnRow: React.FC<Props> = ({ containerBg = 'null' }) => {
+  const { cloudsSrc } = componentsData.CreateCloudsOnRow;
   const [cloudsRow1, setCloudsRow1] = React.useState<React.ReactNode>([]);
   const [cloudsRow2, setCloudsRow2] = React.useState<React.ReactNode>([]);
   const cloudsNum = !UserScreenWidth(768) ? 4 : 11;
@@ -20,7 +19,7 @@ const CreateCloudsOnRow = () => {
       generatedClouds.push(
         <img
           key={`cloud-${i}-${cloudsNum}`}
-          src={svgs[Math.floor(Math.random() * svgs.length)]}
+          src={cloudsSrc[Math.floor(Math.random() * cloudsSrc.length)]}
           alt=''
           aria-hidden='true'
           style={{
@@ -38,7 +37,10 @@ const CreateCloudsOnRow = () => {
   }, [cloudsNum]);
 
   return (
-    <div className={styles.CreateCloudsOnRow}>
+    <div
+      className={styles.CreateCloudsOnRow}
+      style={{ backgroundColor: containerBg }}
+    >
       <div className={styles.cloudsRow}>
         {cloudsRow1}
         {cloudsRow1}
