@@ -1,7 +1,14 @@
 .AirplaneWithTextContainer {
   max-width: 100%;
   overflow-x: auto;
-  padding-bottom: 36px;
+  padding: 0px 16px 36px 16px;
+
+  @media (min-width: 768px) {
+    padding: 0px 24px 36px 24px;
+  }
+  @media (min-width: 1200px) {
+    padding: 0px 0px 36px 0px;
+  }
 
   &::-webkit-scrollbar {
     height: 10px;
@@ -20,7 +27,8 @@
   &::-webkit-scrollbar-thumb:hover {
     background: var(--color-primary-100);
   }
-  @media screen and (pointer: coarse) {
+
+  @media screen and (pointer: coarse) and (max-width: 1200px) {
     padding-bottom: 0px;
     &::-webkit-scrollbar {
       display: none;

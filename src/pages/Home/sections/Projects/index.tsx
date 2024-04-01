@@ -11,8 +11,8 @@ const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
       <MaxWidth>
         <TitleWithStar> {data.title} </TitleWithStar>
         <div className={styles.projectsContent}>
-          {data.projects.map((project) => {
-            return <ProjectsContent {...project} />;
+          {data.projects.map((project, index) => {
+            return <ProjectsContent {...project} key={index} />;
           })}
         </div>
       </MaxWidth>

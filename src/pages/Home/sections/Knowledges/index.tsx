@@ -9,6 +9,8 @@ const Knowledges: React.FC<{ data: KnowledgesData }> = ({ data }) => {
     <section className={styles.knowledgesSection}>
       <MaxWidth>
         <TitleWithStar> {data.title} </TitleWithStar>
+      </MaxWidth>
+      <MaxWidth className={styles.airplanesMaxWidth}>
         <AirplaneWithText texts={data.knowledges} />
       </MaxWidth>
     </section>
