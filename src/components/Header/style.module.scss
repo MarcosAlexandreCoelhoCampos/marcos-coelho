@@ -70,6 +70,11 @@
             display: flex;
             width: min-content;
             white-space: nowrap;
+
+            &:hover {
+              color: var(--color-tertiary-500);
+              transition: color 0.15s 0.1s;
+            }
           }
         }
 
@@ -142,21 +147,13 @@
           align-items: center;
           z-index: 9;
           ul {
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             height: 100%;
             min-height: min-content;
             width: 90%;
-            gap: 20px;
             overflow-x: hidden;
             overflow-y: auto;
             a {
-              color: var(--color-primary-25);
-              font-size: 1.25rem;
-              padding: 5px 10px;
-              display: flex;
-              width: min-content;
               white-space: nowrap;
             }
             & .curriculum {

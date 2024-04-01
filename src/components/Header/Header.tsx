@@ -91,27 +91,47 @@ const Header: React.FC = () => {
               <nav className={`${styles.menuNav}`}>
                 <ul>
                   <li>
-                    <a className='font-nav' href='#about-me'>
+                    <a
+                      onClick={() => setmenuNavActive(false)}
+                      className='font-nav'
+                      href='#about-me'
+                    >
                       Sobre
                     </a>
                   </li>
                   <li>
-                    <a className='font-nav' href='#projects'>
+                    <a
+                      onClick={() => setmenuNavActive(false)}
+                      className='font-nav'
+                      href='#projects'
+                    >
                       Projetos
                     </a>
                   </li>
                   <li>
-                    <a className='font-nav' href='#experience'>
+                    <a
+                      onClick={() => setmenuNavActive(false)}
+                      className='font-nav'
+                      href='#experience'
+                    >
                       Experiencia
                     </a>
                   </li>
                   <li>
-                    <a className='font-nav' href='#academic-education'>
+                    <a
+                      onClick={() => setmenuNavActive(false)}
+                      className='font-nav'
+                      href='#academic-education'
+                    >
                       Formação
                     </a>
                   </li>
                   <li>
-                    <a className='font-nav' href='#contatc-ne'>
+                    <a
+                      onClick={() => setmenuNavActive(false)}
+                      className='font-nav'
+                      href='#contatc-ne'
+                    >
                       Contato
                     </a>
                   </li>
