@@ -16,6 +16,8 @@ import siteData from './textContent/typescript/home.ts';
 
 /* 
 Ajustar tab, está com foco no menu ao iniciar
+Ajustar Aviões, para que eles não tenham MaxWidth no mobile
+Ajustar Typagens (importar typagens que estão locais)
 
 EXISTEM ANOTAÇÕES NOS COMPONENTES:
 CreateStarsOnContainer

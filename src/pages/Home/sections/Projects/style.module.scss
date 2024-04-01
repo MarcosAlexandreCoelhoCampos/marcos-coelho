@@ -1,3 +1,13 @@
 .projectsSection {
   background: linear-gradient(#0a0b6f 10%, var(--color-primary-750));
+  .projectsContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
 }

@@ -24,6 +24,14 @@ export interface KnowledgesData {
 }
 export interface ProjectsData {
   title: string;
+  projects: ProjectData[];
+}
+export interface ProjectData {
+  subtitle: string;
+  technologies?: string;
+  text: string;
+  link: string;
+  image: Image;
 }
 
 interface Image {

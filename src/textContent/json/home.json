@@ -12,7 +12,7 @@
     },
     "title": "Sobre mim",
     "texts": [
-      "Sou um desenvolvedor front-end com uma paixão pela criação de designs envolventes e funcionais. Descobri minha vocação para a programação aos 14 anos e desde então tenho me dedicado a aprimorar minhas habilidades nessa área em constante evolução. Atualmente, aos 20 anos, estou em formação acadêmica, cursando o segundo semestre de Análise e Desenvolvimento de Sistemas na Cruzeiro do Sul.",
+      "Sou um desenvolvedor front-end com uma paixão pela criação de designs envolventes e funcionais. Descobri minha vocação para a programação aos 14 anos e desde então tenho me dedicado a aprimorar minhas habilidades nessa área em constante evolução. Atualmente, aos 20 anos, estou em formação acadêmica, cursando o segundo semestre de Análise e Desenvolvimento de Sistemas na Cruzeiro do Sul",
       "Além disso, como pessoa autista de suporte no grau 1, trago uma perspectiva única e uma abordagem meticulosa aos meus projetos, buscando sempre a excelência e a usabilidade em cada solução que desenvolvo."
     ],
     "stars": [
@@ -37,6 +37,60 @@
     ]
   },
   "Projects": {
-    "title": "Projetos"
+    "title": "Projetos",
+    "projects": [
+      {
+        "subtitle": "Portfolio",
+        "text": "Meu portfolio tem como objetivo mostrar minhas habilidades e projetos de forma criativa e nova.",
+        "technologies": "React - Javascript - SCSS - HTML - Práticas de SEO - Figma - UX/UI",
+        "link": "Veja mais",
+        "image": {
+          "src": "/home/portfolio.webp",
+          "alt": "Imagem exemplo do meu portfolio, site que você está acessando agora",
+          "title": "Imagem mostrando meu portfolio, site que você está acessando agora",
+          "width": 750,
+          "height": 312
+        }
+      },
+      {
+        "subtitle": "Cabana do Coelho",
+        "text": "O objetivo deste site é apresentar cabanas disponíveis para aluguel e fornecer meios de contato para interessados",
+        "technologies": "Figma - HTML - CSS - Javascript",
+        "link": "Veja mais",
+        "image": {
+          "src": "/home/cabanadocoelho.webp",
+          "alt": "Imagem exemplo do site Cabana Do Coelho",
+          "title": "Imagem mostrando site Cabana Do Coelho",
+          "width": 615,
+          "height": 313
+        }
+      },
+      {
+        "subtitle": "WaterSurf",
+        "text": "O objetivo deste site é chamar a atenção de clientes interessados em aulas de Surf.",
+        "technologies": "Figma - HTML - CSS - JavaScript",
+        "link": "Veja mais",
+        "image": {
+          "src": "/home/watersurf.webp",
+          "alt": "Imagem exemplo do site Watersurf",
+          "title": "Imagem mostrando site Watersurf",
+          "width": 342,
+          "height": 273
+        }
+      },
+      {
+        "subtitle": "CoelhoGames",
+        "text": "O objetivo deste site é mostrar a assistencia tecnica para trazer maior confianca de possiveis clientes.",
+        "technologies": "Figma - HTML - CSS - BootStrap",
+        "link": "Veja mais",
+        "image": {
+          "src": "/home/coelhogames.webp",
+          "alt": "Imagem exemplo do site CoelhoGames",
+          "title": "Imagem mostrando site CoelhoGames",
+          "width": 350,
+          "height": 277
+        }
+      }
+    ]
   }
 }
