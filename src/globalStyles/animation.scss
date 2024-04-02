@@ -40,7 +40,7 @@
   transform: translateX(-100vw);
 }
 .animeFromNegativeLeft {
-  animation: animeFromNegativeLeftAnimation 0.8s ease-in 0s forwards normal;
+  animation: animeFromNegativeLeftAnimation 1.2s linear 0s forwards normal;
 }
 
 @keyframes animeFromNegativeLeftAnimation {
@@ -49,5 +49,21 @@
   }
   100% {
     transform: translateX(0px);
+  }
+}
+
+.animeOpacityPreparation {
+  opacity: 0;
+}
+.animeOpacity {
+  animation: animeOpacityAnimation 1.2s ease-in 0s forwards normal;
+}
+
+@keyframes animeOpacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -4,6 +4,7 @@ import MaxWidth from '../../../../components/macroComponents/MaxWidth';
 import TitleWithStar from '../../../../components/macroComponents/TitleWithStar';
 import CreateStarsOnContainer from '../../../../components/macroComponents/CreateStarsOnContainer';
 import { AboutMeData } from '../../../../textContent/typescript/home.ts';
+import ComponentOnViewport from '../../../../functions/ComponentOnViewport/index.tsx';
 
 const AboutMe: React.FC<{ data: AboutMeData }> = ({ data }) => {
   const aboutMeRef = React.useRef<HTMLDivElement>(null);
@@ -12,7 +13,11 @@ const AboutMe: React.FC<{ data: AboutMeData }> = ({ data }) => {
   React.useEffect(() => setLoaded(true), [aboutMeRef, aboutMeContainertRef]);
 
   return (
-    <section className={styles.aboutMeSection} id='about-me' ref={aboutMeRef}>
+    <section
+      className={`${styles.aboutMeSection} `}
+      id='about-me'
+      ref={aboutMeRef}
+    >
       {loaded && (
         <div>
           <CreateStarsOnContainer
@@ -26,7 +31,9 @@ const AboutMe: React.FC<{ data: AboutMeData }> = ({ data }) => {
 
       <MaxWidth>
         <div
-          className={styles.aboutMeSectionContainer}
+          className={`${styles.aboutMeSectionContainer} ${
+            ComponentOnViewport(aboutMeRef, 1.5) && 'animeOpacity'
+          } animeOpacityPreparation`}
           ref={aboutMeContainertRef}
         >
           <img

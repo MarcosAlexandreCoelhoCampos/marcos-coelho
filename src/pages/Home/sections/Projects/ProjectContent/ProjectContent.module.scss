@@ -13,7 +13,7 @@
   @media (min-width: 1200px) {
     max-width: 100%;
     display: grid;
-    grid-template-rows: 1fr 0.5fr;
+    grid-template-rows: auto 0.5fr;
   }
   &:nth-child(even) {
     @media (min-width: 768px) {
@@ -24,7 +24,7 @@
   }
   &:nth-child(even) {
     @media (min-width: 1200px) {
-      grid-template-rows: 0.5fr 1fr;
+      grid-template-rows: 0.5fr auto;
       .ProjectContentImage {
         order: -1;
       }

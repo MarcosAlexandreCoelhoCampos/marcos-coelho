@@ -10,7 +10,7 @@ const Banner: React.FC<{ data: BannerData }> = ({ data }) => {
   return (
     <section className={`${styles.homeBanner}`} ref={homeBannerRef} id='banner'>
       <h1
-        className={`${styles.mainTitle}`}
+        className={`${styles.mainTitle} animeOpacity`}
         style={{ whiteSpace: 'pre-line' }}
         ref={mainTitleRef}
       >

@@ -14,7 +14,9 @@ const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
     <div
       ref={containerRef}
       className={`${styles.AirplaneWithTextContainer} ${
-        isInViewport && !isDesktop ? styles.animate : ''
+        isInViewport && !isDesktop && styles.animate
+      } ${isInViewport && isDesktop && 'animeFromNegativeLeft'} ${
+        isDesktop && 'animeFromNegativeLeftPreparation'
       }`}
     >
       <div className={`${styles.AirplaneWithTextContent}`}>
