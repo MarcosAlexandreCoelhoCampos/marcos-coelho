@@ -10,18 +10,20 @@ const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
   const isInViewport = ComponentOnViewport(containerRef);
   const isDesktop = UserScreenWidthIsLargerThan(1200);
 
+  // Veificar se é possivel fazer uma animação onde ele começa no scroll maximo do componente
+  // e termina no inicio, assim mostrando que é um componente scrolavel e ao mesmo tempo
+  // deixando bonito e interessante
+
   return (
-    <div
-      ref={containerRef}
-      className={`${styles.AirplaneWithTextContainer} ${
-        isInViewport && !isDesktop && styles.animate
-      } ${isInViewport && isDesktop && 'animeFromNegativeLeft'} ${
-        isDesktop && 'animeFromNegativeLeftPreparation'
-      }`}
-    >
+    <div ref={containerRef} className={`${styles.AirplaneWithTextContainer}`}>
       <div className={`${styles.AirplaneWithTextContent}`}>
         {texts.map((text, index) => (
-          <div key={index} className={styles.AirplaneWithText}>
+          <div
+            key={index}
+            className={`${styles.AirplaneWithText}  ${
+              isInViewport && 'animeFromNegativeLeft'
+            } ${'animeFromNegativeLeftPreparation'}`}
+          >
             <p>{text}</p>
             <img
               src={AirplaneWithText.image.src}
@@ -29,6 +31,7 @@ const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
               width={AirplaneWithText.image.width}
               height={AirplaneWithText.image.height}
               title={AirplaneWithText.image.title}
+              aria-hidden='true'
             />
           </div>
         ))}

@@ -7,6 +7,7 @@ import Banner from './sections/Banner';
 import AboutMe from './sections/AboutMe';
 import Projects from './sections/Projects';
 import Knowledges from './sections/Knowledges';
+import ExtraLargeClousDivider from '../../components/macroComponents/ExtraLargeClousDivider/index.tsx';
 
 const Home: React.FC<{ data: SiteData }> = ({ data }) => {
   document.body.style.backgroundColor = 'var(--color-primary-975)';
@@ -20,6 +21,7 @@ const Home: React.FC<{ data: SiteData }> = ({ data }) => {
       <Knowledges data={data.Knowledges} />
       <CloudsDivider />
       <Projects data={data.Projects} />
+      <ExtraLargeClousDivider />
     </>
   );
 };
