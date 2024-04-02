@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './starAnimation.module.scss';
-import componentsData from '../../textContent/typescript/components.ts';
+import componentsData from '../../../textContent/typescript/components';
 
 /* 
 

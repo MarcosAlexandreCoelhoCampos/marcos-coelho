@@ -1,8 +1,8 @@
 import styles from './style.module.scss';
-import TitleWithStar from '../../../../components/TitleWithStar/TitleWithStar';
+import TitleWithStar from '../../../../components/macroComponents/TitleWithStar';
 import { KnowledgesData } from '../../../../textContent/typescript/home.ts';
-import AirplaneWithText from '../../../../components/AirplaneWithText/AirplaneWithText.tsx';
-import MaxWidth from '../../../../components/MaxWidth/MaxWidth.tsx';
+import AirplaneWithText from '../../../../components/macroComponents/AirplaneWithText';
+import MaxWidth from '../../../../components/macroComponents/MaxWidth';
 
 const Knowledges: React.FC<{ data: KnowledgesData }> = ({ data }) => {
   return (

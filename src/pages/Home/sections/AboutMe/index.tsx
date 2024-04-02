@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './style.module.scss';
-import MaxWidth from '../../../../components/MaxWidth/MaxWidth';
-import TitleWithStar from '../../../../components/TitleWithStar/TitleWithStar';
-import CreateStarsOnContainer from '../../../../components/CreateStarsOnContainer/CreateStarsOnContainer.tsx';
+import MaxWidth from '../../../../components/macroComponents/MaxWidth';
+import TitleWithStar from '../../../../components/macroComponents/TitleWithStar';
+import CreateStarsOnContainer from '../../../../components/macroComponents/CreateStarsOnContainer';
 import { AboutMeData } from '../../../../textContent/typescript/home.ts';
 
 const AboutMe: React.FC<{ data: AboutMeData }> = ({ data }) => {

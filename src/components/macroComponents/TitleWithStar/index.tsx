@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.scss';
-import componentsData from '../../textContent/typescript/components.ts';
+import componentsData from '../../../textContent/typescript/components';
 
 interface TitleWithStarProps {
   children: string | string[];

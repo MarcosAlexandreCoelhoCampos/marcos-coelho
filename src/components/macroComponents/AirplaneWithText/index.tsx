@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './AirplaneWithText.module.scss';
-import componentsData from '../../textContent/typescript/components.ts';
-import ComponentOnViewport from '../../functions/ComponentOnViewport/ComponentOnViewport.tsx';
-import UserScreenWidth from '../../functions/UserScreenWidth/UserScreenWidth.tsx';
+import componentsData from '../../../textContent/typescript/components.ts';
+import ComponentOnViewport from '../../../functions/ComponentOnViewport';
+import UserScreenWidth from '../../../functions/UserScreenWidth';
 
 const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
   const { AirplaneWithText } = componentsData;

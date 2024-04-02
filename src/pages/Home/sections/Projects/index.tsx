@@ -1,9 +1,9 @@
 import React from 'react';
-import TitleWithStar from '../../../../components/TitleWithStar/TitleWithStar';
+import TitleWithStar from '../../../../components/macroComponents/TitleWithStar';
 import { ProjectsData } from '../../../../textContent/typescript/home.ts';
 import styles from './style.module.scss';
-import ProjectsContent from '../../../../components/ProjectsContent/ProjectsContent.tsx';
-import MaxWidth from '../../../../components/MaxWidth/MaxWidth.tsx';
+import ProjectsContent from './ProjectsContent/ProjectsContent.tsx';
+import MaxWidth from '../../../../components/macroComponents/MaxWidth';
 
 const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
   return (

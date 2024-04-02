@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.scss';
-import CreateStarsOnContainer from '../../../../components/CreateStarsOnContainer/CreateStarsOnContainer.tsx';
+import CreateStarsOnContainer from '../../../../components/macroComponents/CreateStarsOnContainer';
 import { BannerData } from '../../../../textContent/typescript/home.ts';
 
 const Banner: React.FC<{ data: BannerData }> = ({ data }) => {

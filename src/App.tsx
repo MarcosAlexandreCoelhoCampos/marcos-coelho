@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import Page404 from './pages/Page404';
 
 //  HEADER AND FOOTER
-import Header from './components/Header/Header.tsx';
+import Header from './components/macroComponents/Header';
 
 //  JSON e TYPESCRIPT
 import siteData from './textContent/typescript/home.ts';
@@ -18,6 +18,7 @@ import siteData from './textContent/typescript/home.ts';
 Ajustar tab, está com foco no menu ao iniciar
 Ajustar Aviões, para que eles não tenham MaxWidth no mobile
 Ajustar Typagens (importar typagens que estão locais)
+Separar componentes em componentes micro e os separar os macros que não serão reutilizados em suas devidas seções
 
 EXISTEM ANOTAÇÕES NOS COMPONENTES:
 CreateStarsOnContainer

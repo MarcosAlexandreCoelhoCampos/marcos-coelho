@@ -1,4 +1,4 @@
-import CreateCloudsOnRow from '../CreateCloudsOnRow/CreateCloudsOnRow';
+import CreateCloudsOnRow from '../CreateCloudsOnRow';
 import styles from './style.module.scss';
 
 const CloudsDivider = () => {

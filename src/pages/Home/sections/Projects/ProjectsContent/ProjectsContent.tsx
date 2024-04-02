@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ProjectsContent.module.scss';
-import { ProjectData } from '../../textContent/typescript/home';
+import { ProjectData } from '../../../../../textContent/typescript/home';
 
 const ProjectsContent: React.FC<ProjectData> = ({
   subtitle,
@@ -21,6 +21,13 @@ const ProjectsContent: React.FC<ProjectData> = ({
         </div>
         <a className='font-mediumbutton' href='#'>
           {link}
+          <img
+            src={image.src}
+            alt={image.alt}
+            title={image.title}
+            width={image.width}
+            height={image.height}
+          />
         </a>
       </div>
       <div className={styles.ProjectsContentImage}>

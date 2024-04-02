@@ -1,12 +1,12 @@
 import React from 'react';
-import Banner from './sections/Banner';
-import Head from '../../components/Head/Head.tsx';
-import AboutMe from './sections/AboutMe';
-import Knowledges from './sections/Knowledges/index.tsx';
 import { SiteData } from '../../textContent/typescript/home.ts';
-import CreateCloudsOnRow from '../../components/CreateCloudsOnRow/CreateCloudsOnRow.tsx';
-import CloudsDivider from '../../components/CloudsDivider/index.tsx';
-import Projects from './sections/Projects/index.tsx';
+import Head from '../../components/macroComponents/Head';
+import CreateCloudsOnRow from '../../components/macroComponents/CreateCloudsOnRow';
+import CloudsDivider from '../../components/macroComponents/CloudsDivider';
+import Banner from './sections/Banner';
+import AboutMe from './sections/AboutMe';
+import Projects from './sections/Projects';
+import Knowledges from './sections/Knowledges';
 
 const Home: React.FC<{ data: SiteData }> = ({ data }) => {
   document.body.style.backgroundColor = 'var(--color-primary-975)';
