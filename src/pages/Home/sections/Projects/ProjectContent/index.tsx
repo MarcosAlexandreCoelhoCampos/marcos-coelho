@@ -20,7 +20,7 @@ const ProjectContent: React.FC<ProjectData> = ({
       className={`${styles.ProjectContent} ${
         (ComponentOnViewport(ProjectContent) || seeMoreMobileActived) &&
         'animeToBottom'
-      }`}
+      } animeToBottomPrepartion`}
     >
       <div className={styles.ProjectContentText}>
         <h3 className='font-contrast'>{subtitle}</h3>
