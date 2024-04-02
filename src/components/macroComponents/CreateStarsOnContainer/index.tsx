@@ -112,7 +112,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
           position: 'absolute',
           bottom: `${y}%`,
           left: `${x}%`,
-          animationDelay: `${1 + Math.random() * 1}s`,
+          animationDelay: `-${Math.random() * 2}s`,
           animationDuration: `${4 + Math.random() * 6}s`,
         }}
       />

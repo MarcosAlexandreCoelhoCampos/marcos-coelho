@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CreateCloudsOnRow.module.scss';
-import UserScreenWidth from '../../../functions/UserScreenWidth';
+import UserScreenWidthIsLargerThan from '../../../functions/UserScreenWidthIsLargerThan';
 import componentsData from '../../../textContent/typescript/macroComponents';
 
 interface Props {
@@ -15,7 +15,7 @@ const CreateCloudsOnRow: React.FC<Props> = ({
   const { cloudsSrc } = componentsData.CreateCloudsOnRow;
   const [cloudsRow1, setCloudsRow1] = React.useState<React.ReactNode>([]);
   const [cloudsRow2, setCloudsRow2] = React.useState<React.ReactNode>([]);
-  const cloudsNum = !UserScreenWidth(768) ? 4 : 11;
+  const cloudsNum = !UserScreenWidthIsLargerThan(768) ? 4 : 11;
 
   const createClouds = () => {
     const generatedClouds = [];

@@ -7,32 +7,38 @@ type ImgProps = {
 };
 
 type SeeMoreButtonProps = {
-  link: string;
+  action: () => void;
+  actived: boolean;
   fontStyle?: string;
-  text?: string;
+  textActive?: string;
+  textDesable?: string;
   img?: ImgProps;
   style?: React.CSSProperties;
 };
 
 const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({
-  link,
-  fontStyle = 'font-mediumbutton',
-  text = 'Veja Mais',
+  action,
+  actived = false,
+  fontStyle = 'font-bigbutton',
+  textActive = 'Veja Mais',
+  textDesable = 'Ver menos',
   img = {
-    src: '/icons/arrow/arrow-right-white.svg',
-    title: 'Botão veja mais',
-    width: 11,
-    height: 18,
+    src: '/icons/arrow/arrow-down-green.svg',
+    title: 'Link para saber mais sobre o site',
+    width: 18,
+    height: 10,
   },
   style,
 }) => {
   return (
-    <a
-      href={link}
-      className={`${styles.SeeMoreButton} ${fontStyle}`}
+    <button
+      className={`${styles.SeeMoreButton} ${fontStyle} ${
+        actived && styles.actived
+      }`}
       style={style}
+      onClick={action}
     >
-      {text}
+      {actived ? textDesable : textActive}
       {img && (
         <img
           src={img.src}
@@ -42,7 +48,7 @@ const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({
           aria-hidden='true'
         />
       )}
-    </a>
+    </button>
   );
 };
 

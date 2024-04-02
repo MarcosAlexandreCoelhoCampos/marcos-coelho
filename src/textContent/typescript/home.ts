@@ -32,6 +32,7 @@ export interface ProjectData {
   text: string;
   link: string;
   image: Image;
+  seeMoreMobileActived: boolean;
 }
 
 interface Image {

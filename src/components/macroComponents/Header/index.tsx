@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import MaxWidth from '../MaxWidth';
-import UserScreenWidth from '../../../functions/UserScreenWidth';
+import UserScreenWidthIsLargerThan from '../../../functions/UserScreenWidthIsLargerThan';
 
 /* 
 
@@ -36,15 +36,20 @@ tem essa barra por padrão no inicio
 */
 
 const Header: React.FC = () => {
-  if (UserScreenWidth(768)) document.body.style.paddingTop = '5rem';
+  if (UserScreenWidthIsLargerThan(768)) document.body.style.paddingTop = '5rem';
   else document.body.style.paddingTop = '2rem';
 
   const [menuNavActive, setmenuNavActive] = React.useState(false);
+  const [isFirstRender, setIsFirstRender] = React.useState(true);
 
   const openMenuButton = React.useRef<HTMLButtonElement>(null);
   const closeMenuButton = React.useRef<HTMLButtonElement>(null);
 
   React.useEffect(() => {
+    if (isFirstRender) {
+      setIsFirstRender(false);
+      return;
+    }
     if (menuNavActive) closeMenuButton.current?.focus();
     else openMenuButton.current?.focus();
   }, [menuNavActive]);
@@ -87,7 +92,7 @@ const Header: React.FC = () => {
               )}
             </div>
 
-            {(UserScreenWidth() || menuNavActive) && (
+            {(UserScreenWidthIsLargerThan() || menuNavActive) && (
               <nav className={`${styles.menuNav}`}>
                 <ul>
                   <li>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserScreenWidth = (minWidth: number = 1200): boolean => {
+const UserScreenWidthIsLargerThan = (minWidth: number = 1200): boolean => {
   const [isWideScreen, setIsWideScreen] = React.useState<boolean>(
     window.innerWidth > minWidth
   );
@@ -14,4 +14,4 @@ const UserScreenWidth = (minWidth: number = 1200): boolean => {
   return isWideScreen;
 };
 
-export default UserScreenWidth;
+export default UserScreenWidthIsLargerThan;

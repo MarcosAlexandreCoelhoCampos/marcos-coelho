@@ -2,13 +2,13 @@ import React from 'react';
 import styles from './AirplaneWithText.module.scss';
 import componentsData from '../../../textContent/typescript/macroComponents.ts';
 import ComponentOnViewport from '../../../functions/ComponentOnViewport';
-import UserScreenWidth from '../../../functions/UserScreenWidth';
+import UserScreenWidthIsLargerThan from '../../../functions/UserScreenWidthIsLargerThan';
 
 const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
   const { AirplaneWithText } = componentsData;
   const containerRef = React.useRef<HTMLDivElement>(null);
   const isInViewport = ComponentOnViewport(containerRef);
-  const isDesktop = UserScreenWidth(1200);
+  const isDesktop = UserScreenWidthIsLargerThan(1200);
 
   return (
     <div

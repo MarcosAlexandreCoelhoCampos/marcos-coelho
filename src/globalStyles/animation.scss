@@ -1,0 +1,53 @@
+.animeToTopPreparation {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.animeToTop {
+  animation: animeToTopAnimation 1s forwards ease-in;
+}
+
+@keyframes animeToTopAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animeToBottomPrepartion {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.animeToBottom {
+  animation: animeToTopAnimation 0.8s forwards ease-in;
+}
+
+@keyframes animeToTopAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.animeFromNegativeLeftPreparation {
+  transform: translateX(-100vw);
+}
+.animeFromNegativeLeft {
+  animation: animeFromNegativeLeftAnimation 0.8s ease-in 0s forwards normal;
+}
+
+@keyframes animeFromNegativeLeftAnimation {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
