@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AirplaneWithText.module.scss';
-import componentsData from '../../../textContent/typescript/components.ts';
+import componentsData from '../../../textContent/typescript/macroComponents.ts';
 import ComponentOnViewport from '../../../functions/ComponentOnViewport';
 import UserScreenWidth from '../../../functions/UserScreenWidth';
 

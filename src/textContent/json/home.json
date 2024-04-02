@@ -43,7 +43,7 @@
         "subtitle": "Portfolio",
         "text": "Meu portfolio tem como objetivo mostrar minhas habilidades e projetos de forma criativa e nova.",
         "technologies": "React - Javascript - SCSS - HTML - Práticas de SEO - Figma - UX/UI",
-        "link": "Veja mais",
+        "link": "#",
         "image": {
           "src": "/home/portfolio.webp",
           "alt": "Imagem exemplo do meu portfolio, site que você está acessando agora",
@@ -56,7 +56,7 @@
         "subtitle": "Cabana do Coelho",
         "text": "O objetivo deste site é apresentar cabanas disponíveis para aluguel e fornecer meios de contato para interessados",
         "technologies": "Figma - HTML - CSS - Javascript",
-        "link": "Veja mais",
+        "link": "https://cabana-do-coelho.vercel.app/",
         "image": {
           "src": "/home/cabanadocoelho.webp",
           "alt": "Imagem exemplo do site Cabana Do Coelho",
@@ -69,7 +69,7 @@
         "subtitle": "WaterSurf",
         "text": "O objetivo deste site é chamar a atenção de clientes interessados em aulas de Surf.",
         "technologies": "Figma - HTML - CSS - JavaScript",
-        "link": "Veja mais",
+        "link": "https://water-surf.vercel.app/",
         "image": {
           "src": "/home/watersurf.webp",
           "alt": "Imagem exemplo do site Watersurf",
@@ -82,7 +82,7 @@
         "subtitle": "CoelhoGames",
         "text": "O objetivo deste site é mostrar a assistencia tecnica para trazer maior confianca de possiveis clientes.",
         "technologies": "Figma - HTML - CSS - BootStrap",
-        "link": "Veja mais",
+        "link": "https://coelhogames.vercel.app/",
         "image": {
           "src": "/home/coelhogames.webp",
           "alt": "Imagem exemplo do site CoelhoGames",

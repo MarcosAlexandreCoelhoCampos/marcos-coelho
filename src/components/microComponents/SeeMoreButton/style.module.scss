@@ -1,0 +1,12 @@
+.SeeMoreButton {
+  color: var(--color-primary-25);
+  padding: 5px 18px;
+  background-color: var(--color-tertiary-500);
+  border: 1px solid var(--color-primary-25);
+  width: max-content;
+  border-radius: 100px;
+  margin: auto auto 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

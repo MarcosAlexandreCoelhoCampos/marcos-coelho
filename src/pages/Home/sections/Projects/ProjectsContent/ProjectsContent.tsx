@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ProjectsContent.module.scss';
 import { ProjectData } from '../../../../../textContent/typescript/home';
+import SeeMoreButton from '../../../../../components/microComponents/SeeMoreButton';
 
 const ProjectsContent: React.FC<ProjectData> = ({
   subtitle,
@@ -13,22 +14,12 @@ const ProjectsContent: React.FC<ProjectData> = ({
     <div className={styles.ProjectsContent}>
       <div className={styles.ProjectsContentText}>
         <h3 className='font-contrast'>{subtitle}</h3>
-        <h4> </h4>
         <p>{text}</p>
         <div>
           <p>Ferramentas e Técnologias usadas:</p>
           <h4 className='font-mediumbutton'>{technologies}</h4>
         </div>
-        <a className='font-mediumbutton' href='#'>
-          {link}
-          <img
-            src={image.src}
-            alt={image.alt}
-            title={image.title}
-            width={image.width}
-            height={image.height}
-          />
-        </a>
+        <SeeMoreButton link={link} />
       </div>
       <div className={styles.ProjectsContentImage}>
         <img

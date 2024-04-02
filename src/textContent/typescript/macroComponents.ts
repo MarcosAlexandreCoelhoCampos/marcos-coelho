@@ -1,4 +1,4 @@
-import componentsJson from '../json/components.json';
+import componentsJson from '../json/macroComponents.json';
 
 export interface ComponentsData {
   TitleWithStar: TitleWithStarData;

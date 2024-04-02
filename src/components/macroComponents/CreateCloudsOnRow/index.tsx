@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CreateCloudsOnRow.module.scss';
 import UserScreenWidth from '../../../functions/UserScreenWidth';
-import componentsData from '../../../textContent/typescript/components';
+import componentsData from '../../../textContent/typescript/macroComponents';
 
 interface Props {
   containerBg?: string;
