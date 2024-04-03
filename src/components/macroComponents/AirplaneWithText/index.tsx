@@ -2,20 +2,30 @@ import React from 'react';
 import styles from './AirplaneWithText.module.scss';
 import componentsData from '../../../textContent/typescript/macroComponents.ts';
 import ComponentOnViewport from '../../../functions/ComponentOnViewport';
-import UserScreenWidthIsLargerThan from '../../../functions/UserScreenWidthIsLargerThan';
 
 const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
   const { AirplaneWithText } = componentsData;
   const containerRef = React.useRef<HTMLDivElement>(null);
   const isInViewport = ComponentOnViewport(containerRef);
-  const isDesktop = UserScreenWidthIsLargerThan(1200);
+  const [wasAnimated, setWasAnimated] = React.useState(false);
 
   // Veificar se é possivel fazer uma animação onde ele começa no scroll maximo do componente
   // e termina no inicio, assim mostrando que é um componente scrolavel e ao mesmo tempo
   // deixando bonito e interessante
 
+  React.useEffect(() => {
+    setWasAnimated(false);
+    const timer = setTimeout(() => setWasAnimated(isInViewport), 1200);
+    return () => clearTimeout(timer);
+  }, [isInViewport]);
+
   return (
-    <div ref={containerRef} className={`${styles.AirplaneWithTextContainer}`}>
+    <div
+      ref={containerRef}
+      className={`${styles.AirplaneWithTextContainer} ${
+        isInViewport && wasAnimated && styles.animationOverflow
+      }`}
+    >
       <div className={`${styles.AirplaneWithTextContent}`}>
         {texts.map((text, index) => (
           <div

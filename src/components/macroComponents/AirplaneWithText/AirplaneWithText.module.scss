@@ -1,7 +1,6 @@
 .AirplaneWithTextContainer {
   max-width: 100%;
-  overflow-x: auto;
-  padding: 0px 0px 36px 0px;
+  overflow-x: visible;
 
   &::-webkit-scrollbar {
     height: 10px;
@@ -22,20 +21,24 @@
   }
 
   @media screen and (pointer: coarse) and (max-width: 1200px) {
-    padding-bottom: 0px;
+    padding: 0px 16px 0 16px;
+    @media (min-width: 768px) {
+      padding: 0px 24px 0 24px;
+    }
     &::-webkit-scrollbar {
       display: none;
     }
-    transform: translateX(30px);
+  }
 
-    &.animate {
-      animation: AirplaneAnimate 1s linear both;
+  &.animationOverflow {
+    overflow-x: auto;
+    @media (pointer: fine) {
+      padding: 0px 0px 36px 0px;
     }
-    padding: 0px 16px 36px 16px;
+  }
 
-    @media (min-width: 768px) {
-      padding: 0px 24px 36px 24px;
-    }
+  @media (pointer: fine) {
+    padding: 0px 0px 46px 0px;
   }
 
   .AirplaneWithTextContent {
@@ -72,14 +75,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes AirplaneAnimate {
-  0% {
-    transform: translateX(30px);
-  }
-  100% {
-    transform: translateX(0px);
   }
 }
