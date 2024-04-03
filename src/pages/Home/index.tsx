@@ -10,8 +10,6 @@ import Knowledges from './sections/Knowledges';
 import ExtraLargeClousDivider from '../../components/macroComponents/ExtraLargeClousDivider/index.tsx';
 
 const Home: React.FC<{ data: SiteData }> = ({ data }) => {
-  document.body.style.backgroundColor = 'var(--color-primary-975)';
-
   return (
     <>
       <Head />

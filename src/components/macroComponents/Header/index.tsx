@@ -59,7 +59,9 @@ const Header: React.FC = () => {
       <MaxWidth>
         <div className={styles.container}>
           <div className={styles.containerLogo}>
-            <h2 className='font-logo'>MarcosCoelho</h2>
+            <a className='font-logo' href='/'>
+              MarcosCoelho
+            </a>
           </div>
           <div className={styles.containerNav}>
             <a
@@ -99,7 +101,7 @@ const Header: React.FC = () => {
                     <a
                       onClick={() => setmenuNavActive(false)}
                       className='font-nav'
-                      href='#about-me'
+                      href='/#about-me'
                     >
                       Sobre
                     </a>
@@ -108,7 +110,7 @@ const Header: React.FC = () => {
                     <a
                       onClick={() => setmenuNavActive(false)}
                       className='font-nav'
-                      href='#projects'
+                      href='/#projects'
                     >
                       Projetos
                     </a>
@@ -117,7 +119,7 @@ const Header: React.FC = () => {
                     <a
                       onClick={() => setmenuNavActive(false)}
                       className='font-nav'
-                      href='#experience'
+                      href='/#experience'
                     >
                       Experiencia
                     </a>
@@ -126,7 +128,7 @@ const Header: React.FC = () => {
                     <a
                       onClick={() => setmenuNavActive(false)}
                       className='font-nav'
-                      href='#academic-education'
+                      href='/#academic-education'
                     >
                       Formação
                     </a>
@@ -135,7 +137,7 @@ const Header: React.FC = () => {
                     <a
                       onClick={() => setmenuNavActive(false)}
                       className='font-nav'
-                      href='#contatc-ne'
+                      href='/#contatc-ne'
                     >
                       Contato
                     </a>

@@ -13,6 +13,11 @@
     justify-content: space-between;
     align-items: center;
 
+    .containerLogo * {
+      color: var(--color-primary-25);
+      line-height: 100%;
+    }
+
     .containerNav {
       display: flex;
 

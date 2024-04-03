@@ -1,3 +1,6 @@
+// React
+import React from 'react';
+
 //  Rotas
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -5,8 +8,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 
 // PAGES
-import Home from './pages/Home';
-import Page404 from './pages/Page404';
+const Home = React.lazy(() => import('./pages/Home'));
+const Page404 = React.lazy(() => import('./pages/Page404'));
+import Loading from './pages/Loading/index.tsx';
 
 //  HEADER AND FOOTER
 import Header from './components/macroComponents/Header';
@@ -27,14 +31,16 @@ Header
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <React.Suspense fallback={<Loading />}>
       <Header />
-      <Routes>
-        <Route path='/' element={<Home data={siteData} />} />
-        <Route path='/home' element={<Home data={siteData} />} />
-        <Route path='*' element={<Page404 />} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home data={siteData} />} />
+          <Route path='/home' element={<Home data={siteData} />} />
+          <Route path='*' element={<Page404 />} />
+        </Routes>
+      </BrowserRouter>
+    </React.Suspense>
   );
 };
 
