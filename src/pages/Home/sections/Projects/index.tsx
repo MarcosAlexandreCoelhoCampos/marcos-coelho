@@ -1,5 +1,5 @@
 import React from 'react';
-import TitleWithStar from '../../../../components/macroComponents/TitleWithStar';
+import TitleWithStar from '../../../../components/microComponents/TitleWithStar/index.tsx';
 import { ProjectsData } from '../../../../textContent/typescript/home.ts';
 import styles from './style.module.scss';
 import ProjectsContent from './ProjectContent';

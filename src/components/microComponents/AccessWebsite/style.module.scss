@@ -1,12 +1,14 @@
 .AccessWebsite {
-  color: var(--color-primary-25);
+  color: var(--color-primary-50);
   padding: 5px 18px;
-  background-color: var(--color-tertiary-500);
-  border: 1px solid var(--color-primary-25);
-  width: max-content;
+  background-color: var(--color-tertiary-600);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   border-radius: 100px;
   margin: auto auto 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }

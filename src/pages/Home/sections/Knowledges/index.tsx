@@ -1,5 +1,5 @@
 import styles from './style.module.scss';
-import TitleWithStar from '../../../../components/macroComponents/TitleWithStar';
+import TitleWithStar from '../../../../components/microComponents/TitleWithStar/index.tsx';
 import { KnowledgesData } from '../../../../textContent/typescript/home.ts';
 import AirplaneWithText from '../../../../components/macroComponents/AirplaneWithText';
 import MaxWidth from '../../../../components/macroComponents/MaxWidth';

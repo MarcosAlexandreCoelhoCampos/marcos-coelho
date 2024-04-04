@@ -8,6 +8,7 @@ import AboutMe from './sections/AboutMe';
 import Projects from './sections/Projects';
 import Knowledges from './sections/Knowledges';
 import ExtraLargeClousDivider from '../../components/macroComponents/ExtraLargeClousDivider/index.tsx';
+import ExperienceAndAcademic from './sections/ExperienceAndAcademic/index.tsx';
 
 const Home: React.FC<{ data: SiteData }> = ({ data }) => {
   return (
@@ -20,6 +21,7 @@ const Home: React.FC<{ data: SiteData }> = ({ data }) => {
       <CloudsDivider />
       <Projects data={data.Projects} />
       <ExtraLargeClousDivider />
+      <ExperienceAndAcademic />
     </>
   );
 };
