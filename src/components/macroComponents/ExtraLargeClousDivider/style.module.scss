@@ -1,13 +1,24 @@
 .ExtraLargeClousDivider {
   width: 100%;
   overflow: hidden;
-  height: 300px;
+  height: 100px;
+  @media (min-width: 768px) {
+    height: 200px;
+  }
+  @media (min-width: 1200px) {
+    height: 275px;
+  }
+  @media (min-width: 1400px) {
+    height: calc(200px + 5vw + 5vh);
+  }
+
   background-color: var(--color-primary-750);
   position: relative;
 
   .ExtraLargeClousImages {
     position: absolute;
     bottom: 0px;
+    width: min-content;
   }
 
   .ExtraLargeClousImages:nth-child(1) {
@@ -19,11 +30,11 @@
   }
   .ExtraLargeClousImages:nth-child(3) {
     height: 58%;
-    left: 0;
+    left: -5%;
   }
   .ExtraLargeClousImages:nth-child(4) {
     height: 58%;
-    right: 0;
+    right: -5%;
   }
 
   /*   .ExtraLargeClousImages:nth-child(2) {
