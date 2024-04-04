@@ -24,6 +24,9 @@ Ajustar Aviões, para que eles não tenham MaxWidth no mobile
 Ajustar Typagens (importar typagens que estão locais)
 Separar componentes em componentes micro e os separar os macros que não serão reutilizados em suas devidas seções
 
+Verificar todos os componentes que usam UserScreenWidthIsLargerThan para  saber se eles estão
+realmente agindo como deveriam
+
 EXISTEM ANOTAÇÕES NOS COMPONENTES:
 CreateStarsOnContainer
 Header

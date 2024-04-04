@@ -5,6 +5,8 @@
   gap: 16px;
   border-radius: 25px;
   overflow: hidden;
+  width: 100%;
+  max-width: 500px;
   @media (min-width: 768px) {
     max-width: 360px;
     display: grid;
@@ -13,7 +15,7 @@
   @media (min-width: 1200px) {
     max-width: 100%;
     display: grid;
-    grid-template-rows: auto 0.5fr;
+    grid-template-rows: min-content auto;
   }
   &:nth-child(even) {
     @media (min-width: 768px) {
@@ -24,7 +26,7 @@
   }
   &:nth-child(even) {
     @media (min-width: 1200px) {
-      grid-template-rows: 0.5fr auto;
+      grid-template-rows: auto min-content;
       .ProjectContentImage {
         order: -1;
       }

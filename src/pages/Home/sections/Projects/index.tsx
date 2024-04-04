@@ -9,8 +9,8 @@ import SeeMoreButton from '../../../../components/microComponents/SeeMoreButton'
 
 const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
   const [seeMoreMobileActive, setSeeMoreMobileActive] = React.useState(false);
-  const UserScreenWidthIsLargerThan1200 = UserScreenWidthIsLargerThan(1200);
-  const UserScreenWidthIsLargerThan768 = UserScreenWidthIsLargerThan(768);
+  const UserScreenWidthIsLargerThan1200 = UserScreenWidthIsLargerThan(1199);
+  const UserScreenWidthIsLargerThan768 = UserScreenWidthIsLargerThan(767);
   return (
     <section className={styles.projectsSection} id='projects'>
       <MaxWidth>
@@ -46,7 +46,7 @@ const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
             />;
           })}
         </div>
-        {!UserScreenWidthIsLargerThan(1200) && (
+        {!UserScreenWidthIsLargerThan(1199) && (
           <SeeMoreButton
             action={() => setSeeMoreMobileActive(!seeMoreMobileActive)}
             actived={seeMoreMobileActive}
