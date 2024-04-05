@@ -1,0 +1,13 @@
+.experienceContainer {
+  .experienceContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    @media (min-width: 768px) {
+      gap: 70px;
+    }
+  }
+}

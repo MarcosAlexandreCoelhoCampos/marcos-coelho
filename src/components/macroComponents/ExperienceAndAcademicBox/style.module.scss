@@ -7,6 +7,8 @@
   }
   gap: 15px 10px;
 
+  background-color: #01002641;
+
   grid-template-areas:
     'info1 info3'
     'text info3'
@@ -22,6 +24,12 @@
   .text,
   .button {
     margin: 0 15px;
+  }
+
+  .info1,
+  .info2,
+  .info3 {
+    background-color: #00000041;
   }
 
   .info1 {

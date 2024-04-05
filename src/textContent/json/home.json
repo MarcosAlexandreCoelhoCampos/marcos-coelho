@@ -92,5 +92,54 @@
         }
       }
     ]
-  }
+  },
+  "ExperienceAndAcademic": [
+    {
+      "title": "Experiência",
+      "experiences": [
+        {
+          "info1": "OI S&A",
+          "info2": "05/2023 - Momento",
+          "info3": "Ass. de Desenvolvimento",
+          "texts": [
+            "Minha atuação é centrada no desenvolvimento de sites, com ênfase em landing pages e páginas dedicadas à experiência do usuário no download de faturas. Essa experiência me proporcionou aprofundar meus conhecimentos em React, práticas de versionamento de código e obter uma visão ainda mais abrangente dos serviços relacionados a sites."
+          ]
+        },
+        {
+          "info1": "G&P",
+          "info2": "01/2023 - 05/2023",
+          "info3": "Auxiliar de T.I",
+          "texts": [
+            "Participação no projeto Acelera G&P PCD, um programa de aprimoramento e capacitação que incluiu cursos focados no desenvolvimento de habilidades em front-end, bem como aulas diárias com um dos arquitetos de sistemas da empresa."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Formação",
+      "titleReverse": true,
+      "experiences": [
+        {
+          "info1": "UNICSUL",
+          "info2": "Superior",
+          "info3": "Análise e Desenvolvimento de Sistemas",
+          "texts": [
+            "Atualmente em formação na Universidade Cruzeiro do Sul, estou adquirindo uma sólida base em programação, banco de dados e engenharia de software.",
+            "Inicio: 01/02/2023",
+            "Término previsto: 15/12/2024"
+          ]
+        },
+        {
+          "info1": "Origamid",
+          "info2": "Curso Online",
+          "info3": "Auxiliar de T.I",
+          "texts": [
+            "Lorem ipsum dolor sit amet consectetur. Sit et laoreet at nulla. Pulvinar non justo sed velit odio non nec sed. Sollicitudin turpis eleifend ipsum dolor sit amet consectetur. Sit et laoreet at nulla. "
+          ],
+          "buttonText": "Certificado",
+          "buttonLink": "#"
+        }
+      ]
+    }
+  ]
 }

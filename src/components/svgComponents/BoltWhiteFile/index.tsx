@@ -9,15 +9,15 @@ const BoltWhiteFile: React.FC<BoltWhiteFileProp> = ({
 }) => {
   return (
     <svg
-      width='167'
+      width='140'
       height='889'
-      viewBox='0 0 167 889'
+      viewBox='0 0 140 889'
       fill={fill}
-      xmlns='http://www.w3.org/2000/svg'
       className={className}
+      xmlns='http://www.w3.org/2000/svg'
     >
       <path
-        d='M100.963 0.5L75.5013 352.725L75.4487 353.453L76.1464 353.239L166.295 325.636L24.1962 882.292L71.4973 424.837L71.6233 423.619L70.6808 424.4L0.626009 482.498L51.45 0.5H76H100.963Z'
+        d='M84.5586 0.5L63.2135 352.731L63.1673 353.493L63.8841 353.231L139.322 325.678L20.4731 881.042L60.0191 424.828L60.1366 423.473L59.1693 424.43L0.618177 482.352L43.2122 0.5H63.7126H84.5586Z'
         stroke='white'
       />
     </svg>

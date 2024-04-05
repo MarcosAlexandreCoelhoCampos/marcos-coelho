@@ -5,6 +5,7 @@ export interface SiteData {
   AboutMe: AboutMeData;
   Knowledges: KnowledgesData;
   Projects: ProjectsData;
+  ExperienceAndAcademic: ExperienceAndAcademicData[];
 }
 
 export interface BannerData {
@@ -32,7 +33,22 @@ export interface ProjectData {
   text: string;
   link: string;
   image: Image;
-  seeMoreMobileActived: boolean;
+  seeMoreMobileActived?: boolean;
+}
+
+export interface AcademicExperience {
+  info1: string;
+  info2: string;
+  info3: string;
+  texts: string[];
+  buttonText?: string;
+  buttonLink?: string;
+}
+
+export interface ExperienceAndAcademicData {
+  title: string;
+  titleReverse?: boolean;
+  experiences: AcademicExperience[];
 }
 
 interface Image {
