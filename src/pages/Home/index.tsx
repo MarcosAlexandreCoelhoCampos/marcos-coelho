@@ -16,11 +16,13 @@ const Home: React.FC<{ data: SiteData }> = ({ data }) => {
       <Head />
       <Banner data={data.Banner} />
       <AboutMe data={data.AboutMe} />
-      <CreateCloudsOnRow containerBg='var(--color-primary-800)' />
+      <CreateCloudsOnRow containerBg='var(--color-primary-750)' />
       <Knowledges data={data.Knowledges} />
-      <CloudsDivider />
+      <CloudsDivider style={{ backgroundColor: 'var(--color-primary-750)' }} />
       <Projects data={data.Projects} />
-      <ExtraLargeClousDivider />
+      <ExtraLargeClousDivider
+        style={{ backgroundColor: 'var(--color-primary-650)' }}
+      />
       <ExperienceAndAcademic data={data.ExperienceAndAcademic} />
     </>
   );

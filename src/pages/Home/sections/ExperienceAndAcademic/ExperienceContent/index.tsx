@@ -8,7 +8,7 @@ const ExperienceContent: React.FC<{ data: ExperienceAndAcademicData }> = ({
 }) => {
   return (
     <div className={styles.experienceContainer}>
-      <TitleWithStar reverse={data.titleReverse}> Experiência </TitleWithStar>
+      <TitleWithStar reverse={data.titleReverse}> {data.title} </TitleWithStar>
 
       <div className={styles.experienceContent}>
         {data.experiences.map((experience, index) => (

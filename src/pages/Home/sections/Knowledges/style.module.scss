@@ -1,8 +1,5 @@
 .knowledgesSection {
-  background: linear-gradient(
-    var(--color-primary-800) 10%,
-    var(--color-primary-750)
-  );
+  background: var(--color-primary-750);
   max-width: 100%;
   overflow: hidden;
   @media screen and (pointer: coarse) and (max-width: 1200px) {

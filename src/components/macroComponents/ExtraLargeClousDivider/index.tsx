@@ -1,8 +1,11 @@
+import React from 'react';
 import styles from './style.module.scss';
 
-const ExtraLargeClousDivider = () => {
+const ExtraLargeClousDivider: React.FC<{ style: React.CSSProperties }> = ({
+  style,
+}) => {
   return (
-    <div className={styles.ExtraLargeClousDivider}>
+    <div className={styles.ExtraLargeClousDivider} style={style}>
       <img
         src='./icons/cloud/extra-large/extra-large-cloud-white.svg'
         alt=''

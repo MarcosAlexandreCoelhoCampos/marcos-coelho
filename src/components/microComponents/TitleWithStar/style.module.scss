@@ -12,8 +12,10 @@
     align-self: center;
   }
 
-  &.TitleWithStarContentReverse {
-    flex-direction: row-reverse;
+  @media (max-width: 768px) {
+    &.TitleWithStarContentReverse {
+      flex-direction: row-reverse;
+    }
   }
 
   @media (min-width: 1200px) {

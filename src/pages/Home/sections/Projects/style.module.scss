@@ -1,5 +1,8 @@
 .projectsSection {
-  background: linear-gradient(#0a0b6f 10%, var(--color-primary-750));
+  background: linear-gradient(
+    var(--color-primary-750) 10%,
+    var(--color-primary-650)
+  );
   .projectsContent {
     display: flex;
     justify-content: center;
