@@ -1,4 +1,5 @@
 // import React from "react";
+import MaxWidth from '../MaxWidth';
 import styles from './style.module.scss';
 
 const Footer = ({ backgroundWaves = '#0E2D7B' }) => {
@@ -9,54 +10,74 @@ const Footer = ({ backgroundWaves = '#0E2D7B' }) => {
         style={{ backgroundColor: backgroundWaves }}
       >
         <div className={styles.waves}>
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
         </div>
       </div>
       <footer className={styles.footer}>
-        <nav>
-          <ul>
-            <li>
-              <a href='#'> Sobre </a>
-            </li>
-            <li>
-              <a href='#'> Conhecimento </a>
-            </li>
-            <li>
-              <a href='#'> Projetos </a>
-            </li>
-            <li>
-              <a href='#'> Formação </a>
-            </li>
-          </ul>
-        </nav>
-        <div className={''}>
-          <p className='font-logo'> MarcosCoelho</p>
-          <p> Programador e Designer </p>
-          <nav>
-            <ul>
+        <MaxWidth className={styles.footerMaxWidth}>
+          <nav className={styles.footerContainer}>
+            <ul className={styles.footerLinks}>
               <li>
-                <a href='#'>
-                  <img src='#' alt='Email' />
+                <a href='#' className={'font-nav'}>
+                  Sobre
                 </a>
               </li>
               <li>
-                <a href='#'>
-                  <img src='#' alt='Linkedin' />
+                <a href='#' className={'font-nav'}>
+                  Conhecimento
                 </a>
               </li>
               <li>
-                <a href='#'>
-                  <img src='#' alt='Whatsapp' />
+                <a href='#' className={'font-nav'}>
+                  Projetos
+                </a>
+              </li>
+              <li>
+                <a href='#' className={'font-nav'}>
+                  Formação
                 </a>
               </li>
             </ul>
           </nav>
-        </div>
+          <div className={`${styles.footerContainer}`}>
+            <div className={styles.footerContent}>
+              <p className={`font-logo ${styles.footerLogo}`}> MarcosCoelho</p>
+              <p className={`${styles.footerTextDetail} font-nav`}>
+                Programador e Designer
+              </p>
+              <nav>
+                <ul className={styles.footerSocialMedias}>
+                  <li>
+                    <a href='#'>
+                      <img src='/icons/social-medias/email.svg' alt='Email' />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#'>
+                      <img
+                        src='/icons/social-medias/linkedin.svg'
+                        alt='Linkedin'
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#'>
+                      <img
+                        src='/icons/social-medias/whatsapp.svg'
+                        alt='Whatsapp'
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </MaxWidth>
       </footer>
     </>
   );

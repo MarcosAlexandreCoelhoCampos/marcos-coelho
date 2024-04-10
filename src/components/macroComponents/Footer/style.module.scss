@@ -1,12 +1,100 @@
 .footer {
+  padding: 50px 0;
   max-width: 100%;
   background-color: var(--color-primary-900);
+  p + p {
+    margin-top: 0px;
+  }
+  .footerMaxWidth {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .footerContainer {
+    display: grid;
+    justify-content: space-between;
+    height: 100%;
+    grid-template-columns: 5px auto 5px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 5px auto 5px;
+      width: 100%;
+      gap: 50px;
+      justify-content: initial;
+    }
+
+    &:after {
+      content: '';
+      display: flex;
+      width: 5px;
+      height: 100%;
+      background-color: var(--color-primary-25);
+      border-radius: 100px;
+    }
+    &:before {
+      content: '';
+      display: flex;
+      width: 5px;
+      height: 100%;
+      background-color: var(--color-primary-25);
+      border-radius: 100px;
+    }
+
+    .footerLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      a {
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+        color: var(--color-primary-25);
+        gap: 2px;
+        &:after {
+          content: '';
+          display: flex;
+          width: 100%;
+          height: 2px;
+          background-color: var(--color-tertiary-550);
+          border-radius: 100px;
+        }
+      }
+    }
+
+    .footerLogo {
+      text-align: center;
+    }
+    .footerTextDetail {
+      text-align: center;
+      color: var(--color-primary-700);
+      margin-bottom: 20px;
+    }
+    .footerSocialMedias {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      gap: 21px;
+    }
+  }
+  @media (min-width: 768px) {
+    .footerContainer + .footerContainer {
+      grid-template-columns: auto 5px;
+      &:before {
+        display: none;
+      }
+    }
+  }
 }
 
 .wavesContainer {
   width: 100vw;
   max-width: 100%;
-  height: 56px;
+  height: 64px;
   overflow: hidden;
   .waves {
     display: flex;
@@ -15,18 +103,16 @@
     & > img + img {
       margin-left: -8px;
     }
-    animation: RollingWavesAnimation 25s linear infinite;
+    animation: RollingWavesAnimation 45s linear infinite;
   }
 }
 
 @keyframes RollingWavesAnimation {
   0% {
-    transform: translateX(-1032px) translateY(2px);
+    transform: translateX(-1032px);
   }
-  50% {
-    transform: translateX(-516px) translateY(32px);
-  }
+
   100% {
-    transform: translateX(0) translateY(2px);
+    transform: translateX(0);
   }
 }
