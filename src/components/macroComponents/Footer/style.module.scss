@@ -54,7 +54,7 @@
         flex-direction: column;
         width: min-content;
         color: var(--color-primary-25);
-        gap: 2px;
+        gap: 5px;
         &:after {
           content: '';
           display: flex;
@@ -94,12 +94,11 @@
 .wavesContainer {
   width: 100vw;
   max-width: 100%;
-  height: 64px;
+  height: 52px;
   overflow: hidden;
   .waves {
     display: flex;
     gap: 0px;
-    height: 64px;
     & > img + img {
       margin-left: -8px;
     }
@@ -109,10 +108,10 @@
 
 @keyframes RollingWavesAnimation {
   0% {
-    transform: translateX(-1032px);
+    transform: translateX(-1548px);
   }
 
   100% {
-    transform: translateX(0);
+    transform: translateX();
   }
 }

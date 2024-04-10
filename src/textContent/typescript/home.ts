@@ -40,6 +40,7 @@ export interface AcademicExperience {
   info1: string;
   info2: string;
   info3: string;
+  info3Mobile?: string;
   texts: string[];
   buttonText?: string;
   buttonLink?: string;

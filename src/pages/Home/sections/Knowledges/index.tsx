@@ -6,7 +6,7 @@ import MaxWidth from '../../../../components/macroComponents/MaxWidth';
 
 const Knowledges: React.FC<{ data: KnowledgesData }> = ({ data }) => {
   return (
-    <section className={styles.knowledgesSection}>
+    <section className={styles.knowledgesSection} id='knowledges'>
       <MaxWidth>
         <TitleWithStar> {data.title} </TitleWithStar>
       </MaxWidth>

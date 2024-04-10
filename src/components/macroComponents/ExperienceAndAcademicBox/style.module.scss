@@ -12,8 +12,29 @@
   grid-template-areas:
     'info1 info3'
     'text info3'
-    'button info3'
     'info2 info3';
+
+  &.buttonExists {
+    grid-template-areas:
+      'info1 info3'
+      'text info3'
+      'button info3'
+      'info2 info3';
+  }
+  @media (min-width: 1200px) {
+    grid-template-areas:
+      'info1 info2'
+      'text text'
+      'info3 info3';
+
+    &.buttonExists {
+      grid-template-areas:
+        'info1 info2'
+        'text text'
+        'button button'
+        'info3 info3';
+    }
+  }
 
   * {
     display: flex;
@@ -21,7 +42,7 @@
     justify-content: center;
   }
 
-  .text,
+  .texts,
   .button {
     margin: 0 15px;
   }
@@ -39,6 +60,7 @@
     border-radius: 30px 0 30px 0;
     width: max-content;
     padding: 8px 25px;
+    height: min-content;
   }
   .info2 {
     grid-area: info2;
@@ -48,29 +70,9 @@
     width: max-content;
     margin-right: auto;
     padding: 8px 25px;
-  }
-  .info3 {
-    grid-area: info3;
-    border-left: 2px solid var(--color-primary-25);
-    writing-mode: vertical-lr;
-    padding: 10px 6px;
-    border-radius: 0 30px 30px 0;
-  }
-  .text {
-    grid-area: text;
-  }
-  .button {
-    grid-area: button;
-  }
-
-  @media (min-width: 1200px) {
-    grid-template-areas:
-      'info1 info2'
-      'text text'
-      'button button'
-      'info3 info3';
-
-    .info2 {
+    height: min-content;
+    margin-top: auto;
+    @media (min-width: 1200px) {
       border-top: initial;
       border-right: initial;
       border-left: 2px solid var(--color-primary-25);
@@ -80,11 +82,39 @@
       margin-left: auto;
       margin-right: 0px;
     }
-    .info3 {
+  }
+
+  .info3 {
+    grid-area: info3;
+    border-left: 2px solid var(--color-primary-25);
+    writing-mode: vertical-lr;
+    padding: 10px 6px;
+    border-radius: 0 30px 30px 0;
+    &.info3.info3Desktop {
+      display: none;
+    }
+    @media (min-width: 1200px) {
       border-left: initial;
       border-top: 2px solid var(--color-primary-25);
       border-radius: 0 0 30px 30px;
       writing-mode: initial;
+      &.info3.info3Desktop {
+        display: flex;
+      }
+      &.info3.info3Mobile {
+        display: none;
+      }
     }
+  }
+
+  .texts {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .button {
+    grid-area: button;
   }
 }

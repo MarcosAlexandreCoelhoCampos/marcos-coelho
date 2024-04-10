@@ -7,14 +7,23 @@ const ExperienceAndAcademicBox: React.FC<AcademicExperience> = ({
   info2,
   info3,
   texts,
+  info3Mobile,
   buttonText,
   buttonLink,
 }) => {
   return (
-    <div className={styles.experienceAndAcademicBox}>
+    <div
+      className={`${styles.experienceAndAcademicBox} ${
+        buttonLink && buttonLink && styles.buttonExists
+      }`}
+    >
       <p className={`${styles.info1} font-bigtext`}> {info1} </p>
       <p className={`${styles.info2} font-bigtext`}> {info2} </p>
-      <p className={`${styles.text}`}>{texts}</p>
+      <div className={styles.texts}>
+        {texts.map((text) => (
+          <p>{text}</p>
+        ))}
+      </div>
       {buttonText && buttonLink && (
         <SeeMoreClean
           href={buttonText}
@@ -23,7 +32,18 @@ const ExperienceAndAcademicBox: React.FC<AcademicExperience> = ({
         />
       )}
 
-      <h3 className={`${styles.info3} font-bigtext`}>{info3}</h3>
+      <h3
+        className={`${styles.info3} ${
+          info3Mobile && styles.info3Desktop
+        } font-bigtext`}
+      >
+        {info3}
+      </h3>
+      {info3Mobile && (
+        <h3 className={`${styles.info3Mobile} ${styles.info3} font-bigtext`}>
+          {info3Mobile}
+        </h3>
+      )}
     </div>
   );
 };

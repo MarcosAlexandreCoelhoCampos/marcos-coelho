@@ -10,35 +10,39 @@ const Footer = ({ backgroundWaves = '#0E2D7B' }) => {
         style={{ backgroundColor: backgroundWaves }}
       >
         <div className={styles.waves}>
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
-          <img src='/icons/waves/waves.svg' alt='' width='352' height='132' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
+          <img src='/icons/waves/waves.svg' alt='' width='352' height='64' />
         </div>
       </div>
-      <footer className={styles.footer}>
+      <footer className={styles.footer} id='footer'>
         <MaxWidth className={styles.footerMaxWidth}>
           <nav className={styles.footerContainer}>
             <ul className={styles.footerLinks}>
               <li>
-                <a href='#' className={'font-nav'}>
+                <a href='#about-me' className={'font-nav'}>
                   Sobre
                 </a>
               </li>
               <li>
-                <a href='#' className={'font-nav'}>
+                <a href='#knowledges' className={'font-nav'}>
                   Conhecimento
                 </a>
               </li>
               <li>
-                <a href='#' className={'font-nav'}>
+                <a href='#projects' className={'font-nav'}>
                   Projetos
                 </a>
               </li>
               <li>
-                <a href='#' className={'font-nav'}>
+                <a href='#experience' className={'font-nav'}>
                   Formação
                 </a>
               </li>
@@ -53,12 +57,15 @@ const Footer = ({ backgroundWaves = '#0E2D7B' }) => {
               <nav>
                 <ul className={styles.footerSocialMedias}>
                   <li>
-                    <a href='#'>
+                    <a target='_blank' href='mailto:marcooscampos@hotmail.com'>
                       <img src='/icons/social-medias/email.svg' alt='Email' />
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
+                    <a
+                      target='_blank'
+                      href='https://www.linkedin.com/in/marcos-alexandre-coelho-campos-pcd/'
+                    >
                       <img
                         src='/icons/social-medias/linkedin.svg'
                         alt='Linkedin'
@@ -66,7 +73,7 @@ const Footer = ({ backgroundWaves = '#0E2D7B' }) => {
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
+                    <a target='_blank' href='https://wa.me/5548984515046'>
                       <img
                         src='/icons/social-medias/whatsapp.svg'
                         alt='Whatsapp'

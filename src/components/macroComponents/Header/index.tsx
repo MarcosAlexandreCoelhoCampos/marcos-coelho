@@ -110,6 +110,15 @@ const Header: React.FC = () => {
                     <a
                       onClick={() => setmenuNavActive(false)}
                       className='font-nav'
+                      href='/#knowledges'
+                    >
+                      Conhecimentos
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      onClick={() => setmenuNavActive(false)}
+                      className='font-nav'
                       href='/#projects'
                     >
                       Projetos
@@ -128,7 +137,7 @@ const Header: React.FC = () => {
                     <a
                       onClick={() => setmenuNavActive(false)}
                       className='font-nav'
-                      href='/#academic-education'
+                      href='/#experience'
                     >
                       Formação
                     </a>
@@ -137,7 +146,7 @@ const Header: React.FC = () => {
                     <a
                       onClick={() => setmenuNavActive(false)}
                       className='font-nav'
-                      href='/#contatc-ne'
+                      href='/#footer'
                     >
                       Contato
                     </a>

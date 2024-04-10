@@ -17,6 +17,7 @@ const ExperienceContent: React.FC<{ data: ExperienceAndAcademicData }> = ({
             info1={experience.info1}
             info2={experience.info2}
             info3={experience.info3}
+            info3Mobile={experience.info3Mobile}
             texts={experience.texts}
           />
         ))}
