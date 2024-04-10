@@ -1,0 +1,34 @@
+<svg width='352' height='64' xmlns='http://www.w3.org/2000/svg'>
+          <g filter='url(#filter0_d_262_660)'>
+            <path
+              d='M4 54.9219L348 55.4219V0.921875C348 0.921875 298.639 50.9219 262 50.9219C225.361 50.9219 176 0.921875 176 0.921875C176 0.921875 126.639 50.9219 90 50.9219C53.3609 50.9219 4 0.921875 4 0.921875V54.9219Z'
+              fill='#010026'
+            />
+            <path
+              d='M176 1C240.334 63.9072 278 63.5 348 1V4C277.725 67.3156 240.104 67.0014 176 4V1Z'
+              fill='#EDFAFF'
+            />
+            <path
+              d='M4 1C68.3341 63.9072 106 63.5 176 1V4C105.725 67.3156 68.1035 67.0014 4 4V1Z'
+              fill='#EDFAFF'
+            />
+          </g>
+          <defs>
+            <filter
+              id='filter0_d_262_660'
+              x='0'
+              y='0.921875'
+              width='352'
+              height='62.5'
+              filterUnits='userSpaceOnUse'
+              color-interpolation-filters='sRGB'
+            >
+              <feBlend
+                mode='normal'
+                in='SourceGraphic'
+                in2='effect1_dropShadow_262_660'
+                result='shape'
+              />
+            </filter>
+          </defs>
+        </svg>

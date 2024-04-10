@@ -1,0 +1,32 @@
+.footer {
+  max-width: 100%;
+  background-color: var(--color-primary-900);
+}
+
+.wavesContainer {
+  width: 100vw;
+  max-width: 100%;
+  height: 56px;
+  overflow: hidden;
+  .waves {
+    display: flex;
+    gap: 0px;
+    height: 64px;
+    & > img + img {
+      margin-left: -8px;
+    }
+    animation: RollingWavesAnimation 25s linear infinite;
+  }
+}
+
+@keyframes RollingWavesAnimation {
+  0% {
+    transform: translateX(-1032px) translateY(2px);
+  }
+  50% {
+    transform: translateX(-516px) translateY(32px);
+  }
+  100% {
+    transform: translateX(0) translateY(2px);
+  }
+}

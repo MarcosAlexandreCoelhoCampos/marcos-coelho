@@ -17,6 +17,7 @@ import Header from './components/macroComponents/Header';
 
 //  JSON e TYPESCRIPT
 import siteData from './textContent/typescript/home.ts';
+import Footer from './components/macroComponents/Footer/index.tsx';
 
 /* 
 Ajustar tab, está com foco no menu ao iniciar
@@ -43,6 +44,7 @@ const App = () => {
           <Route path='*' element={<Page404 />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </React.Suspense>
   );
 };
