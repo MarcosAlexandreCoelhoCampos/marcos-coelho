@@ -10,14 +10,14 @@ import './index.css';
 // PAGES
 const Home = React.lazy(() => import('./pages/Home'));
 const Page404 = React.lazy(() => import('./pages/Page404'));
-import Loading from './pages/Loading/index.tsx';
+import Loading from './components/macroComponents/Loading/index.tsx';
 
 //  HEADER AND FOOTER
 import Header from './components/macroComponents/Header';
 
 //  JSON e TYPESCRIPT
 import siteData from './textContent/typescript/home.ts';
-import Footer from './components/macroComponents/Footer/index.tsx';
+import page404Data from './textContent/typescript/page404.ts';
 
 /* 
 Ajustar tab, está com foco no menu ao iniciar
@@ -41,10 +41,12 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home data={siteData} />} />
           <Route path='/home' element={<Home data={siteData} />} />
-          <Route path='*' element={<Page404 />} />
+          <Route
+            path='*'
+            element={<Page404 data={page404Data.Page404Content} />}
+          />
         </Routes>
       </BrowserRouter>
-      <Footer />
     </React.Suspense>
   );
 };

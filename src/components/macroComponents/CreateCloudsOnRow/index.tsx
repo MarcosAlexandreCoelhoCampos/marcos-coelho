@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CreateCloudsOnRow.module.scss';
 import UserScreenWidthIsLargerThan from '../../../functions/UserScreenWidthIsLargerThan';
-import componentsData from '../../../textContent/typescript/macroComponents';
+import macroComponentsData from '../../../textContent/typescript/macroComponents';
 
 interface Props {
   containerBg?: string;
@@ -12,7 +12,7 @@ const CreateCloudsOnRow: React.FC<Props> = ({
   containerBg = 'null',
   animationTimeDuration = 1,
 }) => {
-  const { cloudsSrc } = componentsData.CreateCloudsOnRow;
+  const { cloudsSrc } = macroComponentsData.CreateCloudsOnRow;
   const [cloudsRow1, setCloudsRow1] = React.useState<React.ReactNode>([]);
   const [cloudsRow2, setCloudsRow2] = React.useState<React.ReactNode>([]);
   const cloudsNum = !UserScreenWidthIsLargerThan(768) ? 4 : 11;

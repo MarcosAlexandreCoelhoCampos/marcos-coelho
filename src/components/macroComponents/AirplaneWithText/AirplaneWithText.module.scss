@@ -57,7 +57,10 @@
       display: flex;
       align-items: center;
       gap: 2px;
-
+      img {
+        pointer-events: none;
+        user-select: none;
+      }
       p {
         min-width: 122px;
         width: 35vw;

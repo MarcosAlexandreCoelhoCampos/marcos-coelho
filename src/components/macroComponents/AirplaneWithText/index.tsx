@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './AirplaneWithText.module.scss';
-import componentsData from '../../../textContent/typescript/macroComponents.ts';
+import macroComponentsData from '../../../textContent/typescript/macroComponents.ts';
 import ComponentOnViewport from '../../../functions/ComponentOnViewport';
 
 const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
-  const { AirplaneWithText } = componentsData;
+  const { AirplaneWithText } = macroComponentsData;
   const containerRef = React.useRef<HTMLDivElement>(null);
   const isInViewport = ComponentOnViewport(containerRef);
   const [wasAnimated, setWasAnimated] = React.useState(false);

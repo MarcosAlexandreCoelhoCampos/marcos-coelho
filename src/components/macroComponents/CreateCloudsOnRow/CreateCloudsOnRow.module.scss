@@ -4,14 +4,14 @@
   overflow-x: hidden;
   max-width: 100%;
   min-height: 122px;
+  pointer-events: none;
   user-select: none;
-}
-
-.cloudsRow {
-  display: flex;
-  gap: 118px;
-  &:first-child {
-    bottom: 0px;
-    margin-left: 118px;
+  .cloudsRow {
+    display: flex;
+    gap: 118px;
+    &:first-child {
+      bottom: 0px;
+      margin-left: 118px;
+    }
   }
 }

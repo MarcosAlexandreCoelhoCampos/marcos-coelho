@@ -1,6 +1,6 @@
-import componentsJson from '../json/macroComponents.json';
+import macroComponentsJson from '../json/macroComponents.json';
 
-export interface ComponentsData {
+export interface MacroComponentsData {
   TitleWithStar: TitleWithStarData;
   CreateCloudsOnRow: CreateCloudsOnRowData;
   CreateStarsOnContainer: CreateStarsOnContainerData;
@@ -31,5 +31,6 @@ interface Image {
   height: number;
 }
 
-const componentsData: ComponentsData = componentsJson as ComponentsData;
-export default componentsData;
+const macroComponentsData: MacroComponentsData =
+  macroComponentsJson as MacroComponentsData;
+export default macroComponentsData;

@@ -20,8 +20,8 @@ const ExperienceAndAcademicBox: React.FC<AcademicExperience> = ({
       <p className={`${styles.info1} font-bigtext`}> {info1} </p>
       <p className={`${styles.info2} font-bigtext`}> {info2} </p>
       <div className={styles.texts}>
-        {texts.map((text) => (
-          <p>{text}</p>
+        {texts.map((text, index) => (
+          <p key={index}>{text}</p>
         ))}
       </div>
       {buttonText && buttonLink && (

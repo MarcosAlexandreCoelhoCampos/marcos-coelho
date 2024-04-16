@@ -4,6 +4,7 @@
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
   user-select: none;
+  pointer-events: none;
 }
 
 @keyframes starAnimation {

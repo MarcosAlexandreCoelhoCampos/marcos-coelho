@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.scss';
-import componentsData from '../../../textContent/typescript/macroComponents';
+import macroComponentsData from '../../../textContent/typescript/macroComponents';
 
 interface TitleWithStarProps {
   children: string | string[];
@@ -11,7 +11,7 @@ const TitleWithStar: React.FC<TitleWithStarProps> = ({
   reverse = false,
   children,
 }) => {
-  const { TitleWithStar } = componentsData;
+  const { TitleWithStar } = macroComponentsData;
   return (
     <div
       className={`${styles.TitleWithStarContent} ${

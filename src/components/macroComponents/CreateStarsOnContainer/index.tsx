@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './starAnimation.module.scss';
-import componentsData from '../../../textContent/typescript/macroComponents';
+import macroComponentsData from '../../../textContent/typescript/macroComponents';
 
 /* 
 
@@ -32,7 +32,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   whiteSpaceRef,
   animationStar = true,
 }) => {
-  const { starsSrc } = componentsData.CreateStarsOnContainer;
+  const { starsSrc } = macroComponentsData.CreateStarsOnContainer;
   const starsSvg = svgs[0] ? svgs : starsSrc;
 
   if (containerRef.current) containerRef.current.style.position = 'relative';
