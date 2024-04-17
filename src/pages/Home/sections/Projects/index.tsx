@@ -1,8 +1,8 @@
 import React from 'react';
-import TitleWithStar from '../../../../components/microComponents/TitleWithStar/index.tsx';
 import { ProjectsData } from '../../../../textContent/typescript/home.ts';
+import TitleWithStar from '../../../../components/microComponents/TitleWithStar/index';
 import styles from './style.module.scss';
-import ProjectsContent from './ProjectContent';
+import ProjectBox from '../../../../components/macroComponents/ProjectBox/index';
 import MaxWidth from '../../../../components/macroComponents/MaxWidth';
 import UserScreenWidthIsLargerThan from '../../../../functions/UserScreenWidthIsLargerThan';
 import SeeMoreButton from '../../../../components/microComponents/SeeMoreButton';
@@ -18,13 +18,13 @@ const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
         <div className={styles.projectsContent}>
           {data.projects.map((project, index) => {
             if (UserScreenWidthIsLargerThan1200) {
-              return <ProjectsContent {...project} key={index} />;
+              return <ProjectBox {...project} key={index} />;
             } else if (
               (UserScreenWidthIsLargerThan768 && index < 2) ||
               seeMoreMobileActive
             ) {
               return (
-                <ProjectsContent
+                <ProjectBox
                   {...project}
                   seeMoreMobileActived={seeMoreMobileActive}
                   key={index}
@@ -32,14 +32,14 @@ const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
               );
             } else if (index < 1 || seeMoreMobileActive) {
               return (
-                <ProjectsContent
+                <ProjectBox
                   {...project}
                   seeMoreMobileActived={seeMoreMobileActive}
                   key={index}
                 />
               );
             }
-            <ProjectsContent
+            <ProjectBox
               {...project}
               seeMoreMobileActived={seeMoreMobileActive}
               key={index}

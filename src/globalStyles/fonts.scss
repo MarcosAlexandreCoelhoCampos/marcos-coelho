@@ -110,10 +110,12 @@ h2 {
 p {
   font-family: var(--font-secondary);
   font-size: 1rem;
-  letter-spacing: 0.18px;
-  line-height: 170%;
+  letter-spacing: 0.16px;
+  line-height: 168%;
   @media (min-width: 1200px) {
+    line-height: 170%;
     font-size: 1.125rem;
+    letter-spacing: 0.18px;
   }
 }
 
@@ -123,13 +125,6 @@ p {
   letter-spacing: 0.48px;
   line-height: 125%;
   font-weight: 700;
-}
-
-.font-mobiletext {
-  font-family: var(--font-secondary);
-  font-size: 1rem;
-  letter-spacing: 0.16px;
-  line-height: 168%;
 }
 
 .font-littlebutton {

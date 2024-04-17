@@ -22,13 +22,8 @@
       .ProjectContentImage {
         order: -1;
       }
-    }
-  }
-  &:nth-child(even) {
-    @media (min-width: 1200px) {
-      grid-template-rows: auto min-content;
-      .ProjectContentImage {
-        order: -1;
+      @media (min-width: 1200px) {
+        grid-template-rows: auto min-content;
       }
     }
   }
@@ -47,6 +42,16 @@
   }
   .ProjectContentImage {
     height: 300px;
+    position: relative;
+    p {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      padding: 3px 10px;
+      background-color: var(--color-primary-650);
+      color: var(--color-primary-100);
+      border-radius: 100px;
+    }
     @media (min-width: 768px) {
       height: 100%;
     }

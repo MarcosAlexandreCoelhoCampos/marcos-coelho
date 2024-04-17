@@ -1,24 +1,25 @@
 import React from 'react';
 import styles from './ProjectContent.module.scss';
-import { ProjectData } from '../../../../../textContent/typescript/home';
-import AccessWebsite from '../../../../../components/microComponents/AccessWebsite';
-import ComponentOnViewport from '../../../../../functions/ComponentOnViewport';
+import { ProjectData } from '../../../textContent/typescript/home';
+import AccessWebsite from '../../microComponents/AccessWebsite';
+import ComponentOnViewport from '../../../functions/ComponentOnViewport';
 
-const ProjectContent: React.FC<ProjectData> = ({
+const ProjectBox: React.FC<ProjectData> = ({
   subtitle,
   text,
   link,
   image,
   technologies,
   seeMoreMobileActived,
+  createdForStudy,
 }) => {
-  const ProjectContent = React.useRef(null);
+  const ProjectContentRef = React.useRef(null);
 
   return (
     <div
-      ref={ProjectContent}
+      ref={ProjectContentRef}
       className={`${styles.ProjectContent} ${
-        (ComponentOnViewport(ProjectContent) || seeMoreMobileActived) &&
+        (ComponentOnViewport(ProjectContentRef) || seeMoreMobileActived) &&
         'animeToBottom'
       } animeToBottomPrepartion`}
     >
@@ -31,7 +32,7 @@ const ProjectContent: React.FC<ProjectData> = ({
         </div>
         <AccessWebsite link={link} />
       </div>
-      <div className={styles.ProjectContentImage}>
+      <div className={`${styles.ProjectContentImage}`}>
         <img
           src={image.src}
           alt={image.alt}
@@ -39,9 +40,12 @@ const ProjectContent: React.FC<ProjectData> = ({
           width={image.width}
           height={image.height}
         />
+        {createdForStudy && (
+          <p className={`font-littlebutton`}> Feito para estudo </p>
+        )}
       </div>
     </div>
   );
 };
 
-export default ProjectContent;
+export default ProjectBox;

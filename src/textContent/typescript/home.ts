@@ -30,6 +30,7 @@ export interface ProjectsData {
 export interface ProjectData {
   subtitle: string;
   technologies?: string;
+  createdForStudy?: boolean;
   text: string;
   link: string;
   image: Image;
