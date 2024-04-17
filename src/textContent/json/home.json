@@ -12,8 +12,8 @@
     },
     "title": "Sobre mim",
     "texts": [
-      "Sou um desenvolvedor front-end com uma paixão pela criação de designs envolventes e funcionais. Descobri minha vocação para a programação aos 14 anos e desde então tenho me dedicado a aprimorar minhas habilidades nessa área em constante evolução. Atualmente, aos 20 anos, estou em formação acadêmica, cursando o segundo semestre de Análise e Desenvolvimento de Sistemas na Cruzeiro do Sul",
-      "Além disso, como pessoa autista de suporte no grau 1, trago uma perspectiva única e uma abordagem meticulosa aos meus projetos, buscando sempre a excelência e a usabilidade em cada solução que desenvolvo."
+      "Iniciei minha jornada na programação aos 14 anos e desde então, venho aprimorando minhas habilidades técnicas e criativas. Tenho experiência em programação front-end e UX/UI Design, o que me permite colaborar efetivamente com equipes de desenvolvimento, dando uma visão a mais de design. Além disso, estou sempre buscando expandir meu conhecimento em áreas como back-end e outras tecnologias emergentes.",
+      "Como pessoa autista de suporte no grau 1, minha abordagem meticulosa aos projetos reflete meu compromisso em criar soluções que impactam positivamente a vida das pessoas. Cada solução que desenvolvo visa melhorar a experiência do usuário e tornar a tecnologia mais acessível e agradável."
     ],
     "stars": [
       "/icons/stars/white/star-average-no-tip-white.svg",
@@ -24,15 +24,19 @@
   "Knowledges": {
     "title": "Conhecimentos",
     "knowledges": [
-      "React",
-      "CSS",
-      "SCSS",
-      "UX/UI",
-      "JavaScript",
       "Next.js",
-      "HTML",
-      "BootStrap",
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "SEO",
       "Git",
+      "HTML",
+      "SASS",
+      "CSS",
+      "Azure",
+      "BootStrap",
+      "Inglês B2",
+      "UX/UI",
       "Figma"
     ]
   },
@@ -41,8 +45,8 @@
     "projects": [
       {
         "subtitle": "Portfolio",
-        "text": "Meu portfolio tem como objetivo mostrar minhas habilidades e projetos de forma criativa e nova.",
-        "technologies": "React - Javascript - SCSS - HTML - Práticas de SEO - Figma - UX/UI",
+        "text": "Meu portfólio tem como objetivo mostrar minhas habilidades e projetos de forma criativa e inovadora.",
+        "technologies": "React - Typescript - SASS - HTML - SEO - UX/UI - Figma",
         "link": "#",
         "image": {
           "src": "/home/portfolio.webp",
@@ -54,8 +58,8 @@
       },
       {
         "subtitle": "Cabana do Coelho",
-        "text": "O objetivo deste site é apresentar cabanas disponíveis para aluguel e fornecer meios de contato para interessados",
-        "technologies": "Figma - HTML - CSS - Javascript",
+        "text": "Este site foi desenvolvido para fins de estudo, com o objetivo de proporcionar uma apresentação das cabanas disponíveis para aluguel",
+        "technologies": "UX/UI - Figma - HTML - CSS - Javascript",
         "link": "https://cabana-do-coelho.vercel.app/",
         "image": {
           "src": "/home/cabanadocoelho.webp",
@@ -67,8 +71,8 @@
       },
       {
         "subtitle": "WaterSurf",
-        "text": "O objetivo deste site é chamar a atenção de clientes interessados em aulas de Surf.",
-        "technologies": "Figma - HTML - CSS - JavaScript",
+        "text": "Criado para fins de estudo, o objetivo deste site é destacar o serviço de assistência técnica, visando aumentar a confiança de potenciais clientes.",
+        "technologies": "UX/UI - Figma - HTML - CSS - JavaScript",
         "link": "https://water-surf.vercel.app/",
         "image": {
           "src": "/home/watersurf.webp",
@@ -102,7 +106,8 @@
           "info2": "05/2023 - Momento",
           "info3": "Ass. de Desenvolvimento",
           "texts": [
-            "Minha atuação é centrada no desenvolvimento de sites, com ênfase em landing pages e páginas dedicadas à experiência do usuário no download de faturas. Essa experiência me proporcionou aprofundar meus conhecimentos em React, práticas de versionamento de código e obter uma visão ainda mais abrangente dos serviços relacionados a sites."
+            "Atuei de forma significativa na migração de páginas da tecnologia legada Vignette para Next.JS. Além disso, desenvolvi uma página intuitiva que facilita aos clientes a obtenção da segunda via de sua conta de internet, esse projeto teve diversos desafios relacionados a componentes variados e integrações com o backend.",
+            "No meu dia a dia, utilizo: Next.JS, React.js, TypeScript, JSON para desenvolvimento e integração de dados, Azure para versionamento de código, SASS, HTML, JavaScript e Figma para trabalhar com interfaces criadas pelo time de UX. Além disso, tenho experiência com GitLab, AWS e Node.js."
           ]
         },
         {
@@ -110,7 +115,7 @@
           "info2": "01/2023 - 05/2023",
           "info3": "Auxiliar de T.I",
           "texts": [
-            "Participação no projeto Acelera G&P PCD, um programa de aprimoramento e capacitação que incluiu cursos focados no desenvolvimento de habilidades em front-end, bem como aulas diárias com um dos arquitetos de sistemas da empresa."
+            "Participação no projeto Acelera G&P, um programa de aprimoramento e capacitação que incluiu cursos focados no desenvolvimento de habilidades em front-end, bem como aulas diárias com um dos arquitetos de sistemas da empresa."
           ]
         }
       ]
@@ -125,7 +130,7 @@
           "info3": "Análise e Desenvolvimento de Sistemas",
           "info3Mobile": "ADS",
           "texts": [
-            "Atualmente em formação na Universidade Cruzeiro do Sul, estou adquirindo uma sólida base em programação, banco de dados e engenharia de software.",
+            "Atualmente em formação em Análise e Desenvolvimento de Sistemas na Universidade Cruzeiro do Sul",
             "Inicio: 01/02/2023",
             "Término previsto: 15/12/2024"
           ]
@@ -133,9 +138,21 @@
         {
           "info1": "Origamid",
           "info2": "Curso Online",
-          "info3": "Auxiliar de T.I",
+          "info3": "Front-End e UX/UI Design",
+          "info3Mobile": "Front-End e UX/UI",
           "texts": [
-            "Lorem ipsum dolor sit amet consectetur. Sit et laoreet at nulla. Pulvinar non justo sed velit odio non nec sed. Sollicitudin turpis eleifend ipsum dolor sit amet consectetur. Sit et laoreet at nulla. "
+            "O foco do curso em projetos práticos me permite aplicar rapidamente o que aprendo em situações reais, preparando-me para os desafios do mercado."
+          ],
+          "buttonText": "Certificado",
+          "buttonLink": "#"
+        },
+        {
+          "info1": "TopWay",
+          "info2": "Curso",
+          "info3": "Inglês",
+          "texts": [
+            "Atualmente, já consigo ler textos em inglês, comunicar-me com mais fluidez e coerência e compreender, na maioria das vezes, nativos em sua língua materna. Além das aulas, mantenho uma rotina de estudos com audiobooks, séries e filmes",
+            "Previsão de término: 02/2025"
           ],
           "buttonText": "Certificado",
           "buttonLink": "#"
