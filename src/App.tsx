@@ -23,10 +23,6 @@ import page404Data from './textContent/typescript/page404.ts';
 Ajustar Typagens (importar typagens que estão locais)
 Separar os Macro Componentes em Micro  Componentes 
 
-Target _blanck para abrir as páginas de estudo?
-Criar alguma forma de passar a informação que o site foi criado para estudo e 
-repensar a forma como os cards são criados
-Acredito que manter 3 cards maximos no desktop e deixar o botão "veja mais" é o melhor dos casos
 Ajustar tab do header mobile
 
 EXISTEM ANOTAÇÕES NOS COMPONENTES:

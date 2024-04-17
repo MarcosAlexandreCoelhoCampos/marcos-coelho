@@ -31,6 +31,7 @@ const AccessWebsite: React.FC<AccessWebsiteProps> = ({
       href={link}
       className={`${styles.AccessWebsite} ${fontStyle}`}
       style={style}
+      target='_blanck'
     >
       {text}
       {img && (

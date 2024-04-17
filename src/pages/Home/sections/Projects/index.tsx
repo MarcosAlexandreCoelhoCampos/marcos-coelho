@@ -17,41 +17,27 @@ const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
         <TitleWithStar> {data.title} </TitleWithStar>
         <div className={styles.projectsContent}>
           {data.projects.map((project, index) => {
-            if (UserScreenWidthIsLargerThan1200) {
-              return <ProjectBox {...project} key={index} />;
-            } else if (
+            const shouldRender =
+              (UserScreenWidthIsLargerThan1200 && index < 3) ||
               (UserScreenWidthIsLargerThan768 && index < 2) ||
-              seeMoreMobileActive
-            ) {
-              return (
+              index < 1 ||
+              seeMoreMobileActive;
+
+            return (
+              shouldRender && (
                 <ProjectBox
                   {...project}
                   seeMoreMobileActived={seeMoreMobileActive}
                   key={index}
                 />
-              );
-            } else if (index < 1 || seeMoreMobileActive) {
-              return (
-                <ProjectBox
-                  {...project}
-                  seeMoreMobileActived={seeMoreMobileActive}
-                  key={index}
-                />
-              );
-            }
-            <ProjectBox
-              {...project}
-              seeMoreMobileActived={seeMoreMobileActive}
-              key={index}
-            />;
+              )
+            );
           })}
         </div>
-        {!UserScreenWidthIsLargerThan(1199) && (
-          <SeeMoreButton
-            action={() => setSeeMoreMobileActive(!seeMoreMobileActive)}
-            actived={seeMoreMobileActive}
-          />
-        )}
+        <SeeMoreButton
+          action={() => setSeeMoreMobileActive(!seeMoreMobileActive)}
+          actived={seeMoreMobileActive}
+        />
       </MaxWidth>
     </section>
   );
