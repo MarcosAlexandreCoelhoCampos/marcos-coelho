@@ -5,7 +5,7 @@ interface MaxWidthProps {
   style?: React.CSSProperties;
   className?: string;
   children: React.ReactNode;
-  ref?: React.RefObject<HTMLDivElement>;
+  ref?: React.RefObject<any>;
 }
 
 const MaxWidth: React.FC<MaxWidthProps> = ({

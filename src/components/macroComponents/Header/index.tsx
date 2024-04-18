@@ -2,38 +2,7 @@ import React from 'react';
 import styles from './style.module.scss';
 import MaxWidth from '../MaxWidth';
 import UserScreenWidthIsLargerThan from '../../../functions/UserScreenWidthIsLargerThan';
-
-/* 
-
-Criar animação para navegação
-
-*/
-
-/* 
-Teste
-import ImageOpenMenu from '/icons/open-menu.svg';
-import ImageCloseMenu from 'public/icons/close-menu.svg';
-*/
-
-/* 
-Seguindo esse caminho podemos navegar por paginas de uma forma mais fluida
-
-import { Link } from 'react-router-dom'
-
-<Link to="/"> Home </Link>
-<Link to="sobre"> Sobre </Link
-
-Para ter mais funções dentro do link
-Neste caso, o react adiciona automaticamente a class active no que está ativo com base na rota
-Alem de outras funções e detalhes
-
-import { NavLink } from 'react-router-dom'
-
-Home precisa ter "end" no final, pois o link é apenas uma / e todos os links
-tem essa barra por padrão no inicio
-<NavLink to="/" end > Home </NavLink>
-<NavLink to="sobre"> Sobre </NavLink
-*/
+import PreventFocusEscapeModal from '../../../functions/PreventFocusEscapeModal';
 
 const Header: React.FC = () => {
   if (UserScreenWidthIsLargerThan(768)) document.body.style.paddingTop = '5rem';
@@ -42,16 +11,18 @@ const Header: React.FC = () => {
   const [menuNavActive, setmenuNavActive] = React.useState(false);
   const [isFirstRender, setIsFirstRender] = React.useState(true);
 
-  const openMenuButton = React.useRef<HTMLButtonElement>(null);
-  const closeMenuButton = React.useRef<HTMLButtonElement>(null);
+  const openMenuButtonRef = React.useRef<HTMLButtonElement>(null);
+  const closeMenuButtonRef = React.useRef<HTMLButtonElement>(null);
+  const firstElementHeaderModalRef = React.useRef<HTMLAnchorElement>(null);
+  const lastElementHeaderModalRef = React.useRef<HTMLAnchorElement>(null);
 
   React.useEffect(() => {
     if (isFirstRender) {
       setIsFirstRender(false);
       return;
     }
-    if (menuNavActive) closeMenuButton.current?.focus();
-    else openMenuButton.current?.focus();
+    if (menuNavActive) closeMenuButtonRef.current?.focus();
+    else openMenuButtonRef.current?.focus();
   }, [menuNavActive]);
 
   return (
@@ -59,7 +30,18 @@ const Header: React.FC = () => {
       <MaxWidth>
         <div className={styles.container}>
           <div className={styles.containerLogo}>
-            <a className='font-logo' href='/'>
+            <a
+              className='font-logo'
+              href='/'
+              ref={firstElementHeaderModalRef}
+              onKeyDown={(event) =>
+                PreventFocusEscapeModal(
+                  event,
+                  firstElementHeaderModalRef,
+                  lastElementHeaderModalRef
+                )
+              }
+            >
               MarcosCoelho
             </a>
           </div>
@@ -76,7 +58,7 @@ const Header: React.FC = () => {
               {!menuNavActive && (
                 <button
                   className={styles.openMenu}
-                  ref={openMenuButton}
+                  ref={openMenuButtonRef}
                   onClick={() => setmenuNavActive(true)}
                 >
                   <img src='/icons/menu/open-menu.svg' alt='Abrir menu' />
@@ -86,7 +68,7 @@ const Header: React.FC = () => {
               {menuNavActive && (
                 <button
                   className={styles.closeMenu}
-                  ref={closeMenuButton}
+                  ref={closeMenuButtonRef}
                   onClick={() => setmenuNavActive(false)}
                 >
                   <img src='/icons/menu/close-menu.svg' alt='Fechar menu' />
@@ -156,6 +138,14 @@ const Header: React.FC = () => {
                       className={`font-nav ${styles.curriculum}`}
                       target='_blank'
                       href='https://drive.google.com/file/d/1cP6cDju38YjbBlavWRyaRjR9bZioMm2R/view?usp=sharing'
+                      ref={lastElementHeaderModalRef}
+                      onKeyDownCapture={(event) =>
+                        PreventFocusEscapeModal(
+                          event,
+                          firstElementHeaderModalRef,
+                          lastElementHeaderModalRef
+                        )
+                      }
                     >
                       CV
                     </a>

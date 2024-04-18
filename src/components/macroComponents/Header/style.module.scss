@@ -75,10 +75,10 @@
             display: flex;
             width: min-content;
             white-space: nowrap;
+            transition: color 0.25s;
 
             &:hover {
               color: var(--color-tertiary-500);
-              transition: color 0.15s 0.1s;
             }
           }
         }
@@ -156,6 +156,7 @@
             height: min-content;
             max-height: 90%;
             width: 90%;
+            padding: 7px 0;
             justify-content: flex-start;
             gap: 25px;
             a {

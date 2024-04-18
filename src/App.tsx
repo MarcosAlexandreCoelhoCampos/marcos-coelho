@@ -20,14 +20,13 @@ import siteData from './textContent/typescript/home.ts';
 import page404Data from './textContent/typescript/page404.ts';
 
 /* 
-Ajustar Typagens (importar typagens que estão locais)
+Ajustar Typagens e importações das informações de texto 
 Separar os Macro Componentes em Micro  Componentes 
 
 Ajustar tab do header mobile
 
 EXISTEM ANOTAÇÕES NOS COMPONENTES:
 CreateStarsOnContainer
-Header
 Knowledges
 */
 
