@@ -40,7 +40,7 @@
   transform: translateX(-100vw);
 }
 .animeFromNegativeLeft {
-  animation: animeFromNegativeLeftAnimation 1.2s linear 0s forwards normal;
+  animation: animeFromNegativeLeftAnimation 1.5s ease-out 0s forwards normal;
 }
 
 @keyframes animeFromNegativeLeftAnimation {

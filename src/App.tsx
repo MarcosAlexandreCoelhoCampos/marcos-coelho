@@ -1,19 +1,12 @@
-// React
 import React from 'react';
-
-//  Rotas
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-//  CSS GLOBAL
 import './index.css';
+import Header from './components/macroComponents/Header';
 
 // PAGES
 const Home = React.lazy(() => import('./pages/Home'));
 const Page404 = React.lazy(() => import('./pages/Page404'));
 import Loading from './components/macroComponents/Loading/index.tsx';
-
-//  HEADER AND FOOTER
-import Header from './components/macroComponents/Header';
 
 //  JSON e TYPESCRIPT
 import siteData from './textContent/typescript/home.ts';
@@ -22,8 +15,6 @@ import page404Data from './textContent/typescript/page404.ts';
 /* 
 Ajustar Typagens e importações das informações de texto 
 Separar os Macro Componentes em Micro  Componentes 
-
-Ajustar tab do header mobile
 
 EXISTEM ANOTAÇÕES NOS COMPONENTES:
 CreateStarsOnContainer

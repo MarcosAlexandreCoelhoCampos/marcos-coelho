@@ -58,7 +58,7 @@
       },
       {
         "subtitle": "Cabana do Coelho",
-        "text": "Este site foi desenvolvido para fins de estudo, com o objetivo de proporcionar uma apresentação das cabanas disponíveis para aluguel",
+        "text": "Tem o objetivo de proporcionar uma apresentação das cabanas disponíveis para aluguel",
         "technologies": "UX/UI - Figma - HTML - CSS - Javascript",
         "link": "https://cabana-do-coelho.vercel.app/",
         "createdForStudy": true,
@@ -72,7 +72,7 @@
       },
       {
         "subtitle": "WaterSurf",
-        "text": "Criado para fins de estudo, o objetivo deste site é destacar o serviço de assistência técnica, visando aumentar a confiança de potenciais clientes.",
+        "text": "O objetivo deste site é destacar o serviço de assistência técnica, visando aumentar a confiança de potenciais clientes.",
         "technologies": "UX/UI - Figma - HTML - CSS - JavaScript",
         "createdForStudy": true,
         "link": "https://water-surf.vercel.app/",
