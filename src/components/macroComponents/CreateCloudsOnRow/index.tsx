@@ -25,6 +25,8 @@ const CreateCloudsOnRow: React.FC<Props> = ({
           key={`cloud-${i}-${cloudsNum}`}
           src={cloudsSrc[Math.floor(Math.random() * cloudsSrc.length)]}
           alt=''
+          width={118}
+          height={61}
           aria-hidden='true'
           style={{
             animation: `RollingTheClouds ${

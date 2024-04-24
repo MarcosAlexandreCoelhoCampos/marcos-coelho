@@ -17,12 +17,14 @@ const Header: React.FC = () => {
   const lastElementHeaderModalRef = React.useRef<HTMLAnchorElement>(null);
 
   React.useEffect(() => {
-    if (isFirstRender) {
-      setIsFirstRender(false);
-      return;
+    if (isFirstRender) setIsFirstRender(false);
+    else if (menuNavActive) {
+      closeMenuButtonRef.current?.focus();
+      document.body.style.overflowY = 'hidden';
+    } else {
+      openMenuButtonRef.current?.focus();
+      document.body.style.overflowY = 'initial';
     }
-    if (menuNavActive) closeMenuButtonRef.current?.focus();
-    else openMenuButtonRef.current?.focus();
   }, [menuNavActive]);
 
   return (
@@ -61,7 +63,13 @@ const Header: React.FC = () => {
                   ref={openMenuButtonRef}
                   onClick={() => setmenuNavActive(true)}
                 >
-                  <img src='/icons/menu/open-menu.svg' alt='Abrir menu' />
+                  <img
+                    src='/icons/menu/open-menu.svg'
+                    width={25}
+                    height={18}
+                    alt='Abrir menu'
+                    title='Abrir o menu'
+                  />
                 </button>
               )}
 
@@ -71,7 +79,13 @@ const Header: React.FC = () => {
                   ref={closeMenuButtonRef}
                   onClick={() => setmenuNavActive(false)}
                 >
-                  <img src='/icons/menu/close-menu.svg' alt='Fechar menu' />
+                  <img
+                    src='/icons/menu/close-menu.svg'
+                    width={20}
+                    height={20}
+                    alt='Fechar menu'
+                    title='Fechar o menu'
+                  />
                 </button>
               )}
             </div>

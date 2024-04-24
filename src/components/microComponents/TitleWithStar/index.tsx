@@ -23,6 +23,8 @@ const TitleWithStar: React.FC<TitleWithStarProps> = ({
         src={TitleWithStar.image.src}
         alt={TitleWithStar.image.alt}
         title={TitleWithStar.image.title}
+        width={TitleWithStar.image.width}
+        height={TitleWithStar.image.height}
         aria-hidden='true'
       />
     </div>
