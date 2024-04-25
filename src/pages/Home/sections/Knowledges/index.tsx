@@ -4,10 +4,6 @@ import { KnowledgesData } from '../../../../textContent/typescript/home.ts';
 import AirplaneWithText from '../../../../components/macroComponents/AirplaneWithText';
 import MaxWidth from '../../../../components/macroComponents/MaxWidth';
 
-/* 
-Dividir o conhecimneto em tópicos, para facilitar a leitura ?
-*/
-
 const Knowledges: React.FC<{ data: KnowledgesData }> = ({ data }) => {
   return (
     <section className={styles.knowledgesSection} id='knowledges'>

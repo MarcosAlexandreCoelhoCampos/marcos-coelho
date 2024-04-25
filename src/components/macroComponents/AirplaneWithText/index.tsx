@@ -9,13 +9,9 @@ const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
   const isInViewport = ComponentOnViewport(containerRef);
   const [wasAnimated, setWasAnimated] = React.useState(false);
 
-  // Veificar se é possivel fazer uma animação onde ele começa no scroll maximo do componente
-  // e termina no inicio, assim mostrando que é um componente scrolavel e ao mesmo tempo
-  // deixando bonito e interessante
-
   React.useEffect(() => {
     setWasAnimated(false);
-    const timer = setTimeout(() => setWasAnimated(isInViewport), 1200);
+    const timer = setTimeout(() => setWasAnimated(isInViewport), 1500);
     return () => clearTimeout(timer);
   }, [isInViewport]);
 

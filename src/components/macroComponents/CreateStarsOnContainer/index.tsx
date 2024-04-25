@@ -6,11 +6,10 @@ import macroComponentsData from '../../../textContent/typescript/macroComponents
 
 Melhorar leitura do código
 Separar código em componentes se possivel
-Evitar que estrelas sejam criadas em cima de outras estrelas (talves a função que calcula WhiteSpace ajude)
-numStarTotal tem que alterar ao mudar o tamanho do window
+Evitar que estrelas sejam criadas em cima de outras estrelas 
+(talves a função que calcula WhiteSpace ajude)
 
-VERIFICAR FORMA DE SEMPRE QUE containerRef E whiteSpaceRef ATUALIZAREM
-O CÓDIGO ATUALIZAR TAMBÉM
+Fazer com que containerRef e whiteSpaceRef atualizarem, o resto do cód tbm
 */
 
 interface CreateStarsOnContainerProps {

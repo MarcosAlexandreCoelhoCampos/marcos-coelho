@@ -18,7 +18,6 @@ Separar os Macro Componentes em Micro  Componentes
 
 EXISTEM ANOTAÇÕES NOS COMPONENTES:
 CreateStarsOnContainer
-Knowledges
 */
 
 const App = () => {
