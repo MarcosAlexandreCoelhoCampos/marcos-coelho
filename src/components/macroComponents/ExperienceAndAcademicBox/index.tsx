@@ -1,3 +1,4 @@
+import React from 'react';
 import SeeMoreClean from '../../microComponents/SeeMoreClean';
 import styles from './style.module.scss';
 import { AcademicExperience } from '../../../textContent/typescript/home';
@@ -14,7 +15,7 @@ const ExperienceAndAcademicBox: React.FC<AcademicExperience> = ({
   return (
     <div
       className={`${styles.experienceAndAcademicBox} ${
-        buttonLink && buttonLink && styles.buttonExists
+        buttonText && buttonLink && styles.buttonExists
       }`}
     >
       <p className={`${styles.info1} font-bigtext`}> {info1} </p>
@@ -26,8 +27,8 @@ const ExperienceAndAcademicBox: React.FC<AcademicExperience> = ({
       </div>
       {buttonText && buttonLink && (
         <SeeMoreClean
-          href={buttonText}
-          text={buttonLink}
+          href={buttonLink}
+          text={buttonText}
           className={styles.button}
         />
       )}

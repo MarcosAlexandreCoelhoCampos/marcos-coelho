@@ -1,3 +1,4 @@
+import React from 'react';
 import ExperienceAndAcademicBox from '../../../../../components/macroComponents/ExperienceAndAcademicBox';
 import TitleWithStar from '../../../../../components/microComponents/TitleWithStar';
 import styles from './style.module.scss';
@@ -12,14 +13,7 @@ const ExperienceContent: React.FC<{ data: ExperienceAndAcademicData }> = ({
 
       <div className={styles.experienceContent}>
         {data.experiences.map((experience, index) => (
-          <ExperienceAndAcademicBox
-            key={index}
-            info1={experience.info1}
-            info2={experience.info2}
-            info3={experience.info3}
-            info3Mobile={experience.info3Mobile}
-            texts={experience.texts}
-          />
+          <ExperienceAndAcademicBox key={index} {...experience} />
         ))}
       </div>
     </div>

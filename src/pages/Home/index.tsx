@@ -1,6 +1,6 @@
 import React from 'react';
 import { SiteData } from '../../textContent/typescript/home.ts';
-import Head from '../../components/macroComponents/Head';
+import Header from '../../components/macroComponents/Head';
 import CreateCloudsOnRow from '../../components/macroComponents/CreateCloudsOnRow';
 import CloudsDivider from '../../components/macroComponents/CloudsDivider';
 import Banner from './sections/Banner';
@@ -14,7 +14,7 @@ import Footer from '../../components/macroComponents/Footer/index.tsx';
 const Home: React.FC<{ data: SiteData }> = ({ data }) => {
   return (
     <>
-      <Head />
+      <Header />
       <Banner data={data.Banner} />
       <AboutMe data={data.AboutMe} />
       <CreateCloudsOnRow containerBg='var(--color-primary-750)' />

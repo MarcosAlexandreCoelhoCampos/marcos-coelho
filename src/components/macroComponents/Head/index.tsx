@@ -10,7 +10,7 @@ type HeadProps = {
   lang?: string;
 };
 
-const Head: React.FC<HeadProps> = ({
+const Header: React.FC<HeadProps> = ({
   title = 'MarcosCoelho',
   description = 'Portfólio de Marcos Alexandre Coelho Campos - Desenvolvedor Front-end e Designer UX/UI',
   ogUrl = 'https://marcos-coelho.vercel.app/',
@@ -51,4 +51,4 @@ const Head: React.FC<HeadProps> = ({
   return null;
 };
 
-export default Head;
+export default Header;
