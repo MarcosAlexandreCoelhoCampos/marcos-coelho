@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface BoltWhiteFileProp {
   fill?: string;
   className?: string;

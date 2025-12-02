@@ -7,6 +7,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 80px;
+    position: relative;
+
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
       gap: 26px;
@@ -20,18 +22,20 @@
     display: none;
 
     @media (min-width: 1200px) {
+      width: 220px;
       display: flex;
-      height: 100%;
-      position: relative;
-      width: 200px;
+    }
 
-      img {
-        animation: AnimationBold 5s infinite alternate-reverse ease-in;
-        width: 100%;
-        position: absolute;
-        top: -100px;
-        height: calc(100% + 200px);
-      }
+    .experienceBoltImage {
+      width: 220px;
+      background-image: url('/icons/others/bolt-white.svg');
+      background-position: center;
+      background-size: cover;
+
+      animation: AnimationBold 5s infinite alternate-reverse ease-in;
+      position: absolute;
+      top: -100px;
+      height: calc(100% + 200px);
     }
   }
 }
