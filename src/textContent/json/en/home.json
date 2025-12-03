@@ -98,7 +98,14 @@
           "height": 277
         }
       }
-    ]
+    ],
+    "SeeMoreButton": {
+      "textActive": "See More",
+      "textDisable": "See Less",
+      "img": {
+        "title": "Arrow icon indicating content expansion or collapse"
+      }
+    }
   },
   "ExperienceAndAcademic": [
     {

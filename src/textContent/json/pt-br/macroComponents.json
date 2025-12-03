@@ -50,5 +50,19 @@
       "academic": "Formação",
       "contact": "Contato"
     }
+  },
+  "ProjectBox": {
+    "madeForStudy": "Feito para estudo",
+    "toolsUsed": "Ferramentas e Tecnologias usadas:",
+    "accessSite": "Acessar site",
+    "accessSiteTitle": "Link para saber mais sobre o site"
+  },
+  "Footer": {
+    "about": "Sobre",
+    "knowledge": "Conhecimento",
+    "projects": "Projetos",
+    "education": "Formação",
+    "name": "MarcosCoelho",
+    "subtitle": "Programador e Designer"
   }
 }

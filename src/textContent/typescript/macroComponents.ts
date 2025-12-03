@@ -7,6 +7,8 @@ export interface MacroComponentsData {
   CreateStarsOnContainer: CreateStarsOnContainerData;
   AirplaneWithText: AirplaneWithTextData;
   Header: HeaderData;
+  ProjectBox: ProjectBoxData;
+  Footer: FooterData;
 }
 
 export interface TitleWithStarData {
@@ -50,6 +52,22 @@ export interface HeaderData {
     academic: string;
     contact: string;
   };
+}
+
+export interface ProjectBoxData {
+  madeForStudy: string;
+  toolsUsed: string;
+  accessSite: string;
+  accessSiteTitle: string;
+}
+
+export interface FooterData {
+  about: string;
+  knowledge: string;
+  projects: string;
+  education: string;
+  name: string;
+  subtitle: string;
 }
 
 const enMacroComponentsData: MacroComponentsData =

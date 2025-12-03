@@ -1,7 +1,18 @@
 import MaxWidth from '../MaxWidth';
 import styles from './style.module.scss';
 
+import {
+  ptMacroComponentsData,
+  enMacroComponentsData,
+} from '../../../textContent/typescript/macroComponents.ts';
+import userLang from '../../../functions/userLang/index.ts';
+
 const Footer = ({ backgroundWaves = '#0E2D7B' }) => {
+  const macroComponentsData =
+    userLang === 'pt-br' ? ptMacroComponentsData : enMacroComponentsData;
+
+  const { Footer } = macroComponentsData;
+
   return (
     <>
       <div
@@ -27,31 +38,31 @@ const Footer = ({ backgroundWaves = '#0E2D7B' }) => {
             <ul className={styles.footerLinks}>
               <li>
                 <a href='#about-me' className={'font-nav'}>
-                  Sobre
+                  {Footer.about}
                 </a>
               </li>
               <li>
                 <a href='#knowledges' className={'font-nav'}>
-                  Conhecimento
+                  {Footer.knowledge}
                 </a>
               </li>
               <li>
                 <a href='#projects' className={'font-nav'}>
-                  Projetos
+                  {Footer.projects}
                 </a>
               </li>
               <li>
                 <a href='#experience' className={'font-nav'}>
-                  Formação
+                  {Footer.education}
                 </a>
               </li>
             </ul>
           </nav>
           <div className={`${styles.footerContainer}`}>
             <div className={styles.footerContent}>
-              <p className={`font-logo ${styles.footerLogo}`}> MarcosCoelho</p>
+              <p className={`font-logo ${styles.footerLogo}`}>{Footer.name}</p>
               <p className={`${styles.footerTextDetail} font-nav`}>
-                Programador e Designer
+                {Footer.subtitle}
               </p>
               <nav>
                 <ul className={styles.footerSocialMedias}>
