@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './CreateCloudsOnRow.module.scss';
 import UserScreenWidthIsLargerThan from '../../../functions/UserScreenWidthIsLargerThan';
-import macroComponentsData from '../../../textContent/typescript/macroComponents';
+import {
+  enMacroComponentsData,
+  ptMacroComponentsData,
+} from '../../../textContent/typescript/macroComponents';
+import userLang from '../../../functions/userLang';
 
 interface Props {
   containerBg?: string;
@@ -12,6 +16,9 @@ const CreateCloudsOnRow: React.FC<Props> = ({
   containerBg = 'null',
   animationTimeDuration = 1,
 }) => {
+  const macroComponentsData =
+    userLang === 'pt-br' ? ptMacroComponentsData : enMacroComponentsData;
+
   const { cloudsSrc } = macroComponentsData.CreateCloudsOnRow;
   const [cloudsRow1, setCloudsRow1] = React.useState<React.ReactNode>([]);
   const [cloudsRow2, setCloudsRow2] = React.useState<React.ReactNode>([]);
@@ -33,7 +40,7 @@ const CreateCloudsOnRow: React.FC<Props> = ({
               cloudsNum * animationTimeDuration * 12
             }s linear infinite`,
           }}
-        />
+        />,
       );
     }
     return generatedClouds;

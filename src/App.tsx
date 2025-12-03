@@ -2,15 +2,19 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Header from './components/macroComponents/Header';
+import userLang from './functions/userLang/index.ts';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const Page404 = React.lazy(() => import('./pages/Page404'));
 import Loading from './components/macroComponents/Loading/index.tsx';
 
-import siteData from './textContent/typescript/home.ts';
-import page404Data from './textContent/typescript/page404.ts';
+import { siteDataEn, siteDataPt } from './textContent/typescript/home.ts';
+import { enPage404, ptPage404 } from './textContent/typescript/page404.ts';
 
 const App = () => {
+  const siteData = userLang === 'pt-br' ? siteDataPt : siteDataEn;
+  const page404Data = userLang === 'pt-br' ? ptPage404 : enPage404;
+
   return (
     <React.Suspense fallback={<Loading />}>
       <Header />

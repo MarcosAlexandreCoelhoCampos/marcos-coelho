@@ -3,7 +3,7 @@
     "image": {
       "src": "/icons/stars/white/star-big-subtitle-outline-white.svg",
       "alt": "",
-      "title": "Contorno branco de uma estrela",
+      "title": "White outline of a star",
       "width": 36,
       "height": 36
     }
@@ -31,6 +31,24 @@
       "title": "",
       "width": 80,
       "height": 64
+    }
+  },
+  "Header": {
+    "logo": "MarcosCoelho",
+    "cv": "Resume",
+    "menu": {
+      "openAlt": "Open menu",
+      "openTitle": "Open the menu",
+      "closeAlt": "Close menu",
+      "closeTitle": "Close the menu"
+    },
+    "nav": {
+      "about": "About",
+      "knowledges": "Skills",
+      "projects": "Projects",
+      "experience": "Experience",
+      "academic": "Education",
+      "contact": "Contact"
     }
   }
 }

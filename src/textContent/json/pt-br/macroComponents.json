@@ -1,0 +1,54 @@
+{
+  "TitleWithStar": {
+    "image": {
+      "src": "/icons/stars/white/star-big-subtitle-outline-white.svg",
+      "alt": "",
+      "title": "Contorno branco de uma estrela",
+      "width": 36,
+      "height": 36
+    }
+  },
+  "CreateCloudsOnRow": {
+    "cloudsSrc": [
+      "/icons/cloud/white/cloud-dark-blue-white.svg",
+      "/icons/cloud/white/cloud-dark-white.svg",
+      "/icons/cloud/white/cloud-light-blue-white.svg",
+      "/icons/cloud/white/cloud-light-white.svg"
+    ]
+  },
+  "CreateStarsOnContainer": {
+    "starsSrc": [
+      "/icons/stars/white/star-average-no-tip-white.svg",
+      "/icons/stars/white/star-average-white.svg",
+      "/icons/stars/white/star-big-white.svg",
+      "/icons/stars/white/star-small-white.svg"
+    ]
+  },
+  "AirplaneWithText": {
+    "image": {
+      "src": "/icons/airplane/airplane-outline-white.svg",
+      "alt": "",
+      "title": "",
+      "width": 80,
+      "height": 64
+    }
+  },
+  "Header": {
+    "logo": "MarcosCoelho",
+    "cv": "CV",
+    "menu": {
+      "openAlt": "Abrir menu",
+      "openTitle": "Abrir o menu",
+      "closeAlt": "Fechar menu",
+      "closeTitle": "Fechar o menu"
+    },
+    "nav": {
+      "about": "Sobre",
+      "knowledges": "Conhecimentos",
+      "projects": "Projetos",
+      "experience": "Experiência",
+      "academic": "Formação",
+      "contact": "Contato"
+    }
+  }
+}

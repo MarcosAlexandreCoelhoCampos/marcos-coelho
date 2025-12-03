@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './style.module.scss';
-import macroComponentsData from '../../../textContent/typescript/macroComponents';
+import {
+  ptMacroComponentsData,
+  enMacroComponentsData,
+} from '../../../textContent/typescript/macroComponents.ts';
+import userLang from '../../../functions/userLang/index.ts';
 
 interface TitleWithStarProps {
   children: string | string[];
@@ -11,6 +15,9 @@ const TitleWithStar: React.FC<TitleWithStarProps> = ({
   reverse = false,
   children,
 }) => {
+  const macroComponentsData =
+    userLang === 'pt-br' ? ptMacroComponentsData : enMacroComponentsData;
+
   const { TitleWithStar } = macroComponentsData;
   return (
     <div

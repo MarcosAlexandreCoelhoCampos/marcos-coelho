@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './starAnimation.module.scss';
-import macroComponentsData from '../../../textContent/typescript/macroComponents';
+import {
+  ptMacroComponentsData,
+  enMacroComponentsData,
+} from '../../../textContent/typescript/macroComponents.ts';
+import userLang from '../../../functions/userLang/index.ts';
 
 interface CreateStarsOnContainerProps {
   svgs?: string[];
@@ -21,6 +25,8 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   whiteSpaceRef,
   animationStar = true,
 }) => {
+  const macroComponentsData =
+    userLang === 'pt-br' ? ptMacroComponentsData : enMacroComponentsData;
   const { starsSrc } = macroComponentsData.CreateStarsOnContainer;
   const starsSvg = svgs[0] ? svgs : starsSrc;
 

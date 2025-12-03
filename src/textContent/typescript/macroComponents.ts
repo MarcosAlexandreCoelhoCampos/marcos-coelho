@@ -1,10 +1,12 @@
-import macroComponentsJson from '../json/macroComponents.json';
+import enMacroComponentsJson from '../json/en/macroComponents.json';
+import ptMacroComponentsJson from '../json/pt-br/macroComponents.json';
 
 export interface MacroComponentsData {
   TitleWithStar: TitleWithStarData;
   CreateCloudsOnRow: CreateCloudsOnRowData;
   CreateStarsOnContainer: CreateStarsOnContainerData;
   AirplaneWithText: AirplaneWithTextData;
+  Header: HeaderData;
 }
 
 export interface TitleWithStarData {
@@ -31,6 +33,28 @@ interface Image {
   height: number;
 }
 
-const macroComponentsData: MacroComponentsData =
-  macroComponentsJson as MacroComponentsData;
-export default macroComponentsData;
+export interface HeaderData {
+  logo: string;
+  cv: string;
+  menu: {
+    openAlt: string;
+    openTitle: string;
+    closeAlt: string;
+    closeTitle: string;
+  };
+  nav: {
+    about: string;
+    knowledges: string;
+    projects: string;
+    experience: string;
+    academic: string;
+    contact: string;
+  };
+}
+
+const enMacroComponentsData: MacroComponentsData =
+  enMacroComponentsJson as MacroComponentsData;
+const ptMacroComponentsData: MacroComponentsData =
+  ptMacroComponentsJson as MacroComponentsData;
+
+export { enMacroComponentsData, ptMacroComponentsData };
