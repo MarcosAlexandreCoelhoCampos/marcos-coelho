@@ -1,16 +1,10 @@
 import React from 'react';
 import styles from './starAnimation.module.scss';
-import macroComponentsData from '../../../textContent/typescript/macroComponents';
-
-/* 
-
-Melhorar leitura do código
-Separar código em componentes se possivel
-Evitar que estrelas sejam criadas em cima de outras estrelas 
-(talves a função que calcula WhiteSpace ajude)
-
-Fazer com que containerRef e whiteSpaceRef atualizarem, o resto do cód tbm
-*/
+import {
+  ptMacroComponentsData,
+  enMacroComponentsData,
+} from '../../../textContent/typescript/macroComponents.ts';
+import userLang from '../../../functions/userLang/index.ts';
 
 interface CreateStarsOnContainerProps {
   svgs?: string[];
@@ -31,6 +25,8 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
   whiteSpaceRef,
   animationStar = true,
 }) => {
+  const macroComponentsData =
+    userLang === 'pt-br' ? ptMacroComponentsData : enMacroComponentsData;
   const { starsSrc } = macroComponentsData.CreateStarsOnContainer;
   const starsSvg = svgs[0] ? svgs : starsSrc;
 
@@ -65,7 +61,7 @@ const CreateStarsOnContainer: React.FC<CreateStarsOnContainerProps> = ({
 
   const checkIfPositionIsInsideWhiteSpace = (
     xPercentage: number,
-    yPercentage: number
+    yPercentage: number,
   ) => {
     if (!containerRef.current || !whiteSpaceRef?.current) {
       return false;

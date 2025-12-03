@@ -1,0 +1,166 @@
+{
+  "Banner": {
+    "mainTitle": ["Developer", "Front-End &", "UX/UI Design"]
+  },
+  "AboutMe": {
+    "image": {
+      "src": "/home/marcos-olhando-para-o-lado-esquerdo-em-um-fundo-azul.webp",
+      "alt": "Man named Marcos looking to the left on a blue background",
+      "title": "Marcos looking to the left on a blue background",
+      "width": 568,
+      "height": 402
+    },
+    "title": "About me",
+    "texts": [
+      "I began my programming journey at the age of 14 and since then, I have been refining both my technical and creative skills. I have experience in front-end development and UX/UI Design, which allows me to collaborate effectively with development teams by bringing an additional design perspective. Furthermore, I am always seeking to expand my knowledge in areas such as back-end and other emerging technologies.",
+      "As an autistic person with level 1 support needs, my meticulous approach to projects reflects my commitment to creating solutions that positively impact people's lives. Every solution I develop aims to improve user experience and make technology more accessible and enjoyable."
+    ],
+    "stars": [
+      "/icons/stars/white/star-average-no-tip-white.svg",
+      "/icons/stars/white/star-average-white.svg",
+      "/icons/stars/white/star-small-white.svg"
+    ]
+  },
+  "Knowledges": {
+    "title": "Knowledge",
+    "knowledges": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "SEO",
+      "Git",
+      "HTML",
+      "SASS",
+      "CSS",
+      "Azure",
+      "BootStrap",
+      "English C1",
+      "UX/UI",
+      "Figma"
+    ]
+  },
+  "Projects": {
+    "title": "Projects",
+    "projects": [
+      {
+        "subtitle": "Portfolio",
+        "text": "My portfolio aims to creatively and innovatively showcase my skills and projects.",
+        "technologies": "React - Typescript - SASS - HTML - SEO - UX/UI - Figma",
+        "link": "#",
+        "image": {
+          "src": "/home/portfolio.webp",
+          "alt": "Example image of my portfolio, the website you are accessing now",
+          "title": "Image showing my portfolio, the website you are accessing now",
+          "width": 750,
+          "height": 312
+        }
+      },
+      {
+        "subtitle": "Cabana do Coelho",
+        "text": "Aims to provide a presentation of the cabins available for rent",
+        "technologies": "UX/UI - Figma - HTML - CSS - Javascript",
+        "link": "https://cabana-do-coelho.vercel.app/",
+        "createdForStudy": true,
+        "image": {
+          "src": "/home/cabanadocoelho.webp",
+          "alt": "Example image of the Cabana Do Coelho website",
+          "title": "Image showing the Cabana Do Coelho website",
+          "width": 615,
+          "height": 313
+        }
+      },
+      {
+        "subtitle": "WaterSurf",
+        "text": "The goal of this website is to highlight the technical assistance service, aiming to increase potential clients' trust.",
+        "technologies": "UX/UI - Figma - HTML - CSS - JavaScript",
+        "createdForStudy": true,
+        "link": "https://water-surf.vercel.app/",
+        "image": {
+          "src": "/home/watersurf.webp",
+          "alt": "Example image of the Watersurf website",
+          "title": "Image showing the Watersurf website",
+          "width": 342,
+          "height": 273
+        }
+      },
+      {
+        "subtitle": "CoelhoGames",
+        "text": "The purpose of this website is to showcase the technical assistance service to build more trust among potential clients.",
+        "technologies": "Figma - HTML - CSS - BootStrap",
+        "createdForStudy": true,
+        "link": "https://coelhogames.vercel.app/",
+        "image": {
+          "src": "/home/coelhogames.webp",
+          "alt": "Example image of the CoelhoGames website",
+          "title": "Image showing the CoelhoGames website",
+          "width": 350,
+          "height": 277
+        }
+      }
+    ]
+  },
+  "ExperienceAndAcademic": [
+    {
+      "title": "Experience",
+      "experiences": [
+        {
+          "info1": "Zenvia",
+          "info2": "05/2024 - Present",
+          "info3": "Developer",
+          "texts": [
+            "I work on the development of products focused on communication automation, covering channels such as WhatsApp, RCS, email and SMS, using React and Next.js. I contribute to the creation of complex and reusable interfaces and components aligned with the needs of various teams.",
+            "I am responsible for maintaining and evolving the “Docs” product, with a focus on security, performance and scalability. Additionally, I developed a BFF with authentication, centralizing integrations and strengthening the security of the solutions.",
+            "I collaborate directly with PO, PM, Product Design, Back-End and SRE in planning, estimation and alignment of deliverables. I also support the Front-End team management, helping divide tasks and providing technical guidance during development."
+          ]
+        },
+        {
+          "info1": "OI S&A",
+          "info2": "05/2023 - Present",
+          "info3": "Development Assistant",
+          "texts": [
+            "I contributed significantly to the migration of pages from the legacy Vignette technology to Next.JS. In addition, I developed an intuitive page that helps customers obtain the second copy of their internet bill. This project involved various challenges related to different components and backend integrations.",
+            "In my daily work, I used: Next.JS, React.js, TypeScript, JSON for data development and integration, Azure for code versioning, SASS, HTML, JavaScript, and Figma to work with UX-designed interfaces. I also have experience with GitLab, AWS, and Node.js."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Education",
+      "titleReverse": true,
+      "experiences": [
+        {
+          "info1": "UNICSUL",
+          "info2": "Higher Education",
+          "info3": "Systems Analysis and Development",
+          "info3Mobile": "SAD",
+          "texts": [
+            "Completed higher education degree at Cruzeiro do Sul University, finished in 06/2025"
+          ],
+          "buttonText": "Certificate",
+          "buttonLink": "https://drive.google.com/file/d/1UvAq4O8PJNOjXwS3lhCm4psM38m9nH-n/view?usp=sharing"
+        },
+        {
+          "info1": "TopWay",
+          "info2": "Course",
+          "info3": "English",
+          "texts": [
+            "At TopWay, I acquired the full foundation of the language, which today allows me to read texts confidently, communicate with great fluency, and understand native speakers in their mother tongue.",
+            "End date: 03/2025"
+          ],
+          "buttonText": "Certificate",
+          "buttonLink": "https://drive.google.com/file/d/1LDAObhne4eVQEpfm4sCW5qp1NakQS2Jp/view?usp=sharing"
+        },
+        {
+          "info1": "Origamid",
+          "info2": "Online Course",
+          "info3": "Front-End and UX/UI Design",
+          "info3Mobile": "Front-End and UX/UI",
+          "texts": [
+            "The course’s focus on practical projects allows me to quickly apply what I learn in real situations, preparing me for market challenges."
+          ]
+        }
+      ]
+    }
+  ]
+}

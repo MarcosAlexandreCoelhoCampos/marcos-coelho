@@ -3,8 +3,17 @@ import styles from './style.module.scss';
 import MaxWidth from '../MaxWidth';
 import UserScreenWidthIsLargerThan from '../../../functions/UserScreenWidthIsLargerThan';
 import PreventFocusEscapeModal from '../../../functions/PreventFocusEscapeModal';
+import {
+  ptMacroComponentsData,
+  enMacroComponentsData,
+} from '../../../textContent/typescript/macroComponents.ts';
+import userLang from '../../../functions/userLang/index.ts';
 
 const Header: React.FC = () => {
+  const macroComponentsData =
+    userLang === 'pt-br' ? ptMacroComponentsData : enMacroComponentsData;
+  const { Header } = macroComponentsData;
+
   if (UserScreenWidthIsLargerThan(768)) document.body.style.paddingTop = '5rem';
   else document.body.style.paddingTop = '2rem';
 
@@ -40,11 +49,11 @@ const Header: React.FC = () => {
                 PreventFocusEscapeModal(
                   event,
                   firstElementHeaderModalRef,
-                  lastElementHeaderModalRef
+                  lastElementHeaderModalRef,
                 )
               }
             >
-              MarcosCoelho
+              {Header.logo}
             </a>
           </div>
           <div className={styles.containerNav}>
@@ -53,7 +62,7 @@ const Header: React.FC = () => {
               href='https://drive.google.com/file/d/1cP6cDju38YjbBlavWRyaRjR9bZioMm2R/view?usp=sharing'
               target='_blank'
             >
-              CV
+              {Header.cv}
             </a>
 
             <div className={`${styles.openCloseMenu}`}>
@@ -67,8 +76,8 @@ const Header: React.FC = () => {
                     src='/icons/menu/open-menu.svg'
                     width={25}
                     height={18}
-                    alt='Abrir menu'
-                    title='Abrir o menu'
+                    alt={Header.menu.openAlt}
+                    title={Header.menu.openTitle}
                   />
                 </button>
               )}
@@ -83,8 +92,8 @@ const Header: React.FC = () => {
                     src='/icons/menu/close-menu.svg'
                     width={20}
                     height={20}
-                    alt='Fechar menu'
-                    title='Fechar o menu'
+                    alt={Header.menu.closeAlt}
+                    title={Header.menu.closeTitle}
                   />
                 </button>
               )}
@@ -99,7 +108,7 @@ const Header: React.FC = () => {
                       className='font-nav'
                       href='/#about-me'
                     >
-                      Sobre
+                      {Header.nav.about}
                     </a>
                   </li>
                   <li>
@@ -108,7 +117,7 @@ const Header: React.FC = () => {
                       className='font-nav'
                       href='/#knowledges'
                     >
-                      Conhecimentos
+                      {Header.nav.knowledges}
                     </a>
                   </li>
                   <li>
@@ -117,7 +126,7 @@ const Header: React.FC = () => {
                       className='font-nav'
                       href='/#projects'
                     >
-                      Projetos
+                      {Header.nav.projects}
                     </a>
                   </li>
                   <li>
@@ -126,7 +135,7 @@ const Header: React.FC = () => {
                       className='font-nav'
                       href='/#experience'
                     >
-                      Experiencia
+                      {Header.nav.experience}
                     </a>
                   </li>
                   <li>
@@ -135,7 +144,7 @@ const Header: React.FC = () => {
                       className='font-nav'
                       href='/#experience'
                     >
-                      Formação
+                      {Header.nav.academic}
                     </a>
                   </li>
                   <li>
@@ -144,24 +153,24 @@ const Header: React.FC = () => {
                       className='font-nav'
                       href='/#footer'
                     >
-                      Contato
+                      {Header.nav.contact}
                     </a>
                   </li>
                   <li>
                     <a
                       className={`font-nav ${styles.curriculum}`}
                       target='_blank'
-                      href='https://drive.google.com/file/d/1cP6cDju38YjbBlavWRyaRjR9bZioMm2R/view?usp=sharing'
+                      href='https://drive.google.com/file/d/1APbUYvWe0UrYWFKH1Jb_LfMY2kyaaKaO/view?usp=sharing'
                       ref={lastElementHeaderModalRef}
                       onKeyDownCapture={(event) =>
                         PreventFocusEscapeModal(
                           event,
                           firstElementHeaderModalRef,
-                          lastElementHeaderModalRef
+                          lastElementHeaderModalRef,
                         )
                       }
                     >
-                      CV
+                      {Header.cv}
                     </a>
                   </li>
                 </ul>

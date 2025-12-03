@@ -35,7 +35,7 @@
       "CSS",
       "Azure",
       "BootStrap",
-      "Inglês B2",
+      "Inglês C1",
       "UX/UI",
       "Figma"
     ]
@@ -105,20 +105,22 @@
       "title": "Experiência",
       "experiences": [
         {
+          "info1": "Zenvia",
+          "info2": "05/2024 - Momento",
+          "info3": "Desenvolvedor",
+          "texts": [
+            "Atuo no desenvolvimento de produtos voltados à automação de comunicação, abrangendo canais como WhatsApp, RCS, e-mail e SMS, utilizando React e Next.js. Contribuo para a criação de interfaces e componentes complexos, reutilizáveis e alinhados às necessidades de diversos times.",
+            "Sou responsável pela manutenção e evolução do produto “Docs”, com foco em segurança, performance e escalabilidade. Além disso, desenvolvi um BFF com autenticação, centralizando integrações e reforçando a segurança das soluções.",
+            "Colaboro diretamente com PO, PM, Product Design, Back-End e SRE no planejamento, estimativas e alinhamento das entregas. Também apoio a gestão do time de Front-End, auxiliando na divisão de tarefas e oferecendo orientações técnicas durante o desenvolvimento."
+          ]
+        },
+        {
           "info1": "OI S&A",
           "info2": "05/2023 - Momento",
           "info3": "Ass. de Desenvolvimento",
           "texts": [
             "Atuei de forma significativa na migração de páginas da tecnologia legada Vignette para Next.JS. Além disso, desenvolvi uma página intuitiva que facilita aos clientes a obtenção da segunda via de sua conta de internet, esse projeto teve diversos desafios relacionados a componentes variados e integrações com o backend.",
-            "No meu dia a dia, utilizo: Next.JS, React.js, TypeScript, JSON para desenvolvimento e integração de dados, Azure para versionamento de código, SASS, HTML, JavaScript e Figma para trabalhar com interfaces criadas pelo time de UX. Além disso, tenho experiência com GitLab, AWS e Node.js."
-          ]
-        },
-        {
-          "info1": "G&P",
-          "info2": "01/2023 - 05/2023",
-          "info3": "Auxiliar de T.I",
-          "texts": [
-            "Participação no projeto Acelera G&P, um programa de aprimoramento e capacitação que incluiu cursos focados no desenvolvimento de habilidades em front-end, bem como aulas diárias com um dos arquitetos de sistemas da empresa."
+            "No meu dia a dia, utilizei: Next.JS, React.js, TypeScript, JSON para desenvolvimento e integração de dados, Azure para versionamento de código, SASS, HTML, JavaScript e Figma para trabalhar com interfaces criadas pelo time de UX. Além disso, tenho experiência com GitLab, AWS e Node.js."
           ]
         }
       ]
@@ -133,10 +135,21 @@
           "info3": "Análise e Desenvolvimento de Sistemas",
           "info3Mobile": "ADS",
           "texts": [
-            "Atualmente em formação em Análise e Desenvolvimento de Sistemas na Universidade Cruzeiro do Sul",
-            "Inicio: 01/02/2023",
-            "Término previsto: 15/12/2024"
-          ]
+            "Formação superior completa pela faculdade Cruzeiro do Sul com término no mês 06/2025"
+          ],
+          "buttonText": "Certificado",
+          "buttonLink": "https://drive.google.com/file/d/1UvAq4O8PJNOjXwS3lhCm4psM38m9nH-n/view?usp=sharing"
+        },
+        {
+          "info1": "TopWay",
+          "info2": "Curso",
+          "info3": "Inglês",
+          "texts": [
+            "Na TopWay, adquiri toda a base do idioma, o que hoje me permite ler textos com segurança, comunicar-me com boa fluidez e compreender falantes nativos em sua língua materna.",
+            "Data de término: 03/2025"
+          ],
+          "buttonText": "Certificado",
+          "buttonLink": "https://drive.google.com/file/d/1LDAObhne4eVQEpfm4sCW5qp1NakQS2Jp/view?usp=sharing"
         },
         {
           "info1": "Origamid",
@@ -145,20 +158,7 @@
           "info3Mobile": "Front-End e UX/UI",
           "texts": [
             "O foco do curso em projetos práticos me permite aplicar rapidamente o que aprendo em situações reais, preparando-me para os desafios do mercado."
-          ],
-          "buttonText": "Certificado",
-          "buttonLink": "#"
-        },
-        {
-          "info1": "TopWay",
-          "info2": "Curso",
-          "info3": "Inglês",
-          "texts": [
-            "Atualmente, já consigo ler textos em inglês, comunicar-me com mais fluidez e coerência e compreender, na maioria das vezes, nativos em sua língua materna. Além das aulas, mantenho uma rotina de estudos com audiobooks, séries e filmes",
-            "Previsão de término: 02/2025"
-          ],
-          "buttonText": "Certificado",
-          "buttonLink": "#"
+          ]
         }
       ]
     }

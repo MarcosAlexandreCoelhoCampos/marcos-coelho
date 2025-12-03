@@ -1,4 +1,5 @@
-import page404Json from '../json/page404.json';
+import enPage404Json from '../json/en/page404.json';
+import ptPage404Json from '../json/pt-br/page404.json';
 
 export interface Page404Data {
   Page404Content: Page404ContentData;
@@ -8,5 +9,7 @@ export interface Page404ContentData {
   title: string;
 }
 
-const page404: Page404Data = page404Json as Page404Data;
-export default page404;
+const enPage404: Page404Data = enPage404Json as Page404Data;
+const ptPage404: Page404Data = ptPage404Json as Page404Data;
+
+export { ptPage404, enPage404 };

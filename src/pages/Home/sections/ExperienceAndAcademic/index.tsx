@@ -24,7 +24,7 @@ const ExperienceAndAcademic: React.FC<{
         <div className={styles.experienceContents}>
           <ExperienceContent data={data[0]} />
           <div className={styles.experienceBoltContent}>
-            <img src='/icons/others/bolt-white.svg' alt='' aria-disabled />
+            <div className={styles.experienceBoltImage} />
           </div>
           <ExperienceContent data={data[1]} />
         </div>

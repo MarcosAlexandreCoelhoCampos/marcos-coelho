@@ -1,9 +1,15 @@
 import React from 'react';
 import styles from './AirplaneWithText.module.scss';
-import macroComponentsData from '../../../textContent/typescript/macroComponents.ts';
+import {
+  ptMacroComponentsData,
+  enMacroComponentsData,
+} from '../../../textContent/typescript/macroComponents.ts';
 import ComponentOnViewport from '../../../functions/ComponentOnViewport';
+import userLang from '../../../functions/userLang/index.ts';
 
 const AirplaneWithText: React.FC<{ texts: string[] }> = ({ texts }) => {
+  const macroComponentsData =
+    userLang === 'pt-br' ? ptMacroComponentsData : enMacroComponentsData;
   const { AirplaneWithText } = macroComponentsData;
   const containerRef = React.useRef<HTMLDivElement>(null);
   const isInViewport = ComponentOnViewport(containerRef);

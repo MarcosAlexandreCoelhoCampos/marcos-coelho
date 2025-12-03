@@ -1,4 +1,5 @@
-import homeJson from '../json/home.json';
+import enHomeJson from '../json//pt-br/home.json';
+import ptHomeJson from '../json/en/home.json';
 
 export interface SiteData {
   Banner: BannerData;
@@ -61,5 +62,8 @@ interface Image {
   height: number;
 }
 
-const siteData: SiteData = homeJson as SiteData;
-export default siteData;
+const siteDataPt: SiteData = enHomeJson as SiteData;
+const siteDataEn: SiteData = ptHomeJson as SiteData;
+
+export { siteDataPt };
+export { siteDataEn };

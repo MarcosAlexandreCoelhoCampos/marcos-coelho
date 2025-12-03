@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './style.module.scss';
 type ImgProps = {
   src: string;
@@ -33,6 +34,7 @@ const SeeMoreClean: React.FC<SeeMoreCleanProps> = ({
       className={`${styles.SeeMoreClean} ${fontStyle} ${className}`}
       style={style}
       href={href}
+      target='_blank'
     >
       {text}
       {img && (
