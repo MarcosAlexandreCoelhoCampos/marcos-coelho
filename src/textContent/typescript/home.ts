@@ -27,6 +27,7 @@ export interface KnowledgesData {
 export interface ProjectsData {
   title: string;
   projects: ProjectData[];
+  SeeMoreButton: SeeMoreData;
 }
 export interface ProjectData {
   subtitle: string;
@@ -60,6 +61,14 @@ interface Image {
   title: string;
   width: number;
   height: number;
+}
+
+export interface SeeMoreData {
+  textActive: string;
+  textDisable: string;
+  img: {
+    title: string;
+  };
 }
 
 const siteDataPt: SiteData = enHomeJson as SiteData;

@@ -6,8 +6,16 @@ import ProjectBox from '../../../../components/macroComponents/ProjectBox/index'
 import MaxWidth from '../../../../components/macroComponents/MaxWidth';
 import UserScreenWidthIsLargerThan from '../../../../functions/UserScreenWidthIsLargerThan';
 import SeeMoreButton from '../../../../components/microComponents/SeeMoreButton';
+import {
+  siteDataEn,
+  siteDataPt,
+} from '../../../../textContent/typescript/home.ts';
+import userLang from '../../../../functions/userLang/index.ts';
 
 const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
+  const siteData = userLang === 'pt-br' ? siteDataPt : siteDataEn;
+  const { SeeMoreButton: SeeMore } = siteData.Projects;
+
   const [seeMoreMobileActive, setSeeMoreMobileActive] = React.useState(false);
   const UserScreenWidthIsLargerThan1200 = UserScreenWidthIsLargerThan(1199);
   const UserScreenWidthIsLargerThan768 = UserScreenWidthIsLargerThan(767);
@@ -37,6 +45,14 @@ const Projects: React.FC<{ data: ProjectsData }> = ({ data }) => {
         <SeeMoreButton
           action={() => setSeeMoreMobileActive(!seeMoreMobileActive)}
           actived={seeMoreMobileActive}
+          textActive={SeeMore.textActive}
+          textDesable={SeeMore.textDisable}
+          img={{
+            src: '/icons/arrow/arrow-down-green.svg',
+            title: SeeMore.img.title,
+            width: 18,
+            height: 10,
+          }}
         />
       </MaxWidth>
     </section>

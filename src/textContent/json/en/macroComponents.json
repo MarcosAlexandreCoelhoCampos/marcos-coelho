@@ -50,5 +50,19 @@
       "academic": "Education",
       "contact": "Contact"
     }
+  },
+  "ProjectBox": {
+    "madeForStudy": "Made for study",
+    "toolsUsed": "Tools and Technologies used:",
+    "accessSite": "Visit website",
+    "accessSiteTitle": "Link to learn more about the website"
+  },
+  "Footer": {
+    "about": "About",
+    "knowledge": "Knowledge",
+    "projects": "Projects",
+    "education": "Education",
+    "name": "MarcosCoelho",
+    "subtitle": "Developer & Designer"
   }
 }
